@@ -10,14 +10,22 @@
                 
         .sidebar {
           float: left;
-          width: 10%;
+          width: 180px;
           padding: 15px;
         }
 
         .column {
           float: left;
-          width: 45%;
+          width: calc(100% - 720px);
+          min-width: 360px;
           padding: 15px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          padding: 10px;
         }
         
         /* Clear floats after the columns */
@@ -60,7 +68,7 @@
           <div><h2>Genetic Description</h2></div>
           <p>Howitzers, despite their extensive internal uniqueness, combine a strange mix of epigenetic traits from Reconcilants, Totems, and Pustules, in addition to some of their own unique triggers. How exactly a puppet as magically inclined as a Totem fits into the Howitzers' lineage is generally unknown, though some believe the magic is used to enhance their accuracy at great ranges.</p>
       </div>
-      <div class="column">
+      <div class="gallery">
           <div><h1>Gallery</h1></div>
           <div><img src="howitzer.png" alt="A reference image of a Howitzer." width="520" height="464"></div>
           <br>

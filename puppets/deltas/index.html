@@ -10,14 +10,22 @@
                 
         .sidebar {
           float: left;
-          width: 10%;
+          width: 180px;
           padding: 15px;
         }
 
         .column {
           float: left;
-          width: 45%;
+          width: calc(100% - 720px);
+          min-width: 360px;
           padding: 15px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          padding: 10px;
         }
         
         /* Clear floats after the columns */
@@ -60,7 +68,7 @@
           <div><h2>Genetic Description</h2></div>
           <p>Deltas have an interesting mix of distinct and generic triggers. They share a number of triggers found commonly across other puppet types, but also have a number of triggers found in them and nowhere else. It is generally believed that their powerful psionic abilities are both the beneficiary and explanation of the odd mix of common and rare traits.</p>
       </div>
-      <div class="column">
+      <div class="gallery">
           <div><h1>Gallery</h1></div>
           <div><img src="delta.png" alt="A reference image of a Delta." width="520" height="454"></div>
           <br>

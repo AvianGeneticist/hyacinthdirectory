@@ -10,14 +10,22 @@
                 
         .sidebar {
           float: left;
-          width: 10%;
+          width: 180px;
           padding: 15px;
         }
 
         .column {
           float: left;
-          width: 45%;
+          width: calc(100% - 720px);
+          min-width: 360px;
           padding: 15px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          padding: 10px;
         }
         
         /* Clear floats after the columns */
@@ -61,7 +69,7 @@
           <div><h2>Genetic Description</h2></div>
           <p>Reconcilants have a fairly small epigenetic profile, which is generally owed to the wide variety of subpuppets they can spawn. It's believed this limited genetic complexity makes them better hosts, as less triggers have to work against the Reconcilant's own. They do, however, sport significantly above-average stem cell levels, making them more readily able to both heal or spawn at a moment's notice.</p>
       </div>
-      <div class="column">
+      <div class="gallery">
           <div><h1>Gallery</h1></div>
           <div><img src="reconcilant.png" alt="A reference image of a Reconcilant." width="520" height="390"></div>
           <br>
