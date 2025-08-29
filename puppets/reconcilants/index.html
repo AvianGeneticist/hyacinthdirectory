@@ -8,23 +8,37 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
-          padding: 15px;
+          min-height: 98vh;
+          padding: 10px;
         }
         
         .gallery {
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+    <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Reconcilants fulfill the role of a light carrier in Hyacinth's army, with the ability to spawn a variety of subpuppets: <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a>, <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a>, and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a>. A group of Reconcilants is known as a brood or a den.</p>
           <div><h2>Physical Description</h2></div>
@@ -69,7 +84,8 @@
           <div><h2>Genetic Description</h2></div>
           <p>Reconcilants have a fairly small epigenetic profile, which is generally owed to the wide variety of subpuppets they can spawn. It's believed this limited genetic complexity makes them better hosts, as less triggers have to work against the Reconcilant's own. They do, however, sport significantly above-average stem cell levels, making them more readily able to both heal or spawn at a moment's notice.</p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="reconcilant.png" alt="A reference image of a Reconcilant." width="520" height="390"></div>
           <br>

@@ -8,23 +8,37 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
-          padding: 15px;
+          min-height: 98vh;
+          padding: 10px;
         }
         
         .gallery {
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+    <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Tricksters fulfill the role of light magicians in Hyacinth's army, specializing in lightweight magics with low cost and limited casting times. They are generally the third most common puppet type, after <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a> and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a>. A group of Tricksters is known as a party.</p>
           <div><h2>Physical Description</h2></div>
@@ -71,7 +86,8 @@
           <div><h2>Known Spells</h2></div>
           <p>Because Tricksters display a variety of spells, with distinct spellcasting compared to Totems, their observed spells are listed here for convenience:<br> - Arcane Slivers: Needles of raw magic that are spawned in significant numbers, and then either passed to allies or thrown directly as an attack.<br> - Magic Missiles: A volley of larger, raw magic projectiles, with high accuracy and magical tracking.<br> - Guiding Bolt: A strong bolt of light magic that leaves a clinging light on the target, illuminating it both physically and magically.<br> - Fire Bolt: Exclusive to "Hot Tricksters". A fiery projectile that produces a small explosion upon impact.<br> - Frost Beam: Exclusive to "Cold Tricksters". A narrow beam of icy magic that leaves its target chilled and sluggish.<br> - Shield: A magical bubble shield that briefly protects the Trickster from physical and magical attacks.<br> - Magic Hand: A Trickster's form of psychokinesis. Does not posess the force needed to reliably attack.<br> - Disturbance: The collection of visual and auditory disturbances Tricksters use to prank their fellows.</p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="trickster.png" alt="A reference image of a Trickster." width="520" height="396"></div>
           <br>

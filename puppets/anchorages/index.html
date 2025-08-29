@@ -8,23 +8,37 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
-          padding: 15px;
+          min-height: 98vh;
+          padding: 10px;
         }
         
         .gallery {
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+  <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+    <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Anchorages act as heavy support and mobile bases for <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a>. They carry specialized buildings on their back, facilitating mobile operations where they might not otherwise be possible. A group of Anchorages is called a city.</p>
           <div><h2>Physical Description</h2></div>
@@ -72,7 +87,8 @@
           <p>An Anchorage is very little without its Serfs and buildings. Serfs will have their own page, but buildings will be discussed here: Every building type has a different physical appearance, but also ties into a different spell, augmenting its effectiveness. The spells involved generally create small-scale pocket dimensions within, giving more room than is physically available. If the Anchorage is moved into an anti-magic field, the dimension is not destroyed; only rendered inaccessible until the anti-magic effect is removed. The material houses are built out of is colloquially known as Haetin, and is either made by Serfs by mixing the blood of an Anchorage with their own phlegm-laden spit, or produced directly by Phylacteries. The latter is preferred, as overtapping an Anchorage for Haetin can kill it.</p>
           <p>There are three main types of buildings known to be used on Anchorages:<br> - Housing structures are round structures, designed to house Serfs when they are not working or needed in battle. Housing structures, while simple on the surface, play host to small strands of brain matter that are believed to lighten the psionic load of operating multiple Serfs. A single housing structure can house up to four Serfs both physically and psionically, though an Anchorage's "twin" Serf will be offloaded to the first house built (if it ever is).<br> - Phylacteries take the form of lumpy, oozing mounds. They are constantly suffused with Haetin, which Serfs can harvest by slicing open individual mounds. A properly-tended Phylactery can produce nearly six times the Haetin as its host Anchorage can produce in blood, with no detriment to the Anchorage's health.<br> - Lastly, Foundries share similar orbular structures to Housing, but have a single elongated smokestack that vents smoke produced by the internal crafting facilities. Despite the smoke being released, minimal heat is tangible through the structure walls, and even the exhaust is rarely warmer than the Anchorage's body temperature. Serfs work in Foundries to produce various things from Haetin, and the produced works can range from simple tools or ammunition to artifacts of minor magical power.</p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="anchorage.png" alt="A reference image of an Anchorage." width="520" height="474"></div>
           <br>

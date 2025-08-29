@@ -8,23 +8,37 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
-          padding: 15px;
+          min-height: 98vh;
+          padding: 10px;
         }
         
         .gallery {
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+    <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Pustules are (relatively) heavyweight subpuppets. They are spawned by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> as a mix of heavy area damage and support for <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a>. A group of Pustules is known as a clump or a clot.</p>
           <div><h2>Physical Description</h2></div>
@@ -68,7 +83,8 @@
           <div><h2>Genetic Description</h2></div>
           <p>Relative even to Imps, Pustules have extremely simplistic epigenetic profiles. This is self-evident, given they have a minimal amount of unique features. However, like many venomous species, Pustules boast a robust resilience to their own acid, and the presence of a Pustule seems to act as an epigenetic trigger of its own, as Hyacinth and other puppets display better acid resistance when Pustules are present. Triggering epigenetic changes was thought to be a feature exclusive to Hyacinth or external factors, so it is believed this ability is why Pustules are otherwise as uncomplex as puppets get.</p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="pustule.png" alt="A reference image of a Pustule." width="520" height="432"></div>
           <br>

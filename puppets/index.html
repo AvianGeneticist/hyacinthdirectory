@@ -8,23 +8,37 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
-          padding: 15px;
+          min-height: 98vh;
+          padding: 10px;
         }
         
         .gallery {
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+    <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Puppets are semi-independent creatures spawned by Hyacinth in states of duress (most commonly as a response to physical pain). While puppets appear to be entirely separate from Hyacinth in physical space, they are connected by a powerful psionic bond that leaves them in a state of neurological dependence on Hyacinth directly. As such, a puppet's state of being is reliant on Hyacinth's: If Hyacinth is asleep, for example, all their puppets are asleep. If Hyacinth were to die, all their puppets would also die. In this way, they are closer to limbs than independent entities, although puppets do display independent traits when idling. While different puppet types have unique group identities, when addressing multiple puppet types as a collective, a group of them is known as a horde, an army, or a clan.</p>
           <p>Puppets come in several different categories with wildly varying traits and abilities. Their sizes also vary quite a bit as well, ranging from barely pony sized Deltas to towering Praetors that nearly match Hyacinth themselves. The most general grouping of puppets is largely by their 'psionic weight'; that is, the amount of psionic impulses they trade with Hyacinth on a usual basis. Psionic weight can be grouped together in three major categories: Light, Heavy, and Superheavy.</p>
@@ -74,7 +89,8 @@
           <p>Many puppet types can spawn lesser puppets of their own, often to fill vastly different roles than their hosts or as augmentations to the host's natural capabilities. These are collectively known as "subpuppets", and range quite wildly in function. Universally, however, subpuppets are generally quite small, and decidedly simpler than most normal puppets.Their psionic weight is weathered directly by their host puppets instead of by Hyacinth directly, hinting that psionic weight is not as simple as linearly feeding up through Hyacinth's brain mass directly.</p>
           <p>Across Hyacinth's puppet types, there are five different varieties of subpuppets:<br> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a><br> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a><br> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a><br> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a><br> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a><br> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
         </div>
     </div>

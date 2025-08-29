@@ -8,16 +8,29 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -25,6 +38,7 @@
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+  <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+    <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Serfs act as the working hooves for the buildings built on <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a>. They are not well-suited to combat, but are an excellent workforce. A group of Serfs is called a swarm or a strike.</p>
           <div><h2>Physical Description</h2></div>
@@ -68,7 +83,8 @@
           <div><h2>Genetic Description</h2></div>
           <p>Serfs have an interesting epigenetic profile not due to what they have, but what they don't. There are a number of genomic sequences active in every other puppet and subpuppet type that aren't active in Serfs. This is believed to relate to their frailty and lack of combat ability, but there is no way to know for absolute certain. In terms of what they do share with other puppets, Imps and Arrays both have passing epigenetic similarities.</p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="serf.png" alt="A reference image of a Serf." width="520" height="434"></div>
           <br>

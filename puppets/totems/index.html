@@ -8,23 +8,37 @@
           box-sizing: border-box;
         }
                 
+        .row {
+          display: flex;
+        }
+                
         .sidebar {
           float: left;
-          width: 180px;
-          padding: 15px;
+          min-width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
         }
 
         .column {
           float: left;
-          width: calc(100% - 720px);
+          width: calc(100% - 740px);
           min-width: 360px;
-          padding: 15px;
+          min-height: 98vh;
+          padding: 10px;
         }
         
         .gallery {
           float: left;
           width: 540px;
           min-width: 540px;
+          min-height: 98vh;
           padding: 10px;
         }
         
@@ -36,9 +50,9 @@
         }
         </style>
 </head>
-<body>
-    <div style="font-family:verdana" class="row">
-      <div class="sidebar">
+<body style="background-color:rgba(105,175,100,1);">
+    <div style="font-family:verdana; color:rgba(255,225,185,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="text-indent:8px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -57,7 +71,8 @@
         <div style="text-indent:16px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
         <div style="text-indent:24px"> - <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
       </div>
-        <div class="column">
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Totems are the heavy mages of Hyacinth's army, specializing in large-scale auras and other intense spells. In addition to their raw magical strength, they can spawn spirits and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a> to augment their magical abilities. A group of Totems is known as a congregation.</p>
           <div><h2>Physical Description</h2></div>
@@ -71,7 +86,8 @@
           <p>Totems have a distinct spell pool relative to Tricksters, generally focusing on more sweeping spell effects with less acute utility. Their observed spells are listed here for convenience:<br> - Arcane Blades: The most "basic" combat magic Totems have, manifesting as large, pale blades of magic light. These are not finely controlled like Tricksters' Arcane Slivers, instead appearing as slits of light around the Totem that then erupt into larger blades towardss a chosen direction.<br> - Weather Manipulation: Totems can conjure arcane clouds to change the weather. The default appears to be an storm of icicles and snow, but with Wisps or Spirits on standby to assist their magic, it can range from a rain of fire and brimstone, to glistening rain that heals injuries and grows plants, to frantic lightning storms.<br> - Aura of Time: The Totem opens a field in which time is massively accelerated (one hour outside the field passes one day inside) or decelerated (one hour outside the field passes one minute inside).<br> - Aura of Vitality: The Totem opens a field in which creatures' needs are naturally satiated over time, and their natural healing abilities are sped up (ten minutes in the field allows the body one day worth of healing).</p>
           <p>In addition to their actual spells, Totems can use the magical aid of spirits or Wisps to augment the potency of their spells (both hurtful and helpful), change their elements (as seen with Weather Manipulation), or make it more percise (increasing its accuracy and giving even non-tracking spells faint tracking). While each spirit or Wisp can contribute the same amount of energy in a single cast, spirits are entirely spent by these boons, whereas Wisps must merely withdraw and rest for a minute or two.</p>
       </div>
-      <div class="gallery">
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="totem.png" alt="A reference image of a Totem." width="520" height="394"></div>
           <br>
