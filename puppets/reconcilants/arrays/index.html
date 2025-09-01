@@ -41,8 +41,27 @@
           min-height: 98vh;
           padding: 10px;
         }
+
+        .infobox {
+          float: right;
+          width: 340px;
+          height: 400px;
+          padding: 5px;
+        }
+
+        .infotable {
+          border-collapse: collapse;
+          width: 100%;
+          height: 100%;
+        }
+
+        .infotablecell {
+          border: 2px solid rgba(65,150,60,1);
+          padding: 5px;
+        }
         
         /* Clear floats after the columns */
+        
         .row:after {
           content: "";
           display: table;
@@ -74,6 +93,30 @@
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.5),rgba(0,165,5,0.1));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
           <div><h1>Overview</h1></div>
+          <div class="infobox">
+            <table class="infotable" style="font-family:verdana; color:rgba(255,235,215,1)">
+              <tr>
+                <td class="infotablecell">Commonality</td>
+                <td class="infotablecell">37.4% (Reconcilants)</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Durability</td>
+                <td class="infotablecell">2/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Strength</td>
+                <td class="infotablecell">Physical: 1/10<br>Psionic: 2/10<br>Magical: 4/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Specials</td>
+                <td class="infotablecell">Coordinated electrical attacks<br>Flight</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Personality</td>
+                <td class="infotablecell">Social but exclusive</td>
+              </tr>
+            </table>
+          </div>
           <p>Arrays act as light magical attackers, striking targets with coordinated bursts of lightning from their eel-like tails. They are spawned from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a>. A group of Arrays is known as a flicker.</p>
           <div><h2>Physical Description</h2></div>
           <p>Arrays are fairly small subpuppets, standing at 1' 8" (51cm), with fairly slim, small builds. Like <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a>, they have two major distinguishing features: Their pegasus- or bird-like wings, and their large, spined, eel-like tails that they use to launch electric attacks from. In addition to the expected suite of electrochemical organs for storing and generating electrical charge, Arrays have a specialized piece of their brain not found in any other puppet, seemingly responsible for coordinating</p>
