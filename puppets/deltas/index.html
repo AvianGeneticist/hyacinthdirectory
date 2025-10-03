@@ -12,6 +12,13 @@
         .row {
           display: flex;
         }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
                 
         .sidebar {
           float: left;
@@ -57,7 +64,7 @@
         }
 
         .infotablecell {
-          border: 2px solid rgba(65,150,60,1);
+          border: 2px solid rgba(214,145,210,0.5);
           padding: 5px;
         }
         
@@ -68,11 +75,31 @@
           display: table;
           clear: both;
         }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(0,0,205);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
         </style>
 </head>
-<body style="background-color:rgba(105,175,100,1);">
-    <div style="font-family:verdana; color:rgba(255,235,215,1)" class="row">
-      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -101,10 +128,10 @@
       </div>
       
       <div class="spacer"></div>
-        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <div class="infobox">
-            <table class="infotable" style="font-family:verdana; color:rgba(255,235,215,1)">
+            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
               <tr>
                 <td class="infotablecell">Commonality</td>
                 <td class="infotablecell">13.6%</td>
@@ -143,7 +170,7 @@
           <p>Originally, Deltas only had the ability to shield. They were entirely dependent on their shielding capabilities, and once they had a full-strength shield or two up they were basically idlers. Psionic aggression and assistance were added to diversify their pool and reduce the risks of downtime, but also helped define them into a more well-rounded support class. Now Deltas are for everything, and everyone, which gives them a very strong niche even in cases like the Mesosa or mezzers like <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a>. Deltas also have the most interactions with other puppet types, owing to how versatile their psionic materials are.</p>
       </div>
       <div class="spacer"></div>
-      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="delta.png" alt="A reference image of a Delta." width="520" height="454"></div>
           <br>

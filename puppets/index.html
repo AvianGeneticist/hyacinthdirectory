@@ -8,9 +8,16 @@
         * {
           box-sizing: border-box;
         }
-                
+
         .row {
           display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../backgroundwhite.png), url(../backgroundblue.png), url(../backgroundred.png), url(../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
         }
                 
         .sidebar {
@@ -49,11 +56,31 @@
           display: table;
           clear: both;
         }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(0,0,205);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
         </style>
 </head>
-<body style="background-color:rgba(105,175,100,1);">
-  <div style="font-family:verdana; color:rgba(255,235,215,1)" class="row">
-      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+<body id="base">
+  <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -82,7 +109,7 @@
       </div>
       
       <div class="spacer"></div>
-        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Puppets are semi-independent creatures spawned by Hyacinth in states of duress (most commonly as a response to physical pain). While puppets appear to be entirely separate from Hyacinth in physical space, they are connected by a powerful psionic bond that leaves them in a state of neurological dependence on Hyacinth directly. As such, a puppet's state of being is reliant on Hyacinth's: If Hyacinth is asleep, for example, all their puppets are asleep. If Hyacinth were to die, all their puppets would also die. In this way, they are closer to limbs than independent entities, although puppets do display independent traits when idling. While different puppet types have unique group identities, when addressing multiple puppet types as a collective, a group of them is known as a horde, an army, or a clan.</p>
           <p>Puppets come in several different categories with wildly varying traits and abilities. Their sizes also vary quite a bit as well, ranging from barely pony sized Deltas to towering Praetors that nearly match Hyacinth themselves. The most general grouping of puppets is largely by their 'psionic weight'; that is, the amount of psionic impulses they trade with Hyacinth on a usual basis. Psionic weight can be grouped together in three major categories: Light, Heavy, and Superheavy.</p>
@@ -104,7 +131,7 @@
           <p>While technically still falling under the umbrella of subpuppets, there are five different types of elementals that can be summoned magically instead of being spawned psionobiologically. With the exception of Agents, all of said elementals are spawned by Totems. The five varieties of elementals are:<br><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a><br><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a><br><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a><br><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a><br><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></p>
       </div>
       <div class="spacer"></div>
-      <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="cuddlepile.png" alt="Hyacinth and a variety of puppets snuggled together." width="520" height="320"></div>
         </div>

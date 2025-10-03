@@ -12,6 +12,13 @@
         .row {
           display: flex;
         }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(backgroundwhite.png), url(backgroundblue.png), url(backgroundred.png), url(backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
                 
         .sidebar {
           float: left;
@@ -49,11 +56,31 @@
           display: table;
           clear: both;
         }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(0,0,205);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
         </style>
 </head>
-<body style="background-color:rgba(105,175,100,1);">
-    <div style="font-family:verdana; color:rgba(255,235,215,1)" class="row">
-      <div class="sidebar" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
@@ -82,7 +109,7 @@
       </div>
       
       <div class="spacer"></div>
-        <div class="column" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.2));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
           <p>Hyacinth is the main focus of this directory and acts as a progenitor of more or less everything else found within. As a character, Hyacinth has existed in separate incarnations depending on the exact world/timeline they are apart of. As such, their exact origin and biology can change, being massaged to fit the setting. The contents of this directory will mostly stick to information that is reliably true across all canons the character has appeared in, but keep in mind that most details are negotiable to help them fit into the setting. If details are irreconcilable or otherwise conflict with each other, discussions of conflicting events will occur as their own distinct paragraphs with the prefix point "DC:" (short for DisContinuity).</p>
           <p>Hyacinth is a roughly 8' 10" equid creature. Originally, Hyacinth was a normal equine, but a traumatic event at some point in their past has resulted in them developing into an equine-adjacent mutant (occasionally refered to as an Equid Abomination). This mutation has lead to them developing powerful psionic abilities (more on that later), including their spawning of flesh puppets when placed under intense duress (for example, extreme acute stress, or physical injury).</p>
@@ -95,7 +122,7 @@
           <p>In addition to the diverse army of puppets at their disposal, Hyacinth has their own array of strengths and abilities at their disposal. At their most basic, Hyacinth is extremely durable, surviving attacks that would kill most with relative ease. Their array of limbs includes a large flange mace, giving them a potent attack in close quarters. And, of course, they have not one, but two unicorn horns to cast magic with, though their magic is largely confined to healing magics of varying power, in addition to telekinesis by way of magic hands.</p>
         </div>
         <div class="spacer"></div>
-        <div class="gallery" style="background-image:linear-gradient(rgba(0,165,5,0.6),rgba(0,165,5,0.2));border: 3px solid rgba(0,120,0,1);border-radius:10px;">
+        <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.2));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Gallery</h1></div>
           <div><img src="hyacinth.png" alt="A reference image of Hyacinth, focused on their left side." width="520" height="404"></div>
           <br>
