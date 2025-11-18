@@ -1,0 +1,307 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abomination Puppets</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 660px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        table {
+          width: 100%;
+          border: 1px solid rgba(214,145,210,0.6);
+          border-collapse: collapse;
+        }
+
+        td {
+          vertical-align: top;
+          border: 1px solid rgba(214,145,210,0.6);
+          border-collapse: collapse;
+          padding: 8px;
+          width: 50%;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+        <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Stories</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Games</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div>
+            <h1>Overview</h1>
+            <p>This section is dedicated to puppets and how they scale up throughout the levels and specialties. Each puppet has 6 tiers, and starts at tier 1. Tiers 2-5 are earned through normal leveling, where tier 6 is reserved for puppets who are the subject of specialties.</p>
+            <p>If a stat scales up through tiers, it will be represented as a series of numbers, separated by slashes, in parentheses (e.g. (1/2/3/4/5/6)).</p>
+            <p>All puppets inherit skill, tool, save, weapon, and armor proficiencies, as well as their proficiency bonuses, from their hosts.</p>
+          </div>
+          <table style="font-family:verdana; color:rgba(225,245,255,1)">
+            <tr>
+          <td>
+            <h1>Manipulator</h1>
+            <p>Manipulators are small-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: (12/13/14/15/15/16)</li>
+              <li>Dexterity: (12/12/13/14/14/15)</li>
+              <li>Constitution: (12/13/13/14/15/16)</li>
+              <li>Intelligence: 10</li>
+              <li>Wisdom: 12</li>
+              <li>Charisma: 8</li>
+            </ul>
+            <p>Manipulators boast the following features:</p>
+            <ul>
+              <li>Hit Points: Manipulators have an HP stat of 2 + (2.5 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Manipulators have an unarmored Armor Class of (10/10/11/11/11/12) + Dexterity Modifier</li>
+              <li>Move Speed: 30ft (Walking)</li>
+              <li>Unarmed Attack: An unarmed hit using Strength for hit and damage rolls. Damage die is (1d6/1d6/1d8/1d10/1d12/1d12) + Strength Mod + Proficiency Bonus.</li>
+              <li>One-Handed Wielding: Manipulators can equip one-handed weapons or shields.</li>
+            </ul>
+          </td>
+          <td>
+            <h1>Trickster</h1>
+            <p>Tricksters are small-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: 10</li>
+              <li>Dexterity: (12/12/13/14/14/16)</li>
+              <li>Constitution: (12/12/13/13/14/14)</li>
+              <li>Intelligence: 10</li>
+              <li>Wisdom: (12/13/14/15/16/16)</li>
+              <li>Charisma: 8</li>
+            </ul>
+            <p>Tricksters boast the following features:</p>
+            <ul>
+              <li>Hit Points: Tricksters have an HP stat of 2 + (2 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Tricksters have an unarmored Armor Class of (10/10/10/11/11/11) + Dexterity Modifier</li>
+              <li>Move Speed: 30ft (Walking)</li>
+              <li>Unarmed Attack: An unarmed hit using Strength for hit and damage rolls. Damage die is 1d4 + Strength Mod + Proficiency Bonus</li>
+              <li>Trickster Bolt: A natural force attack directed at a target within 60ft. Ranged spell attack. Damage die is (1d4/1d6/1d8/1d10/2d6/2d6) + Spellcasting Modifier force damage.</li>
+              <li>Spellcasting: Tricksters draw magical power and knowledge from their host. Tricksters can cast any Cantrip their host knows, as well as spells of 1st level (if their host has an unspent 1st level spell slot). A Trickster's spellcasting ability is it Wisdom.</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td>
+            <h1>Delta</h1>
+            <p>Deltas are small-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: 10</li>
+              <li>Dexterity: (12/12/13/14/14/16)</li>
+              <li>Constitution: (12/12/12/13/13/13)</li>
+              <li>Intelligence: 10</li>
+              <li>Wisdom: (14/14/15/16/17/18)</li>
+              <li>Charisma: 8</li>
+            </ul>
+            <p>Deltas boast the following features:</p>
+            <ul>
+              <li>Hit Points: Deltas have an HP stat of 2 + (1.5 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Deltas have an unarmored Armor Class of (10/10/10/11/11/11) + Dexterity Modifier</li>
+              <li>Move Speed: 30ft (Walking)</li>
+              <li>Unarmed Attack: An unarmed hit using Strength for hit and damage rolls. Damage die is 1d4 + Strength Mod + Proficiency Bonus.</li>
+              <li>Improved Assistance: Deltas can take the Assist action at a range of 30 feet.</li>
+              <li>Psionic Shield: Deltas can project a psionic shield around an ally within 60 feet of them. The shield's durability equal to (6/8/10/14/18/24) + the Delta's Wisdom Modifier. A Delta can split its focus among (1/1/2/2/2/3) Shields at once.</li>
+            </ul>
+          </td>
+          <td>
+            <h1>Howitzer</h1>
+            <p>Howitzers are medium-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: 10</li>
+              <li>Dexterity: (12/12/13/13/13/14)</li>
+              <li>Constitution: (12/13/13/14/15/16)</li>
+              <li>Intelligence: (14/14/15/15/16/16)</li>
+              <li>Wisdom: 12</li>
+              <li>Charisma: 10</li>
+            </ul>
+            <p>Howitzers boast the following features:</p>
+            <ul>
+              <li>Hit Points: Howitzers have an HP stat of 4 + (4.5 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Howitzers have an unarmored Armor Class of (14/14/14/14/15/16) + Dexterity Modifier to a max of +2.</li>
+              <li>Move Speed: 15ft (Walking)</li>
+              <li>Unarmed Attack: An unarmed hit using Strength for hit and damage rolls. Damage die is 1d4 + Strength Mod + Proficiency Bonus.</li>
+              <li>Shelling: Howitzers can make a ranged shelling attack using their Intelligence modifier, with a normal range of 150 feet and a long range of 500 feet. The fire damage per shell is (1d8/1d12/1d12/1d12/2d8/2d8) + Intelligence Modifier + Proficiency Bonus, and a Howitzer can fire (1/1/2/2/2/3) shells normally, or (1/2/3/4/4/5) shells with disadvantage on the attack rolls and a range restriction of normal range.</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td>
+            <h1>Reconcilant</h1>
+            <p>Reconcilants are medium-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: 12</li>
+              <li>Dexterity: (10/10/11/12/13/14)</li>
+              <li>Constitution: (14/15/16/16/17/18)</li>
+              <li>Intelligence: 10</li>
+              <li>Wisdom: (12/12/13/13/13/14)</li>
+              <li>Charisma: 6</li>
+            </ul>
+            <p>Reconcilants boast the following features:</p>
+            <ul>
+              <li>Hit Points: Reconcilants have an HP stat of 4 + (5 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Reconcilants have an unarmored Armor Class of (12/12/14/14/15/16) + Dexterity Modifier to a max of +2.</li>
+              <li>Move Speed: 20ft (Walking)</li>
+              <li>Unarmed Attack: An unarmed hit using Strength for hit and damage rolls. Damage die is 1d4 + Strength Mod + Proficiency Bonus.</li>
+              <li>Spawning: As a reaction to taking damage, Reconcilants take 1 extra point of damage to spawn and Imp Subpuppet. With the appropriate specialty, Reconcilants instead roll a 1d8 when spawning, spawning an Imp on a 1-6 or a Pustule on a 7 and 8.</li>
+              <li>Subpuppet Capacity: Reconcilants have (3/3/4/4/5/6) Subpuppet slots by default, with Imps occupying 1 each and Pustules occupying 2 each.</li>
+            </ul>
+          </td>
+          <td>
+            <h1>Imp</h1>
+            <p>Imps are small-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: 12</li>
+              <li>Dexterity: (12/13/14/15/16/16)</li>
+              <li>Constitution: (10/11/11/11/12/12)</li>
+              <li>Intelligence: 8</li>
+              <li>Wisdom: 12</li>
+              <li>Charisma: 12</li>
+            </ul>
+            <p>Imps boast the following features:</p>
+            <ul>
+              <li>Hit Points: Imps have an HP stat of 2 + (1 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Imps have an unarmored Armor Class of 14 + Dexterity Modifier.</li>
+              <li>Move Speed: 30ft (Walking, Flying)</li>
+              <li>Unarmed Attack: An unarmed hit using Dexterity for hit and damage rolls. Damage die is (1d4/1d4/1d4/1d6/1d6/1d8) + Dexterity Mod + Proficiency Bonus, and is piercing instead of bludgeoning.</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td>
+            <h1>Pustule</h1>
+            <p>Pustules are small-sized Abominations. Their ability scores are:</p>
+            <ul>
+              <li>Strength: 10</li>
+              <li>Dexterity: 14</li>
+              <li>Constitution: (12/13/14/15/16/18)</li>
+              <li>Intelligence: 10</li>
+              <li>Wisdom: 12</li>
+              <li>Charisma: 6</li>
+            </ul>
+            <p>Pustules boast the following features:</p>
+            <ul>
+              <li>Hit Points: Pustules have an HP stat of 4 + (1 + Constitution Modifier) per level.</li>
+              <li>Armor Class: Pustules have an unarmored Armor Class of (12/12/13/13/13/14) + Dexterity Modifier to a max of +2.</li>
+              <li>Move Speed: 30ft (Walking)</li>
+              <li>Unarmed Attack: An unarmed hit using Strength for hit and damage rolls. Damage die is 1d2 + Strength Mod + Proficiency Bonus.</li>
+              <li>Acid Spit: The Pustule spits a shot of acid at a target within 25 feet of itself, dealing 1d6 + its Constitution Modifier + Proficiency Bonus Acid damage.</li>
+              <li>Acid Coating: The Pustule can coat an adjacent ally's weapon with acid, adding 1d4 Acid damage to it for 10 turns. This can also be applied to an Imp's or Abomination's natural weapons.</li>
+              <li>Acid Burst: The Pustule ruptures one of its large blister sacs, dealing damage to all within a 15 foot radius. Acid damage is 3d6 + its Constitution Modifier + Proficiency Bonus Acid damage.</li>
+            </ul>
+          </td>
+          <td>
+            <!--Dummy cell-->
+          </td>
+          </tr>
+          </table>
+        </div>
+    </div>
+    </body>
+</html>

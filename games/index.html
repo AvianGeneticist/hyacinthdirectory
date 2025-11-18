@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serfs</title>
-    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>Games</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-                
+
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../../../backgroundwhite.png), url(../../../backgroundblue.png), url(../../../backgroundred.png), url(../../../backgroundyellow.png);
+          background-image: url(../backgroundwhite.png), url(../backgroundblue.png), url(../backgroundred.png), url(../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -36,7 +36,7 @@
 
         .column {
           float: left;
-          width: calc(100% - 740px);
+          width: calc(100% - 200px);
           min-width: 360px;
           min-height: 98vh;
           padding: 10px;
@@ -49,27 +49,8 @@
           min-height: 98vh;
           padding: 10px;
         }
-
-        .infobox {
-          float: right;
-          width: 340px;
-          height: 400px;
-          padding: 5px;
-        }
-
-        .infotable {
-          border-collapse: collapse;
-          width: 100%;
-          height: 100%;
-        }
-
-        .infotablecell {
-          border: 2px solid rgba(214,145,210,0.5);
-          padding: 5px;
-        }
         
         /* Clear floats after the columns */
-        
         .row:after {
           content: "";
           display: table;
@@ -102,8 +83,8 @@
         </style>
 </head>
 <body id="base">
-  <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
-    <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
@@ -144,47 +125,12 @@
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
-          <div class="infobox">
-            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
-              <tr>
-                <td class="infotablecell">Commonality</td>
-                <td class="infotablecell">100% (Anchorages)</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Durability</td>
-                <td class="infotablecell">1/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Strength</td>
-                <td class="infotablecell">Physical: 2/10<br>Psionic: 1/10<br>Magical: 1/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Specials</td>
-                <td class="infotablecell">Builds and works structures on Anchorages<br>Flight</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Personality</td>
-                <td class="infotablecell">Constantly working, in and out of combat</td>
-              </tr>
-            </table>
-          </div>
-          <p>Serfs act as the working hooves for the buildings built on <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a>. They are not well-suited to combat, but are an excellent workforce. A group of Serfs is called a swarm or a strike.</p>
-          <div><h2>Physical Description</h2></div>
-          <p>Serfs are quite small among subpuppets, standing at just 1' 4" (41cm) with slimmer builds. Their defining traits are their five legs, their fly-like insectoid wings, and their single bladed limb in place of what could have once been a sixth leg. Despite superficially resembling <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a>, Serfs are not built for combat of any sort, with their bodies being much lighter and simpler. Their blades, while extremely sharp, are best suited for cutting and shaping Haetin. With their tiny builds and nimble five-legged bodies, they are extremely good at their job: Navigating between and inside buildings placed on Anchorages.</p>
-          <div><h2>Behaviour</h2></div>
-          <p>Serfs are almost entirely relegated to non-combat roles, but that doesn't mean they don't have a role in combat. They fulfill the roles of supply troops, both crafting new weapons and ammunition and dispersing it as needed. If an Anchorage has an Emplacement installed, Serfs will prioritize keeping it fuelled as long as spare Haetin is available. Serfs will even occasionally airlift an injured puppet to the rear battle lines, if the puppet is light enough to be safely carried. If the army is in desperate need of extra hooves on the front lines, Serfs can use their fine-bladed limb as a combat knife, which is more than capable of cutting through hide, skin, and even some lesser-reinforced metal armors like thin chainmail.</p>
-          <p>Serfs are generally just as busy outside of combat as they are inside it, constantly buzzing around an Anchorage's buildings (or multiple Anchorages' buildings if a city is formed) to gather materials, craft new items, and store them comfortably. If a Serf needs to rest and its host Anchorage does not have any available housing, it will roost against the underside of one of its Antlers. A single Serf is always spawned as a "twin" with its host Anchorage, making them the only subpuppet to be spawned from Hyacinth directly.</p>
-          <div><h2>Genetic Description</h2></div>
-          <p>Serfs have an interesting epigenetic profile not due to what they have, but what they don't. There are a number of genomic sequences active in every other puppet and subpuppet type that aren't active in Serfs. This is believed to relate to their frailty and lack of combat ability, but there is no way to know for absolute certain. In terms of what they do share with other puppets, Imps and Arrays both have passing epigenetic similarities.</p>
-          <div><h2>Metanarrative</h2></div>
-          <p>Serfs were built into the design of Anchorages perhaps more tightly than any other subpuppet. While <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> had Imps to start and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> got <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a> as extensions of their role as artillery and spotter, Serfs and Anchorages are effectively inseparable; they break down fundamentally without one another. Anchorages need Serfs to work on them, and Serfs need Anchorages to work on. This tight bond ensures they have a distinct niche and modus operandi, even in a system where subpuppets (even those in significant number) are very common.</p>
-      </div>
-      <div class="spacer"></div>
-      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Gallery</h1></div>
-          <div><img src="serf.png" alt="A reference image of a Serf." width="520" height="434"></div>
-          <br>
-          <!--<div><img src="deltainspect.png" alt="A Delta with a small insect captured in one of its fields." width="520" height="358"></div>-->
+          <p>While Hyacinth is a bit unwieldly to put in many games, I have written some documentation on putting them in games. This page acts as a hub for different files, or a subwiki for documentation if necessary (for example, Dungeons and Dragons). I might also try coding some web-based games at somepoint.</p>
+          <div><h2>Subwikies</h2></div>
+          <dl>
+            <dt><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">(Dungeons and Dragons) Abomination Class</a></dt>
+            <dd>- (Subwiki) A relatively flexible/customizeable variant of Hyacinth's "species" and "class" made for Dungeons and Dragons 5th Edition. Occupies the role of a tanky frontline partcaster by default (similar to a Paladin), but can be elaborated into different roles via subclasses and other player choices.</dd>
+          </dl>
         </div>
     </div>
     </body>

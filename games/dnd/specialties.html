@@ -1,0 +1,269 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abomination Specialties</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+                
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 360px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+        <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Stories</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Games</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <h1>Overview</h1>
+          <p>Specialties act as the Abomination Class' subclasses, typically elaborating on a puppet type and some aspect of the main class as well. Each puppet type has one.</p>
+          <div><h1>Manipulators</h1></div>
+          <div><h2>Level 3</h2></div>
+          <div><h3>Manipulator Enhancement</h3></div>
+          <p>Your specialization in your Manipulators manifests as a marked increase in their strength and durability. Manipulators go up in strength by 1 tier.</p>
+          <p>When you roll to spawn a puppet and the result isn't a Manipulator, you may reroll the spawning die. If you do this, you must use the new roll.</p>
+          <p>Your Manipulators excel best when they have access to a reliable stock of weapons. You gain proficiency in 2 Martial Weapons of your choice, or 1 Martial Weapon and Shields.</p>
+          <div><h3>Manipulator Favour</h3></div>
+          <div><h3>Handedness Training</h3></div>
+          <div><h2>Level 7</h2></div>
+          <div><h3>Manipulator's Agility</h3></div>
+          <p>You gain +1 to your Acrobatics skill for each Manipulator you have, up to a maximum of +6.</p>
+          <div><h3>Ingrained Training</h3></div>
+          <p>Manipulators gain boons depending on what they have equipped:</p>
+          <ul>
+            <li>If a melee weapon or shield, +1 AC in +2 to hit.</li>
+            <li>If a thrown weapon, +3 to hit.</li>
+            <li>If a ranged weapon, +1 to hit and +2 to damage.</li>
+          </ul>
+          <div><h2>Level 11</h2></div>
+          <div><h3>Parrying Instinct</h3></div>
+          <p>Your Dexterity modifier contribution to your Unarmored Armor Class is uncapped.</p>
+          <div><h3>Weapon Expertise</h3></div>
+          <p>You gain proficiency in an additional Martial Weapon type of your choice. Additionally, pick one weapon you already have proficiency in. You now have expertise in that weapon.</p>
+          <div><h2>Level 17</h2></div>
+          <div><h3>Versatile Pillar</h3></div>
+          <p>Your current and maximum Dexterity increase by 2.</p>
+          <div><h3>Weapon Mastery</h3></div>
+          <p>Pick one type of weaponry. You can now use that weapon's mastery property.</p>
+          <div><h3>Guiding Weapons</h3></div>
+          <p>You learn the Conjure Guiding Weapon spell, and can cast it once at its lowest level without expending a spell slot.</p>
+          <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+          <div><h1>Tricksters</h1></div>
+          <div><h2>Level 3</h2></div>
+          <div><h3>Trickster Enhancement</h3></div>
+          <p>Your Tricksters increase in power by 1 tier.</p>
+          <div><h3>Trickster Favour</h3></div>
+          <p>When you roll to spawn a puppet and the result isn't a Trickster, you may reroll the spawning die. If you do this, you must use the new roll.</p>
+          <div><h3>Battle Magic</h3></div>
+          <p>You learn 1 Cantrip and 2 1st level spells from the Wizard spell list. They are Abomination Spells for you, and don't count against your Abomination spells known.</p>
+          <div><h2>Level 7</h2></div>
+          <div><h3>Communal Casting</h3></div>
+          <p>Using your Tricksters as spellcasing foci, you can greatly amplify your momentary magic power. Using up to 4 Tricksters, you can trade lower-level spell slots for the opportunity to cast a higher-leveled spell. The level achieved is equal to the sum of all spell slots contributed (for example, casting a 3rd level spell would require a 1st and 2nd level slot, or 3 1st level ones). Presently, you can cast spells of up to 4th level this way.</p>
+          <div><h3>Advanced Spells</h3></div>
+          <p>You can learn 2 4th-level spells from the Wizard or Cleric Spell lists (they don't have to be the same list). You do not gain any 4th-level spell slots immediately, but they can be cast via communal casting.</p>
+          <div><h2>Level 11</h2></div>
+          <div><h3>Trickster Temperature</h3></div>
+          <p>Starting at 11th level, your Tricksters show an obvious bias to a “temperature” of magic, granting you spells that do not count against your spells known:</p>
+          <ul>
+            <li>Hot Tricksters grant you knowledge of the Fire Bolt Cantrip and the 4th-Level spell Wall of Fire.</li>
+            <li>Cold Tricksters grant you knowledge of the Ray of Frost Cantrip and the 4th-Level spell Ice Storm.</li>
+          </ul>
+          <p>You may change your Tricksters' temperature whenever you gain a level in this class.</p>
+          <div><h3>4th Level Spells</h3></div>
+          <p>You gain two 4th-Level spell slots, and gain an additional one at level 17.</p>
+          <div><h2>Level 17</h2></div>
+          <div><h3>Magic Network</h3></div>
+          <p>For each Trickster you have, you gain one 1st-Level spell slot.</p>
+          <div><h3>Maximized Communal Casting</h3></div>
+          <p>Your communal casting benefits are pushed to the limit. You gain the following benefits:</p>
+          <ul>
+            <li>You learn one 5th-Level and one 6th-Level spell from the Wizard or Cleric Spell Lists (they don't have to be the same list).</li>
+            <li>You can now communally cast spells of up to 6th level, assuming you have the slots to fuel them.</li>
+            <li>You can now integrate up to 6 Tricksters into the communal cast.</li>
+          </ul>
+          <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+          <div><h1>Deltas</h1></div>
+          <div><h2>Level 3</h2></div>
+          <div><h3>Delta Enhancement</h3></div>
+          <p>Your Deltas increase in power by 1 tier.</p>
+          <div><h3>Delta Favour</h3></div>
+          <p>When you roll to spawn a puppet and the result isn't a Delta, you may reroll the spawning die. If you do this, you must use the new roll.</p>
+          <div><h3>Psionic Awakening</h3></div>
+          <p>You awaken to some of the psionic power of your Deltas. You can now provide Shields in the same way they do (shield strength is 8 HP + your Wisdom Modifier), and can also use the Assist action out to a range of 30 feet. At 11th Level, your shield strength increases, becoming equal to your Wisdom Score.</p>
+          <div><h2>Level 7</h2></div>
+          <div><h3>Psionic Rebuke</h3></div>
+          <p>When a shielded ally is attacked, you or a Delta may expend its reaction to deal 1d6 Psychic Damage to the attacker. At levels 11 and 17, this damage increases to 2d6 and 3d6, respectively.</p>
+          <div><h2>Level 11</h2></div>
+          <div><h3>Psionic Wrath</h3></div>
+          <p>You and your Deltas unlock the ability to incite a powerful psionic wrath in your allies. A psionically enhanced ally gains +2 to their hit rolls and damage rolls for 3 turns, and this effect can be stacked up to twice (stacking refreshes the timer). Maintaining a level of psionic aggression occupies one of the Delta's psionic shield slots.</p>
+          <div><h2>Level 17</h2></div>
+          <div><h3>Passive Maintenance</h3></div>
+          <p>Each turn, all active Delta shields recover an amount of HP equal to your Wisdom Modifier, without need for active replenishment.</p>
+          <div><h3>Wisdom Pillar</h3></div>
+          <p>Your current and maximum Wisdom scores increase by 2.</p>
+          <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+          <div><h1>Howitzers</h1></div>
+          <div><h2>Level 3</h2></div>
+          <div><h3>Howitzer Enhancement</h3></div>
+          <p>Your Howitzers increase in power by 1 tier.</p>
+          <div><h3>Howitzer Favour</h3></div>
+          <p>When you roll to spawn a puppet and the result isn't a Howitzer, you may reroll the spawning die. If you do this, you must use the new roll.</p>
+          <div><h3>Natural Commander</h3></div>
+          <p>Your maximum Organization Points increase by 6. You can expend a 1st level spell slot to recover 5 Organization Points, and recover 5 Organization Points on a short rest.</p>
+          <div><h2>Level 7</h2></div>
+          <div><h3>Coordinated Strike</h3></div>
+          <p>For 8 Organization Points, you can call forth an immediate hail from all of your Howitzers on one target. For each Howitzer you have, they fire one shell at a target of your choosing, regardless of range. Using this special command consumes your action, but does not consume the Howitzers'.</p>
+          <div><h3>Heavy Carapace</h3></div>
+          <p>You possess mastery over your interior tissues, unlocking a second option for heavy defense. As an alternative to your preexisting natural armor, you can harden your body into a more solid carapace. Utilizing this mutation makes your natural Armor Class 16 + your Constitution Modifier.</p>
+          <p>You can switch between different natural armor configurations during a long rest, but you must have access to at least 25 pounds of food.</p>
+          <div><h2>Level 11</h2></div>
+          <div><h3>Marked For Death</h3></div>
+          <p>Injuring enemies with your natural weapon or a two-handed equipped weapon increases their vulnerability to Fire damage by 1 stage (Immunity -> Resistance -> Normal -> Vulnerability -> [4x Damage]). This effect cannot stack.</p>
+          <div><h3>Always Preparing</h3></div>
+          <p>You recover 5 Organization Points each time you roll initiative. You can sacrifice higher level spell slots to recover Organization points, recovering 5 * the spell slots' level.</p>
+          <div><h2>Level 17</h2></div>
+          <div><h3>Immense Barrage</h3></div>
+          <p>You can spend 20 Organization Points to call a heavy barrage from all of your Howitzers (2 shells each) without expending their actions. If this special command kills its target, half the Organization Point cost is refunded.</p>
+          <div><h3>Wellspring of Coordination</h3></div>
+          <p>You gain +1 Organization Point per level, applying retroactively. This means you gain 17 points immediately, and gain 3 points per level for levels 18, 19, and 20.</p>
+          <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+          <div><h1>Reconcilants</h1></div>
+          <div><h2>Level 3</h2></div>
+          <div><h3>Reconcilant Enhancement</h3></div>
+          <p>Your Reconcilants increase in power by 1 tier.</p>
+          <div><h3>Reconcilant Favour</h3></div>
+          <p>When you roll to spawn a puppet and the result isn't a Reconcilant, you may reroll the spawning die. If you do this, you must use the new roll.</p>
+          <div><h3>Extended Influence</h3></div>
+          <p>Your Puppet Capacity increases by 4.</p>
+          <div><h2>Level 7</h2></div>
+          <div><h3>Pustules</h3></div>
+          <p>Reconcilants gain the ability to summon Pustules when injured. When a Reconcilant spawns a subpuppet, roll a d8. On 1-6, spawn an Imp. On 7 or 8, spawn a Pustule.</p>
+          <div><h3>Acid Tolerance</h3></div>
+          <p>You and all of your puppets and subpuppets gain a resistance to Acid Damage.</p>
+          <div><h2>Level 11</h2></div>
+          <div><h3>Font of Lifeforce</h3></div>
+          <p>You gain one use of the spell Aura of Vitality at its lowest level. You can cast it without a spell slot, but once you cast it in this way you cannot do so again until you finish a long rest.</p>
+          <p>Additionally, your Reconcilants each gain 4 uses of Healing Word at its lowest level and 1 use of Mass Healing Word at its lowest level.</p>
+          <div><h2>Level 17</h2></div>
+          <div><h3>Force of Swarms</h3></div>
+          <p>The presence of Pustules motivates Imps to fight even harder. For every Pustule that you own across your Reconcilants, Imps get +1 to their damage rolls, up to +6.</p>
+          <div><h3>Meat Outposts</h3></div>
+          <p>Subpuppets within 5 feet of a Reconcilant receive the following benefits:</p>
+          <ul>
+            <li>They have advantage on defensive spell saving throws.</li>
+            <li>Their AC is increased by 2.</li>
+            <li>They recover 2 HP each turn.</li>
+          </ul>
+        </div>
+    </div>
+    </body>
+</html>

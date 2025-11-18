@@ -1,0 +1,559 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abomination Core</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 180px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 760px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        table {
+          width: 100%;
+          border: 1px solid rgba(214,145,210,0.6);
+          border-collapse: collapse;
+        }
+
+        td {
+          vertical-align: top;
+          border: 1px solid rgba(214,145,210,0.6);
+          border-collapse: collapse;
+          padding: 4px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+        <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+        <div style="padding-left:24px;padding-bottom:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a></div>
+        <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Stories</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Games</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Overview</h1></div>
+          <p>The Abomination Class is a custom class intended for use with Dungeons and Dragons 5th Edition. I've done my best to make it fairly well-balanced, but it hasn't had extensive testing and there's no doubt in my mind there's probably some absurd things you can do with it. The class' mechanical sides will be broken down into a few different pages with the hopes of being easy to navigate. This main page will focus on creating an Abomination character and the abilities they'll get from their main levels, with side pages being dedicated to spell lists, subclasses, and so on.</p>
+          <div><h2>Side Pages</h2></div>
+          <ul>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd/puppets.html">Puppet Reference</a></li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd/specialties.html">Specialties (Subclasses)</a></li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd/spells.html">Spell List</a></li>
+          </ul>
+          <div><h2>Starting an Abomination</h2></div>
+          <p>Abominations are sentient creatures that come in a variety of shapes, though for the sake of this class, you'll be an Equid Abomination; that is, at least some discernible part horse. As an Abomination, you have a substantial variety of abilities available to you, be them physical, magical, or psionic.</p>
+          <p>Abominations are not inherently wicked creatures, though their beastly looks typically lead to them living solitary or outcast lives, or at the very least they don't enjoy the same comforts as most civilized creatures. This can lead them towards villainous behaviour as they struggle for survival, but it is not a guarantee.</p>
+          <div><h3>Racial Effects</h3></div>
+          <p>The unique nature of Abominations means they come bundled with a prepackage species intended for usage with the class:</p>
+          <ul>
+            <li>Your size is Medium. However, for the sake of calculating Carry Weight, your size is Large.</li>
+            <li>You range in height from 8 to 9 feet tall, and your weight ranges from 5400 to 7000 pounds.</li>
+            <li>You speak Common and Abomination.</li>
+            <li>Your movement speed is 20 feet.</li>
+            <li>You gain +2 Constitution and +2 Wisdom, but suffer a -2 Penalty to your Charisma.</li>
+            <li>You have one functioning hand* and cannot wear clothing or armor unless they are made specifically for you.</li>
+            <li>You have a natural Armor Class of 14 plus up to 2 from your Dexterity modifier, but suffer disadvantage on stealth checks. Additionally, you are weak to Psychic Damage.</li>
+          </ul>
+          <div><h3>Class Initialization</h3></div>
+          <p>As an Abomination, you are a very bulky creature, reflected in your hitpoints. Your hit die is a d12, meaning you start with 12 + Constitution HP at first level, and gain an extra 1d12 + Constitution Modifier HP each time you take a level in the Abomination Class.</p>
+          <p>You receive the following proficiencies:</p>
+          <ul>
+            <li>Skill Proficiencies: Choose 2 from Athletics, Intimidation, Animal Handling, Medicine, Arcana, and Perception</li>
+            <li>Tool Proficiencies: Choose 1 from Brewer's Supplies, Herbalism Kit, or Cook's Utensils</li>
+            <li>Weapon Proficiencies: Simple Weapons (Melee and Ranged)</li>
+            <li>Armor Proficiencies: None</li>
+            <li>Saving Throws: Strength and Constitution</li>
+          </ul>
+          <p>Additionally, you receive some starting equipment:</p>
+          <ul>
+            <li>Three Knives or a Blowgun and 6 Darts</li>
+            <li>3 Wooden or Glass Bottles capable of holding 2 cups of liquid each</li>
+            <li>A set of Brewer's Supplies, an Herbalism Kit, or a pouch containing 15 GP</li>
+          </ul>
+          <div><h2>Core Abomination Levels</h2></div>
+          <p>The Abomination class follows the standard 20-level structure of a DnD 5e class. Below is a table that lays out some core features of the class: Spell slots, maximum spawn puppets, and such. Full details on level features are further below.</p>
+          <table style="font-family:verdana; color:rgba(225,245,255,1);">
+            <tr>
+              <td rowspan="2"><b>Level</b></td>
+              <td rowspan="2"><b>Class Features</b></td>
+              <td colspan="2"><b>Puppet Capacity</b></td>
+              <td rowspan="2"><b>Organization Points</b></td>
+              <td colspan="2"><b>Spells Known</b></td>
+              <td colspan="3"><b>Spell Slots</b></td>
+            </tr>
+            <tr>
+              <td>Base</td>
+              <td>From Wisdom</td>
+              <td>Cantrips</td>
+              <td>Leveled Spells</td>
+              <td>1st</td>
+              <td>2nd</td>
+              <td>3rd</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Unarmored Defense, Meat Factory, Natural Weaponry, Turgid Vials</td>
+              <td>4</td>
+              <td>Up to +2</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Spellcasting, Organization Points</td>
+              <td>4</td>
+              <td>Up to +2</td>
+              <td>8</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Puppet Specialty</td>
+              <td>4</td>
+              <td>Up to +2</td>
+              <td>10</td>
+              <td>2</td>
+              <td>2</td>
+              <td>3</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Ability Score Improvement/Feat</td>
+              <td>4</td>
+              <td>Up to +2</td>
+              <td>12</td>
+              <td>2</td>
+              <td>3</td>
+              <td>3</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>1st Grade Evolution</td>
+              <td>4</td>
+              <td>Up to +2</td>
+              <td>14</td>
+              <td>2</td>
+              <td>3</td>
+              <td>3</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Arcane Imbuing</td>
+              <td>6</td>
+              <td>Up to +2</td>
+              <td>16</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>1</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Puppet Specialty Feature</td>
+              <td>6</td>
+              <td>Up to +2</td>
+              <td>18</td>
+              <td>3</td>
+              <td>3</td>
+              <td>4</td>
+              <td>1</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Ability Score Improvement/Feat</td>
+              <td>6</td>
+              <td>Up to +2</td>
+              <td>20</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td>2</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Proliferated Senses</td>
+              <td>6</td>
+              <td>Up to +2</td>
+              <td>22</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td>2</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>2nd Grade Evolution</td>
+              <td>6</td>
+              <td>Uncapped</td>
+              <td>24</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td>2</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Puppet Specialty Feature</td>
+              <td>6</td>
+              <td>Uncapped</td>
+              <td>26</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>2</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Ability Score Improvement/Feat</td>
+              <td>6</td>
+              <td>Uncapped</td>
+              <td>28</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>3</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>-</td>
+              <td>8</td>
+              <td>Uncapped</td>
+              <td>30</td>
+              <td>4</td>
+              <td>5</td>
+              <td>5</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>3rd Grade Evolution</td>
+              <td>8</td>
+              <td>Uncapped</td>
+              <td>32</td>
+              <td>4</td>
+              <td>5</td>
+              <td>5</td>
+              <td>4</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Overproduction, Meat Fortress</td>
+              <td>8</td>
+              <td>Uncapped</td>
+              <td>34</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>4</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Ability Score Improvement/Feat</td>
+              <td>8</td>
+              <td>Uncapped</td>
+              <td>36</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>5</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Puppet Specialty Feature</td>
+              <td>8</td>
+              <td>Uncapped</td>
+              <td>38</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>5</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>Apex Evolution</td>
+              <td>10</td>
+              <td>Uncapped</td>
+              <td>40</td>
+              <td>4</td>
+              <td>6</td>
+              <td>7</td>
+              <td>5</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>Ability Score Improvement/Feat</td>
+              <td>10</td>
+              <td>Uncapped</td>
+              <td>42</td>
+              <td>4</td>
+              <td>6</td>
+              <td>7</td>
+              <td>6</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>Champion's Embrace</td>
+              <td>10</td>
+              <td>Uncapped</td>
+              <td>44</td>
+              <td>4</td>
+              <td>6</td>
+              <td>7</td>
+              <td>6</td>
+              <td>4</td>
+            </tr>
+          </table>
+          <div><h2>Level 1</h2></div>
+          <div><h3>Unarmored Defense</h3></div>
+          <p>You can add your Constitution Modifier to your unarmored Armor Class.</p>
+          <div><h3>Natural Weaponry</h3></div>
+          <p>As an Abomination, you are a freak of nature. While your first limb is always a horn for spellcasting, and your second is always a hand, the third has a degree of variance, picked from one of the options below:</p>
+          <ul>
+            <li>*Second Hand: Miraculously, your third limb has borne a functional second hand. It does not provide any innate benefit, but allows you to handle weapons two-handed, or a second one-handed weapon or shield.</li>
+            <li>Maul: A massive flange mace resembling a maul or similar large, blunt weapon. Your unarmed attack damage becomes 1d8 + your Strength Modifier + your Proficiency Bonus (bludgeoning). You always have proficiency with your natural weapon.</li>
+            <li>Partisan: An elongated limb resembling a pike, tipped with a ferocious crown of spikes. Your unarmed attack damage becomes 1d6 + your Strength Modifier + your Proficiency Bonus (piercing), and you can make unarmed attacks at up to 10 feet away.</li>
+            <li>Bulwark: An enormous plated bulwark shaped similarly to a tower shield. You gain +2 AC and can make a bash with the bulwark, dealing 1d4 + your Strength Modifier + your Proficiency Bonus (bludgeoning) and shoving it back 5 feet if they fail a Strength Check against a DC of 12 + your Strength Modifier.</li>
+            <li>Spike Launcher: A bulky limb using your natural musculature to launch sharpened keratin spikes at dangerous velocity. You can make a ranged attack dealing 1d6 + your Strength Modifier + your Proficiency Bonus (piercing) damage, using your Strength for the attack roll. You always have proficiency with your natural weapon.</li>
+          </ul>
+          <div><h3>Meat Factory</h3></div>
+          <p>When you take damage from an attack, you must expend your reaction to spawn a Meat Puppet. This causes 1d4 damage to you and produces a meat puppet according to a d20 roll. You can attempt to resist this reaction, and must pass a Constitution saving throw against a DC of 20 - (your unoccupied puppet slots) * 2. Succeeding the save preserves your reaction. The puppet probabilities vary:</p>
+          <ul>
+            <li>If you have no extra puppet types, you produce a Manipulator on a 1-9, a Trickster on an 10-16, or a Reconcilant on a 17-20.</li>
+            <li>If you have Deltas, you produce a Manipulator on a 1-7, a Trickster on an 8-13, a Delta on a 14-17, or a Reconcilant on a 18-20.</li>
+            <li>If you have Howitzers, you produce a Manipulator on a 1-8, a Trickster on a 9-13, a Howitzer on a 15-17, or a Reconcilant on a 18-20.</li>
+            <li>If you have both Deltas and Howitzers, you produce Manipulator on a 1-6, a Trickster on a 7-12, a Delta on a 13-16, a Howitzer on a 17-18, or a Reconcilant on a 19-20.</li>
+          </ul>
+          <div><h3>Turgid Vials</h3></div>
+          <p>Your Abominable blood contains wretched chemicals and magics that can be made into tonics of varying sorts. They are collectively known as “Turgid Vials”, and each one has different requirements:</p>
+          <ul>
+            <li>The Simplest Turgid Vial is just Abomination Blood carefully heated to concentrate it. Preparing a bottle requires 1d6 of your blood and some sort of cooking-worth heat source. Cooking takes half an hour. A full bottle contains 3 charges. Each charge can either heal a Puppet or Subpuppet by 1d4 + the User's Medicine Modifier, or can be applied as a poison to a weapon (natural or artificial), dealing 1d4 Poison Damage for 5 attacks.</li>
+            <li>With the addition of Stinging Nettle and the judicious use of Brewer's Supplies, one can make Nocturnal Mire. Cooking takes an hour. A bottle of Nocturnal Mire contains 3 charges. Nocturnal Mire has no medical benefits, but when applied to a weapon it adds 1d6 Necrotic damage for 5 attacks.</li>
+            <li>With the addition of Dandelion, Abomination Blood can be steeped into Pox Aroma. Cooking takes half an hour. Pox Aroma has no poisonous effects, but when given to a puppet or subpuppet as medicine it restores 1d8 + the User's Medicine Modifier.</li>
+          </ul>
+          <div><h2>Level 2</h2></div>
+          <div><h3>Spellcasting</h3></div>
+          <p>Starting at 2nd level, you can cast spells. You can only commit a certain amount of spells committed to memory, represented by your spells known. You can change your known spells after a long rest, with additional meditation time of 1 hour per the new spell's level.</p>
+          <p>Your spellcasting modifier is your Wisdom, and your natural horn acts as your spellcasting focus. Your full spell list can be found on the <a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd/spelllist.html">Spell List</a> page.</p>
+          <div><h3>Organization and Commands</h3></div>
+          <p>Also starting at second level, you unlock the ability to coordinate your puppets in collaborative ways, allowing them to share and enhance each others' strengths. Your maximum organization point total is equal to 4 + 2 * your Abomination Level, and they can be spent on Special Commands so long as you have the appropriate puppets.</p>
+          <div><h2>Level 3</h2></div>
+          <div><h3>Puppet Specialty</h3></div>
+          <p>Starting at 3rd level, you can commit to a puppet specialty, channeling your inherent mutations into a path that will shape your spawn as much as it does you. You can focus on any of the three Puppet types you already have, or unlock one of two new Puppets: Deltas or Howitzers.</p>
+          <ul>
+            <li>Manipulators: Your Manipulators will become tougher and more versatile, and together you will become far greater at tool and weapon use.</li>
+            <li>Tricksters: Your Tricksters will become more magically powerful, and your casting potential will fully develop with them as your conduits.</li>
+            <li>Reconcilants: Your Reconcilants will mutate new spawn and propagate your lifeforce, reinforcing you and your clan.</li>
+            <li>Deltas: You will develop Deltas, protective psions with ample opportunity for support. Your own psionic potential will blossom with them, teaching you the secrets of manipulating the mind.</li>
+            <li>Howitzers: You will develop Howitzers, powerful artillery units with great range and precision. Your defense and command skills will flourish with their insight.</li>
+          </ul>
+          <p>Your Puppet Specialty will evolve further at levels 7, 11, and 17.</p>
+          <div><h2>Level 4</h2></div>
+          <div><h3>Ability Score Improvement</h3></div>
+          <p>You may put two points into an Ability Score of your choosing, or one point each into two different Ability Scores. If the Optional Feats rule is enabled, you may alternatively take a Feat of your choosing.</p>
+          <p>You receive further boons of this nature at 8th, 12th, 16th, and 19th level.</p>
+          <div><h2>Level 5</h2></div>
+          <div><h3>1st Grade Evolution</h3></div>
+          <p>You and your puppets grow more powerful. All puppets, regardless of type, increase in strength by 1 Tier. Additionally, your natural weapons grow more powerful:</p>
+          <ul>
+            <li>Second Hand: When wielding a two-handed weapon, you can add +2 to the Hit and Damage Rolls. When wielding any weapon, you gain an Extra Attack.</li>
+            <li>Maul: Your Maul's damage becomes 1d12 + your Strength Modifier + your Proficiency Bonus. When attacking with your natural weapon, you can make an additional melee or unarmed attack in the same action.</li>
+            <li>Partisan: Your Partisan's damage becomes 1d10 + your Strength Modifier + your Proficiency Bonus. When attacking with your natural weapon, you can make an additional melee or unarmed attack in the same action, so long as the used weapon has the reach to hit the target.</li>
+            <li>Bulwark: Your Bulwark's bash damage becomes 1d8 + your Strength Modifier + your Proficiency Bonus. You can make an additional melee or unarmed attack in the same action.</li>
+            <li>Spike Launcher: Your Spike Launcher does not gain any additional damage, but you can make an extra shot in the same action at no downside.</li>
+          </ul>
+          <div><h2>Level 6</h2></div>
+          <div><h3>Arcane Imbuing</h3></div>
+          <p>You gain the ability to Imbue a willing creature with magic that they can call upon.</p>
+          <p>An Imbue requires a spell slot of 1 level higher than the Imbued Spell (Imbuing a target with a 1st level spell would require a 2nd level spell slot, for example), as well as the material components of the Imbued Spell. Imbuing a target with a spell grants it 2 uses of the spell at its lowest level, with a spellcasting ability equivalent to yours. Spells cast from a stored Imbue do not require material components; only vocal and somatic ones (if applicable). Stored Imbue casts dissipate after a short or long rest.</p>
+          <p>At levels higher than the Imbue's lowest, each additional level of spell slot increases the amount of available uses by 2.</p>
+          <div><h2>Level 9</h2></div>
+          <div><h3>Proliferated Senses</h3></div>
+          <p>Your natural neural network burgeons with your puppets, enhancing your mind in the same way they extend your body. You gain proficiency in Wisdom saving throws, and you can add the amount of puppets you have (up to 6) to any Perception Check you make.</p>
+          <div><h2>Level 10</h2></div>
+          <div><h3>2nd Grade Evolution</h3></div>
+          <p>Again, you and your puppets become stronger. Your puppets of all types go up in strength by 1 tier, and you develop further your natural offense:</p>
+          <ul>
+            <li>Second Hand: When wielding a two-handed weapon, you can add your proficiency bonus to the rolls. If you have proficiency in that weapon, the effect doubles (expertise).</li>
+            <li>Maul: Your Maul's damage becomes 2d8 + your Strength Modifier + your Proficiency Bonus. Your Maul becomes magical for the purposes of overcoming resistance and immunity.</li>
+            <li>Partisan: Your Partisan's damage becomes 2d6 + your Strength Modifier + your Proficiency Bonus. Your Partisan's reach is now 15 feet, and your secondary attack may be a thrown one. Your Partisan becomes magical for the purposes of overcoming resistance and immunity.</li>
+            <li>Bulwark: Your Bulwark's bash damage becomes 1d10 + your Strength Modifier + your Proficiency Bonus, and the shove distance on a target's failed save is now 10 feet. You gain an additional point of AC from your Bulwark (making the total boon +3). Your Bulwark becomes magical for the purposes of overcoming resistance and immunity.</li>
+            <li>Spike Launcher: Your Spike Launcher's damage becomes 2d4 + your Strength Modifier + your Proficiency Bonus. Your Spike Launcher becomes magical for the purposes of overcoming resistance and immunity.</li>
+          </ul>
+          <div><h2>Level 14</h2></div>
+          <div><h3>3rd Grade Evolution</h3></div>
+          <p>A third time, you and your puppets become stronger. Your puppets of all types go up in strength by 1 tier, and your natural offense more significantly increases:</p>
+          <ul>
+            <li>Second Hand: When wielding any weapon, you can add your proficiency bonus to the rolls. If you have proficiency in that weapon, the effect doubles (expertise). You can pick one of the following fighting styles: Archery, Great Weapon Fighting, Two-Weapon Fighting, Thrown Weapon Fighting.</li>
+            <li>Maul: Your Maul's damage becomes 2d10 + your Strength Modifier + 2 * your Proficiency Bonus. </li>
+            <li>Partisan: Your Partisan's damage becomes 2d8 + your Strength Modifier + 2 * your Proficiency Bonus.</li>
+            <li>Bulwark: Your Bulwark's bash damage becomes 2d6 + your Strength Modifier + 2 * your Proficiency Bonus.</li>
+            <li>Spike Launcher: Your Spike Launcher's damage becomes 2d6 + your Strength Modifier + 2 * your Proficiency Bonus.</li>
+          </ul>
+          <div><h2>Level 15</h2></div>
+          <div><h3>Overproduction</h3></div>
+          <p>When you use your reaction to spawn a Meat Puppet, you can release a second puppet at the cost of an extra 1d4 of HP.</p>
+          <div><h3>Meat Fortress</h3></div>
+          <p>You act as a mobile home base for your puppets and subpuppets, providing them a safe haven in which they are protected and nurtured. Puppets and Subpuppets within 10 feet of you gain the following benefits:</p>
+          <ul>
+            <li>They have advantage on defensive spell saving throws.</li>
+            <li>Their AC is increased by 2.</li>
+            <li>They recover HP equal to your Constitution modifier each turn.</li>
+          </ul>
+          <div><h2>Level 18</h2></div>
+          <div><h3>Apex Evolution</h3></div>
+          <p>Your puppets gain 1 additional tier of strength, bringing them to the highest level that anything less than dedicated mutation or specialization will allow. Additionally, you have become extremely fluent in your natural weapons' abilities, demonstrating a skill that rivals trained martial soldiers. Your natural weapons gain the following benefits:</p>
+          <ul>
+            <li>Second Hand: You can now harness the mastery property of one weapon type. You can change your mastered weapon when you gain another level in this class.</li>
+            <li>Maul: Your natural Maul gains the Sap property.</li>
+            <li>Partisan: Your Partisan gains the Topple property.</li>
+            <li>Bulwark: Your Bulwark does not gain an explicit mastery property. When successfully blocking a melee attack with your shield (an attacker fails to get past your AC), the attacker must make a Constitution saving throw equal to 12 + your own Constitution Modifier, and is Stunned until its next turn on a failed save.</li>
+            <li>Spike Launcher: Your Spike Launcher gains the Vex property.</li>
+          </ul>
+          <div><h2>Level 20</h2></div>
+          <div><h3>Champion's Embrace</h3></div>
+          <p>You have learned to channel an otherworldly psionic power into one of your puppets, tapping into the most primal forces that rage inside you. Binding to a puppet in this way requires a meditative ritual lasting 1 hour for Manipulators, Tricksters, and Deltas, or 2 hours for Reconcilants and Howitzers.</p>
+          <p>A championed puppet receives several benefits:</p>
+          <ul>
+            <li>Their HP per level is increased by 3.</li>
+            <li>They enjoy the HP recovery effect of Meat Fortress at any distance.</li>
+            <li>The puppet gains access to its legendary action pool.</li>
+            <li>When taking part in Special Commands, the Organization Point cost is reduced by 1 (to a minimum of 1).</li>
+          </ul>
+          <p>If your championed puppet falls in battle, you immediately a spawn a new puppet of the same type, though it does not receive the benefits of being championed.</p>
+        </div>
+    </div>
+    </body>
+</html>
