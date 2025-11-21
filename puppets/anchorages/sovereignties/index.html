@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>Sovereignties</title>
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-
+                
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../backgroundwhite.png), url(../backgroundblue.png), url(../backgroundred.png), url(../backgroundyellow.png);
+          background-image: url(../../../backgroundwhite.png), url(../../../backgroundblue.png), url(../../../backgroundred.png), url(../../../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -36,7 +36,7 @@
 
         .column {
           float: left;
-          width: calc(100% - 200px);
+          width: calc(100% - 740px);
           min-width: 360px;
           min-height: 98vh;
           padding: 10px;
@@ -49,8 +49,27 @@
           min-height: 98vh;
           padding: 10px;
         }
+
+        .infobox {
+          float: right;
+          width: 340px;
+          height: 400px;
+          padding: 5px;
+        }
+
+        .infotable {
+          border-collapse: collapse;
+          width: 100%;
+          height: 100%;
+        }
+
+        .infotablecell {
+          border: 2px solid rgba(214,145,210,0.5);
+          padding: 5px;
+        }
         
         /* Clear floats after the columns */
+        
         .row:after {
           content: "";
           display: table;
@@ -83,8 +102,8 @@
         </style>
 </head>
 <body id="base">
-    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
-      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+  <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+    <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
@@ -126,12 +145,48 @@
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
-          <p>While Hyacinth is a bit unwieldly to put in many games, I have written some documentation on putting them in games. This page acts as a hub for different files, or a subwiki for documentation if necessary (for example, Dungeons and Dragons). I might also try coding some web-based games at somepoint.</p>
-          <div><h2>Subwikies</h2></div>
-          <dl>
-            <dt><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">(Dungeons and Dragons) Abomination Class</a></dt>
-            <dd>- (Subwiki) A relatively flexible/customizeable variant of Hyacinth's "species" and "class" made for Dungeons and Dragons 5th Edition. Occupies the role of a tanky frontline partcaster by default (similar to a Paladin), but can be elaborated into different roles via subclasses and other player choices.</dd>
-          </dl>
+          <div class="infobox">
+            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
+              <tr>
+                <td class="infotablecell">Commonality</td>
+                <td class="infotablecell">100% (Anchorage Hullyards)</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Durability</td>
+                <td class="infotablecell">10/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Strength</td>
+                <td class="infotablecell">Physical: 4/10<br>Psionic: 1/10<br>Magical: 4/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Specials</td>
+                <td class="infotablecell">Integrated Machine Gun<br>Magic Missiles</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Personality</td>
+                <td class="infotablecell">Stalwart and present</td>
+              </tr>
+            </table>
+          </div>
+          <p>Constructed by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a> and operated by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a>, Sovereignties are mechanized puppets equipped with heavy weaponry. A group of Sovereignties is known as a state or coalition.</p>
+          <div><h2>Physical Description</h2></div>
+          <p>Sovereignties are rather sizeable among puppets at 5' 10" tall, with their bulky builds contributing significantly to their overall mass. As mechanized puppets, they do not have conventional flesh and biological tissue; instead, they have a hardened shell formed from thick layers of Haetin, including several reinforced body rings that give them substantial durability for their size. Of note is the small stonk of horns on their tail end, as well as a large firearm-like structure that lies inside their mouths, the magazine of which hangs over the side of their head like a mane. Their eyes are shadowy hollows, with two ringular glowing pink irises that they use for expression.</p>
+          <div><h2>Behaviour</h2></div>
+          <p>Sovereignties are an extension of the Anchorages and Serfs that construct and maintain them, acting as heavy guardians and powerful midline combatants. Their reinforced body structure gives them astonishing durability, to the point where, pound-for-pound, they match <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a> in terms of raw tankiness. Where Praetors excel in close-ranged combat, however, Sovereignties much prefer medium-range, laying down suppressive fire with the machine guns mounted inside their crania while targeting nimbler point targets with magic missiles. They typically try to occupy a space between the front lines and their host Anchorages in combat, as their machine guns require constant resupply from Serfs working in Foundries.</p>
+          <p>Outside of combat, Sovereignties spend much of their time around their host Anchorage, receiving repairs and restocks from Serfs and generally not doing much. They may occasionally help with civilian tasks, though for the most part they seem hard-wired to focus on military tasks. One particular niche they occupy is working in areas that other puppets may find dangerous or uncomfortable; in particular, carrying <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> over rocky terrain so magic can be used erode it into more comfortable, habitable soil.</p>
+          <div><h2>Genetic Description</h2></div>
+          <p>Sovereignties have no genetic material, being constructs, but their consciousness appears to be psionic like other puppets. Given an Anchorage must have a valid hullyard to maintain a Sovereignty, the usual guess as to how they work is that the Sovereignty's consciousness is entirely offloaded to the structure, which follows the typical operating pattern of Anchorage buildings having biological or even seemingly live components.</p>
+          <div><h2>Metanarrative</h2></div>
+          <p>Look, I'll be honest. I developed the idea for these guys while on a Titanfall 2 kick (though Stellaris also played some part in inspiring them). They're just combat mechs, I don't really know how to elaborate on them. They're something different for Anchorages and Serfs to use in combat.</p>
+          <p>Originally they were going to use physical missiles, but I couldn't make a launcher design I liked, so they got magic missiles instead. I like it as something for them to use if they run out of ammunition for whatever reason, given they're not actually that physically strong.</p>
+      </div>
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Gallery</h1></div>
+          <div><img src="sovereignty.png" alt="A reference image of a Sovereignty." width="520" height="456"></div>
+          <br>
+          <!--<div><img src="deltainspect.png" alt="A Delta with a small insect captured in one of its fields." width="520" height="358"></div>-->
         </div>
     </div>
     </body>
