@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>Colonies</title>
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-
+                
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../backgroundwhite.png), url(../backgroundblue.png), url(../backgroundred.png), url(../backgroundyellow.png);
+          background-image: url(../../../backgroundwhite.png), url(../../../backgroundblue.png), url(../../../backgroundred.png), url(../../../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -36,7 +36,7 @@
 
         .column {
           float: left;
-          width: calc(100% - 200px);
+          width: calc(100% - 740px);
           min-width: 360px;
           min-height: 98vh;
           padding: 10px;
@@ -49,8 +49,27 @@
           min-height: 98vh;
           padding: 10px;
         }
+
+        .infobox {
+          float: right;
+          width: 340px;
+          height: 400px;
+          padding: 5px;
+        }
+
+        .infotable {
+          border-collapse: collapse;
+          width: 100%;
+          height: 100%;
+        }
+
+        .infotablecell {
+          border: 2px solid rgba(214,145,210,0.5);
+          padding: 5px;
+        }
         
         /* Clear floats after the columns */
+        
         .row:after {
           content: "";
           display: table;
@@ -83,8 +102,8 @@
         </style>
 </head>
 <body id="base">
-    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
-      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+  <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+    <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
@@ -140,17 +159,55 @@
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
-          <p>While Hyacinth is a bit unwieldly to put in many games, I have written some documentation on putting them in games. This page acts as a hub for different files, or a subwiki for documentation if necessary (for example, Dungeons and Dragons). I might also try coding some web-based games at somepoint.</p>
-          <div><h2>Mod Pages</h2></div>
-          <dl>
-            <dt><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">(Into The Breach) Hyacinthmod</a></dt>
-            <dd>- A custom player squad for Into the Breach, starring Hyacinth's puppets. Currently features a single squad with 3 mechs and 1 deployable, as well as fully custom weaponry.</dd>
-          </dl>
-          <div><h2>Subwikies</h2></div>
-          <dl>
-            <dt><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">(Dungeons and Dragons) Abomination Class</a></dt>
-            <dd>- (Subwiki) A relatively flexible/customizeable variant of Hyacinth's "species" and "class" made for Dungeons and Dragons 5th Edition. Occupies the role of a tanky frontline partcaster by default (similar to a Paladin), but can be elaborated into different roles via subclasses and other player choices.</dd>
-          </dl>
+          <div class="infobox">
+            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
+              <tr>
+                <td class="infotablecell">Commonality</td>
+                <td class="infotablecell">65% (Anchorage Hullyards)</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Durability</td>
+                <td class="infotablecell">7/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Strength</td>
+                <td class="infotablecell">Physical: 4/10<br>Psionic: 1/10<br>Magical: 2/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Specials</td>
+                <td class="infotablecell">Remote Anchorage building support</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Personality</td>
+                <td class="infotablecell">Restless and meandering</td>
+              </tr>
+            </table>
+          </div>
+          <p>Colonies act as extensions of the <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> that facilitate their construction, providing mobile support and additional space for <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a> and haetin as needed. They are capable of fulfilling a variety of roles thanks to sharing buildings with Anchorages, though are lacking some components that would permit complete autonomy. A group of Colonies is known as a pact or a fort.</p>
+          <div><h2>Physical Description</h2></div>
+          <p>Colonies are the second smallest of the Analogues, but stand at a still-considerable 4' 2" (127cm) tall, putting them above all light puppets in terms of size. As Analogues, they do not have a biological figure, instead being assembled out of plated Haetin material. Their manes and tails are formed of unrefined Haetin kept in a semi-liquid state, which acts as a natural form of Haetin storage for building operation (as Colonies do not have blood for Serfs to convert into Haetin manually, and they cannot support Phylacteries). Additionally, Colonies have a single large platform on their back, formed of a material similar to <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Trickster</a> or <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totem</a> horns.</p>
+          <div><h2>Behaviour</h2></div>
+          <p>Like the Anchorages that they are operated by, Colonies can have wildly varying purposes depending on what buildings they are equipped with. However, due to only having space for a single building, Colonies are much more prone to specialization: A Colony with an Emplacement relies entirely on its Emplacement, for example. In general, Colonies will be used as external hardpoints for Emplacements, or reserve space for extra Serfs when equipped with housing. They may also act as caravanners when equipped with Foundries.</p>
+          <p>Outside of combat, Colonies display an unusual level of incohesion with their host Anchorages. They are prone to wandering or pacing around in uneven paths around their hosts, even when their host Anchorages have found a proper resting spot, requiring Serfs or larger Analogues to sheperd them into a resting place. The working of Serfs around the Colony or its buildings seems to have a calming effect on a Colony, and as such Emplacement-carrying or buildingless Colonies tend to be the most restless during peacetime.</p>
+          <div><h2>Genetic Description</h2></div>
+          <p>Being Analogues, Colonies have minimal genetic material to speak of. However, the material their back platforms are made of is quite similar to that of Totem and Trickster horns, which is a trait shared by the underlying structure of Anchorage antlers. Despite this, Colonies are missing some of the biological makeup to properly support certain buildings, and which is reflected in the relative simplicity of their platform structure compared to Anchorage antlers.</p>
+          <div><h2>Buildings</h2></div>
+          <p>Colonies do not carry buildings with the same robustness that their host Anchorages do, though they still support a healthy variety of structures and can be surprisingly effective when employed properly. While the building types they have are shared with Anchorages, the Colonies do interact differently with their structures:</p>
+          <ul>
+            <li>Firstly, Colonies <b>cannot</b> carry Phylacteries or Hullyards. Phylacteries are incompatible with Colonies due to a lack of biological activity; instead, the Colonies store unrefined Haetin directly as part of their wider physiology. Just like Anchorages, however, overtapping their supply of Haetin is dangerous for the Colony. Hullyards are simply due to a lack of psionic throughput; Colonies do not have the size or neurological robustness to properly support the construction and operation of other Analogues.</li>
+            <li>Housing structures can be found on Colonies, though they operate at a reduced efficiency: One Colony can only host up to three Serfs. Still, this is more efficient by Anchorage hardpoint than building housing directly on the Anchorage, so Anchorages who have been fostered by a larger city of Anchorages will often prefer to carry housing on Colonies.</li>
+            <li>Foundries are unique in that they seem to have no detriment in operation capacity when placed on a Colony; a Foundry provides the same amenities and storage on a Colony as it does an Anchorage. As such, Serfs heavily prefer building Foundries on Colonies when possible, and a common setup for a two-Colony Hullyard is to have one Colony carry housing and the other carry a Foundry.</li>
+            <li>Emplacements are similar in nature to Housing when it comes to their interactions with Colonies; they are typically run at a lower power, firing shorter beams with less energy throughput. Emplacements also seem to be more difficult for Colonies to wield; Colonies are prone to sloppier firing lines, occasionally even catching their allies with the head or tail-end of the beam. As such, Emplacement-carrying Colonies are fairly rare, typically only being brought out in significant number when the combat strength is needed.</li>
+          </ul>
+          <div><h2>Metanarrative</h2></div>
+          <p>Colonies were one of three Analogues added as part of my <a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a> mod for Hyacinth's puppets, and the function of Colonies originates from there. They've been fleshed out a bit in writing, of course, but the same general principle applies: They're a handy little support unit for Anchorages to have more buildings (a use that is more necessary now that Anchorages have more building types than they started with).</p>
+      </div>
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Gallery</h1></div>
+          <div><img src="colony.png" alt="A reference image of a Colony." width="520" height="488"></div>
+          <br>
+          <!--<div><img src="deltainspect.png" alt="A Delta with a small insect captured in one of its fields." width="520" height="358"></div>-->
         </div>
     </div>
     </body>

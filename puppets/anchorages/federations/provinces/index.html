@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>Provinces</title>
+    <link rel="icon" type="image/x-icon" href="../../../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-
+                
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../backgroundwhite.png), url(../backgroundblue.png), url(../backgroundred.png), url(../backgroundyellow.png);
+          background-image: url(../../../../backgroundwhite.png), url(../../../../backgroundblue.png), url(../../../../backgroundred.png), url(../../../../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -36,7 +36,7 @@
 
         .column {
           float: left;
-          width: calc(100% - 200px);
+          width: calc(100% - 740px);
           min-width: 360px;
           min-height: 98vh;
           padding: 10px;
@@ -49,8 +49,27 @@
           min-height: 98vh;
           padding: 10px;
         }
+
+        .infobox {
+          float: right;
+          width: 340px;
+          height: 400px;
+          padding: 5px;
+        }
+
+        .infotable {
+          border-collapse: collapse;
+          width: 100%;
+          height: 100%;
+        }
+
+        .infotablecell {
+          border: 2px solid rgba(214,145,210,0.5);
+          padding: 5px;
+        }
         
         /* Clear floats after the columns */
+        
         .row:after {
           content: "";
           display: table;
@@ -83,8 +102,8 @@
         </style>
 </head>
 <body id="base">
-    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
-      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+  <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+    <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
         <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
@@ -140,17 +159,45 @@
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Overview</h1></div>
-          <p>While Hyacinth is a bit unwieldly to put in many games, I have written some documentation on putting them in games. This page acts as a hub for different files, or a subwiki for documentation if necessary (for example, Dungeons and Dragons). I might also try coding some web-based games at somepoint.</p>
-          <div><h2>Mod Pages</h2></div>
-          <dl>
-            <dt><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">(Into The Breach) Hyacinthmod</a></dt>
-            <dd>- A custom player squad for Into the Breach, starring Hyacinth's puppets. Currently features a single squad with 3 mechs and 1 deployable, as well as fully custom weaponry.</dd>
-          </dl>
-          <div><h2>Subwikies</h2></div>
-          <dl>
-            <dt><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">(Dungeons and Dragons) Abomination Class</a></dt>
-            <dd>- (Subwiki) A relatively flexible/customizeable variant of Hyacinth's "species" and "class" made for Dungeons and Dragons 5th Edition. Occupies the role of a tanky frontline partcaster by default (similar to a Paladin), but can be elaborated into different roles via subclasses and other player choices.</dd>
-          </dl>
+          <div class="infobox">
+            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
+              <tr>
+                <td class="infotablecell">Commonality</td>
+                <td class="infotablecell">100% (Federations)</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Durability</td>
+                <td class="infotablecell">7/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Strength</td>
+                <td class="infotablecell">Physical: 3/10<br>Psionic: 0/10<br>Magical: 0/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Specials</td>
+                <td class="infotablecell">High-powered integral rifle<br>Optional heavy rockets<br>Aerial melee attacks</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Personality</td>
+                <td class="infotablecell">Skittish and playful</td>
+              </tr>
+            </table>
+          </div>
+          <p>Provinces act as aerial support units, manufactured by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a>. They can provide hard-hitting ranged support where it's needed most, strafing above the action with weaponry designed to punch up. A group of Provinces is called a collection.</p>
+          <div><h2>Physical Description</h2></div>
+          <p>Provinces are the smallest of the analogues by far, standing at just 2' 9" (84cm) tall with fairly lean builds. They sport large (for their size) diamongular wings with embedded rotors that allow them to fly with exceptional mobility. Their mobility in the air is second only to <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a>, surpassing even <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a>. They also feature very strong armor for their size, allowing them to punch well above their weight. Their most notable feature is the fact that one of their front legs is replaced with a gun, which they use to fire high-caliber rounds at chosen targets. They also have an openable set of doors in their underbelly which they use to launch ballistic missiles from (when their host Federation provides such ordnance).</p>
+          <div><h2>Behaviour</h2></div>
+          <p>Provinces are deployed by their host Federations as aerial support, featuring a variety of ranged attacks as well as some amount of unarmed combat prowess. Their primary weapon is the high-caliber rifle that replaces their fourth leg, which they are remarkably accurate with even when moving at high speed. The shells they fire are designed for piercing thick armor, as opposed to the more general-use cartridges fired by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a>. Provinces can also carry a single heavy-hitting buster missile in their torso (in place of some regular ammo) when such ordnance provided by their host Federation, with said missile being designed for piercing all but the heaviest armor; a small tinge of unstable magic gives the missiles a bang-per-gram yield that's a half-step between conventional explosives and nuclear weaponry, though the lethality is tempered by the fairly small size and the fact each Province can only carry a single missile per deployment.</p>
+          <p>Provinces display a very flighty personality when deployed during peacetime, rapidly flitting among other puppets and playfully jumping them with unloaded weaponry. The effectiveness of such play threats is dubious, given all puppets share a collective intelligence, but the sudden jump is occasionally enough to make a <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilant</a> spawn.</p>
+          <div><h2>Genetic Description</h2></div>
+          <p>As with all Analogues, Provinces are divorced from conventional biology. However, their structure is unusual even among Analogues, as they have no sort of raw Haetin storage of any kind. This is a double-edged sword: It keeps weight down, making the Province vastly more nimble, but also means that when repairs are needed, the Province has no emergency reserves to patch itself with. Given the Provinces' high armor strength for their size and the fact they rely on speed to avoid danger, it can be assumed that this is considered a worthwhile tradeoff.</p>
+      </div>
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Gallery</h1></div>
+          <div><img src="province.png" alt="A reference image of a Province." width="520" height="500"></div>
+          <br>
+          <!--<div><img src="deltainspect.png" alt="A Delta with a small insect captured in one of its fields." width="520" height="358"></div>-->
         </div>
     </div>
     </body>
