@@ -190,10 +190,26 @@
             var content = this.parentElement.nextElementSibling;
             if (content.style.display === "block") {
               content.style.display = "none";
-              this.innerHTML = "<b>+</b>"
+              this.innerHTML = "<b><u>+</u></b>"
             } else {
               content.style.display = "block";
-              this.innerHTML = "<b>-</b>"
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
             }
           });
         }
