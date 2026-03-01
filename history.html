@@ -1,0 +1,244 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyacinth Directory</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(backgroundwhite.png), url(backgroundblue.png), url(backgroundred.png), url(backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 360px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>History</h1></div>
+          <p>This page sees a general history of Hyacinth's development as a character. Consider this an extension of the Metanarrative blocks under each puppet's page; "I", "me", and other first-person language refers to the site author (the one typing this out right now).</p>
+          <div><h2>The Inspiration Period</h2></div>
+          <p>At the outset, Hyacinth didn't have any sort of specialized puppet types initially. They were heavily inspired by a game called Cataclismo mixing with my burgeoning interest in the My Little Pony fandom (which I had been a part of for a few months at that point). So, they spawned the fodder enemies from that game, with some extension of lore that they themselves were spawned from a larger "Archmother" that spawned independent abominations. Speaking of the term "abomination", that also came from Cataclismo, as "Abominations" are the enemies in that game that are known for spawning tons of fodder enemies. I did include other aspects of the game's enemy roster in Hyacinth's design as well; their mace is a holdover from the "Centaur" enemies, which have five legs and mace-tipped limbs that they use for attacking. Hyacinth's original design, especially, was more or less an Abomination and a Centaur crammed together and put into a different artstyle. Their colours are inspired by Cataclismo enemies, too; particularly the "enamelled" forms with their lighter blue and purple palette.</p>
+          <p>As I decided to flesh out Hyacinth a bit more, I wanted to elaborate on them to make them a bit more than a few Cataclismo enemies smashed together. So, I started designing their puppets. All four of them. No, don't look at the navigation bar, I'll get there. Manipulators, Tricksters, Reconcilants, and Imps were the original four, and I think that's most apparent in that they're all the puppet types that explicitly share features with Hyacinth directly: Manipulators have handed arms, Tricksters have horns for spellcasting, and Reconcilants spawn their own lesser puppets. Imps were deliberately the only puppet type to <i>not</i> share a feature with them, as they earned the Reconcilants their name (they "reconciled" the peculiarities by acting as an extra layer between Hyacinth and Imps).</p>
+          <div><h2>The Dungeons and Dragons Period</h2></div>
+          <p>For a while, Hyacinth was a character just for roleplay and art sake. This started to change when I attempted to get back into Dungeons and Dragons after a period of downtime, in which I decided I wanted to partake in homebrewing a proper class layout for Hyacinth so I could play them in a more tangible form. This was, in essence, the first game I "modded" Hyacinth into. The original draft of what is now call the Abomination class/species was very simple: No subclasses, a basic spell list, and bare minimum statblocks for Manipulators, Tricksters, Reconcilants, and Imps. Things heated up when I tried giving meaningful subclasses to the class in the form of puppet specialties, which introduced three new puppet types: Deltas and Howitzers as their own unique specialties, and Pustules as a unique unlock from the Reconcilant specialty. This was the first major addition I'd made to Hyacinth since puppets were introduced.</p>
+          <p>Of course, I kept elaborating on the DnD class, refining various things. At one point I expanded the class beyond level 20, which posed a new logistical challenge: How do I combat action economy when, inevitably, the puppet capacity of any given abomination is going to scale up? This led to the creation of the first superheavy puppet: The Praetor. This origin as being something on the level of a demi-god (as post level 20 characters in DnD would canonically be godlike) influenced a lot of the Praetor's abilities, like how the power scales were designed to top out at their level of individual strength, and the way that their poison is capable of damaging even things that aren't alive (as poison is terrible in DnD).</p>
+          <p>Around this time, I also made a Warlock subclass focusing around the warlock patron flavoured around an Archmother patron. This gave rise to two puppets: The Totem and its Wisps. Yes, the Totem wasn't even made for Hyacinth originally. I just lumped it in as superheavy puppet at somepoint because I liked it thematically as a heavy mage. A lot of the Totem's abilities are referential to their origin as an assistant to a proper warlock; in particular, the Wisps' abilities to manipulate magic, and the Totems' more powerful overall spellcasting (as Warlocks in DnD always cast spells at the highest level available to them).</p>
+          <p>Another puppet that was only kind of introduced in this general period of time was the Herald, as a dropped element of the main Abomination class' Howitzer specialty. This shaped a lot of Herald behaviours, being largely extensions of the Howitzer, as I didn't want to bloat the action economy too much (especially since Howitzers were supposed to be the summonless heavy puppet). The Herald was eventually dropped from the DnD incarnation of the Howitzer entirely, but lives on as a helpful little critter in more narrative driven settings (or games where an extra unit wouldn't be a large balance issue).</p>
+          <p>Lastly, rounding out the DnD period was the last puppet to be made for it: The Array, as an extra subpuppet to occupy Reconcilants' subpuppet capacity. Their main mechanic (attacking communally via chaining attacks through one another) was entirely for the sake of simplifying action economy and reducing overhead for the sake of DnD's turn format. While Arrays didn't make the jump to the current iteration of Abominations (that is, the one hosted on this site), they're still a part of the legacy and I like having them around as funky fish-pegasi.</p>
+          <div><h2>The Narrative Period</h2></div>
+          <p>After the Dungeons and Dragons period wound down, Hyacinth had by now grown into something of a hyperfixation. I themed my entire bluesky after them, and to this day that bluesky is still mostly for posting Hyacinth art. This is kind of a dry spell in puppet creation, as I mostly focused on fleshing out what I had and making lots of art for the existing puppets (and Hyacinth themselves). That said, two puppets debuted during the early phases of this era: The Serf and the Anchorage. Analogues came later, silly. It started off as just the Serf, the Anchorage, and three buildings (Housing, Foundries, and Phylacteries). They originated as something conceptual that I'd add if Hyacinth wasn't mostly a DnD class, which I eventually took to just adding them narratively. The start of this era is when Hyacinth really began transforming from a simple "character" to a true hyperfixation and 'sona, and it's when I started thinking less about game feel and more about narrative and design.</p>
+          <p>Things went quiet, new content-wise, for a while. I was mostly developing them through roleplaying with friends, solidifying Hyacinth's personality and elaborating on how puppets were as creatures. At some point, I realized I needed a place to corroborate everything about them. I couldn't just send people five google docs and a dozen images anytime someone asked (nevermind trying to sift through the bluesky!). A friend of mine had been getting into microsite makery, which gave me an idea: I could make myself a wiki for Hyacinth and all they entail. I could put all their puppets, all the art, their integrations into games, all in one place. I could make a website. <i>This</i> website. This all coincided with a slow and steady realization that Hyacinth was, in fact, a 'sona. So I got to work.</p>
+          <div><h2>The Website Period</h2></div>
+          <p>The Website Period is punctuated firstly by the release of the website. At its inception, it was <i>much</i> simpler than it is now: The Hyacinth page, a list of the ~dozen puppets that existed at the time, a short overview on puppets as a concept, and that's it. Each page had illustrations imported from the bluesky, and lore brought in from my own back-end writing, the endless void that is my brainspace, and the tidbits from the DnD documentation. It wasn't pretty at first (if you remember the old vibrant green and khaki colour scheme, props to you), but it was a space I could write about Hyacinth and get all of the thoughts in my head out onto a page.</p>
+          <p>The initial phase of the Website Period also includes the release of a new puppet type: The Mesosa. With the site being on and operational, I didn't need an excuse to make a new puppet type: If I had an idea, I could draw it, write about it, and post it here. The Mesosa was the first puppet to benefit from this possibility, and paved the way for more puppets that mostly existed "just 'cause I thought they were cool". I also wrote the first day of Hyacinth's Diary around this time, starting off the story section. And, of course, I eventually remastered the DnD class and ported it to here as well. Notably, I also have the commit history to remind me of everything now, too.</p>
+          <p>From here, puppet introductions speed up for a little while. In fairly short order, we got quite a few heavy-hitters (literally), interspersed between more regular updates to the site with polishing, restyling, and elaborating on puppet descriptions. As a lightning round, the puppets introduced in this period (in approximate chronological order) were:</p>
+          <dl>
+            <dt>Brokers, Consuls, Agents, Delegates, and Envoys</dt>
+            <dd>These five puppet types represented the idea of differently flavoured elementals for Hyacinth, adapting the four main elemental damage types from DnD into differently stylized elementals. They also represented the first real foray into non-puppet creatures, which were first experimented with Wisps way back when (which, perhaps appropriately, the Elementals joined the Wisps as spawns of Totems).</dd>
+            <dt>Perditioners</dt>
+            <dd>Perditioners were the true heralds of the real "narrative-first" mentality. They're too powerful for conventional games or stories; instead they're more about displays of biblical power, meant to work on a cosmological scale. They were the first of the titan puppets, respresenting destruction on a scale that is difficult to fathom. In short, they're here to look cool.</dd>
+            <dt>Sovereignties</dt>
+            <dd>A mix of a Stellaris game in which a Hyacinth-themed Empire got the Cybrex Warform artifacts as well as a burgeoning reignition of my interest in Into the Breach made me realize "man giving Hyacinth robots would kick ass". The Sovereignty was the first Analogue, though at the time Analogues weren't a distinct class of entity; the Sovereignty was just a "mechanized puppet" that was constructed by Serfs.</dd>
+            <dt>Cambrians, Cornucopiae, Fronds, Coddlers, Auroras, and Seraphs</dt>
+            <dd>Joining their offense-oriented siblings were the Cambrians, representing a titan diametrically opposed to the Perditioners' awesome destructive powers. Cambrians specialize in all kinds of life restoration and healing, from fixing ecological deadzones to resurrecting individuals (via Seraphs). The Cambrians also represent the artistry that is born from life as they sculpt their lesser titans to assist them. Cambrians (perhaps ironically, given their name) take heavy inspiration from biblical topics such as flooding and angels.</dd>
+            <dt>Myrmecophs</dt>
+            <dd>Added via my Hyacinth Pilot mod for Into the Breach, the Myrmecoph was made as a displacement-heavy unit for that game that I then adapted into the narrative as a sort of offensive-support, mind-altering puppet. I don't get to use them in writing too often (mind control is kind of a no-no power for roleplaying), but I am quite fond of the strange little bug horsies.</dd>
+            <dt>Colonies, Federations, and Provinces</dt>
+            <dd>Elaborating on Analogues were the three introduced in the Into the Breach mod via the second squad (appropriately called Hyacinth's Analogues), which featured the Anchorage and all that came from it. Analogues were too cool of a design not to elaborate on, and I'm happy that I pursued fleshing them out more as they relate to conventional puppets.</dd>
+            <dt>Barycenters and Satellites</dt>
+            <dd>The most recent puppet additions as of the time of writing (though I do have ideas for one more swirling around in my head), inspired by my love of space and wanting to give Reconcilants a titan of their own to really stick the fact that they're <i>the</i> subpuppet-spawning puppet.</dd>
+          </dl>
+          <div><h2>The Present</h2></div>
+          <p>And now, we come to the present. The site is full of different avenues of thought, plays host to multiple different games (including a browser-based incremental game coded entirely by yours truly), and is slowly being updated with all of the original artwork being digitized, refined, and coloured. I'll be making an extended gallery page soon to fit artwork that doesn't otherwise comfortably fit in the rest of the pages, either due to page layout limitations or just because it wouldn't fit anywhere easily. I also have one more puppet idea planned for the semi-near future, and will likely write about that soon. If you made it all the way to the end, thanks for reading; Hyacinth is a very special piece of me and I'm glad there are people who like them.</p>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    </body>
+</html>
