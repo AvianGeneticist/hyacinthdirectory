@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weirs</title>
-    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>Archons Overview</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-                
+
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../../../backgroundwhite.png), url(../../../backgroundblue.png), url(../../../backgroundred.png), url(../../../backgroundyellow.png);
+          background-image: url(../backgroundwhite.png), url(../backgroundblue.png), url(../backgroundred.png), url(../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -60,27 +60,8 @@
           min-height: 98vh;
           padding: 10px;
         }
-
-        .infobox {
-          float: right;
-          width: 340px;
-          height: 400px;
-          padding: 5px;
-        }
-
-        .infotable {
-          border-collapse: collapse;
-          width: 100%;
-          height: 100%;
-        }
-
-        .infotablecell {
-          border: 2px solid rgba(214,145,210,0.5);
-          padding: 5px;
-        }
         
         /* Clear floats after the columns */
-        
         .row:after {
           content: "";
           display: table;
@@ -113,7 +94,7 @@
         </style>
 </head>
 <body id="base">
-    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+  <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
       <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
         <div><h3>Navigation</h3></div>
         <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
@@ -210,7 +191,6 @@
             this.classList.toggle("active");
             if (this.innerHTML === "<b>+</b>") {
               this.innerHTML = "<b><u>+</u></b>"
-              console.log(this.parentElement.innerHTML)
             } else {
               this.innerHTML = "<b><u>-</u></b>"
             }
@@ -219,66 +199,29 @@
             this.classList.toggle("active");
             if (this.innerHTML === "<b><u>+</u></b>") {
               this.innerHTML = "<b>+</b>";
-              console.log(this.parentElement.innerHTML)
             } else {
               this.innerHTML = "<b>-</b>";
             }
           });
-        };
-
-        var heritage = document.getElementById("totemparent")
-        heritage.addEventListener("load", expandparentage());
-        function expandparentage() {
-          heritage.lastElementChild.innerHTML = '<b>-</b>'
-          heritage.nextElementSibling.style.display = "block"
         }
       </script>
       
       <div class="spacer"></div>
-        <div class="column" onload="categoryExpand" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Weir Overview</h1></div>
-          <div class="infobox">
-            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
-              <tr>
-                <td class="infotablecell">Commonality</td>
-                <td class="infotablecell">100% (Threshold Conjuring)</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Durability</td>
-                <td class="infotablecell">2/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Strength</td>
-                <td class="infotablecell">Physical: 0/10<br>Psionic: 1/10<br>Magical: 3/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Specials</td>
-                <td class="infotablecell">Flight<br>Magical transfer<br>Transmutation of arcane energies</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Personality</td>
-                <td class="infotablecell">Frenetic, but moody</td>
-              </tr>
-            </table>
-          </div>
-          <p>Weirs are psionomagical subpuppets conjured by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/gangrene.html">Thresholds</a> when high energy currents are present. They act as magical couriers and transmutators, converting excess magical energies into various useful forms. A group of Weirs is known as a conduit.</p>
-          <div><h3>Variants</h3></div>
-          <p><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a> - <b>Weirs</b></p>
-          <div><h2>Physical Description</h2></div>
-          <p>Weirs can be seen as a counterpart to Wisps, though there is some discourse on whether they are truly gangrenized Wisps, or if they are just a closely related conceptual organism. Regardless of exact relation, Weirs do support all the hallmarks of a gangrenized puppet: Their bodies are more robust, their spellcasting abilities are less so, and they also differ reasonably in size (standing at 1' 7", or 48cm). They also share the same "fibreglassy" texture, as well as a faint glow that they radiate consistently. Most notable are their long, curly tails, which are actually partially-solidified via keratinization. It is common to see coalesced globules of magic within the curls of a Weir's tail, being ferried where they need to go.</p>
-          <div><h2>Behaviour</h2></div>
-          <p>Weirs, superficially, act similar to Wisps, staying near their host Threshold in preparation for the necessity of a magical delivery. They are typically quite sedate in this waiting state, spending time either resting on their Threshold or chittering amongst themselves. When the order for magic comes in, however, Weirs work very hard to fill it: They swiftly attach to one of the Threshold's horns, drawing the necessary magic out in the form of up to eight globules, each one encompassing the approximate magic storage of a <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Trickster</a>. They then take these globules (and potentially more of their fellows, if even more magic is required) and swiftly flit towards their target.</p>
-          <p>At the site of delivery is when the Weirs' second key ability comes in: Transmutation. Weirs are capable of converting magical energy between various usable forms, be it purified magic for regular puppets, gangrenous energy for gangrenous ones, plant magic for verdants or farming, healing water for medical purposes, elemental energies for maintaining elementals, or most surprisingly, raw Haetin. How exactly they know how to convert between these energies is unknown.</p>
-          <p>Weirs do not act particularly differently in or out of combat. They have a single job that they do well; the only difference is the circumstances it is done in. In battles, they will often bring energy to fatigued puppets, or they will stock <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a> with spare raw Haetin.</p>
-          <div><h2>Genetic Description</h2></div>
-          <p>Like Wisps, Weirs lack any true genetic code, being psionomagical creations. They also have replica internal organs, however, and they imitate the appearance of being partially gangrenized. Attempts to make a Weir manipulate itself or one of its other fellows into a different magical form, however, have proven utterly unsuccessful, so there is most certainly something anchoring Weirs to their current forms.</p>
-          <div><h2>Metanarrative</h2></div>
-          <p>Weirs round out the <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totem</a>/Threshold dichotomy by providing a counterpart to Wisps, reflecting not only body, but ability as well. Weirs focus more on the logistical side of magic, abandoning spellcasting entirely for the sake of magical support. I was originally going to make a whole set of alt-elementals, but couldn't come up with enough ideas that I liked to commit to it.</p>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Overview</h1></div>
+          <p>Archons are a class of being somewhere between full Archmothers and lesser <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets">Puppets</a>. They act as more independent agents within a puppet clan, capable of controlling some amount of the gestalt when situation calls for it and helping to organize greater activities. Unlike Archmothers, which consistently display a relative balance of physical and magical strength with an emphasis on puppet creation, Archons display a much broader range of strengths and weaknesses: Some specialize in physical abilities, others in magic, and some may specialize in completely different methods of spawning.</p>
+          <p>Colloquially, some call Archons "Archpuppets" to better represent their status above normal puppets, though Archmothers seldom favour this designation. A group of Archons is called a court.</p>
+          <div><h2>Origins</h2></div>
+          <p>What most separates an Archon from a puppet is how they come to be: That is, they are not spawned like normal puppets. Archons almost always arise from some exceptional method of creation, with the most common being properly birthed from an Archmother following some form of sexual reproduction. This is generally said to explain their variability, as they are seldom a "clean" genetic copy of their Archmother. Details on how Archons come to be will be elaborated on by class.</p>
+          <div><h2>Physical Traits</h2></div>
+          <p>Despite their variations, Archons do have some consistent traits about them. The easiest way to tell if an equid abomination is an Archon is their eyes: Archons have sclerae and irises, but no pupils (as opposed to regular puppets, which lack irises). Additionally, an Archon's height is typically consistent: 8' 2", or 249cm. While body shape can vary, and some bodily features may cause an Archon to appear taller or shorter overall, generally, their bodies are consistently of a similar size.</p>
+          <div><h2>Puppet Spawning</h2></div>
+          <p>While Archons are prone to functional inconsistentcy, one aspect of their abilities is always consistent: An Archon spawns full puppets, from a pool of subpuppets. The psionic weight from these spawned puppets is consistently passed over to the Archmother, so Archons instead only exist to increase the growth rate of a puppet clan.</p>
+          <p>While Archons do not spawn subpuppets, their impure genetic code means that some of their puppets may be altered during the spawning process, and as such, an Archon will typically have its own pool of puppet "variants" that they spawn in place of the more usual fare. Once again, this typically varies by Archon type, and will be elaborated on on a per-class basis.</p>
       </div>
       <div class="spacer"></div>
       <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Gallery</h1></div>
-          <div><img src="weir.png" alt="A reference image of a Weir." width="520" height="668"></div>
         </div>
     </div>
     </body>

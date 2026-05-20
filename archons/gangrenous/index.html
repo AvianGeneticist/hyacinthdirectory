@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weirs</title>
-    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>Gangrenous Archons</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
@@ -15,7 +15,7 @@
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../../../backgroundwhite.png), url(../../../backgroundblue.png), url(../../../backgroundred.png), url(../../../backgroundyellow.png);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -210,7 +210,6 @@
             this.classList.toggle("active");
             if (this.innerHTML === "<b>+</b>") {
               this.innerHTML = "<b><u>+</u></b>"
-              console.log(this.parentElement.innerHTML)
             } else {
               this.innerHTML = "<b><u>-</u></b>"
             }
@@ -219,66 +218,73 @@
             this.classList.toggle("active");
             if (this.innerHTML === "<b><u>+</u></b>") {
               this.innerHTML = "<b>+</b>";
-              console.log(this.parentElement.innerHTML)
             } else {
               this.innerHTML = "<b>-</b>";
             }
           });
-        };
-
-        var heritage = document.getElementById("totemparent")
-        heritage.addEventListener("load", expandparentage());
-        function expandparentage() {
-          heritage.lastElementChild.innerHTML = '<b>-</b>'
-          heritage.nextElementSibling.style.display = "block"
         }
       </script>
       
       <div class="spacer"></div>
-        <div class="column" onload="categoryExpand" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Weir Overview</h1></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Gangrenous Archon Overview</h1></div>
           <div class="infobox">
             <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
               <tr>
-                <td class="infotablecell">Commonality</td>
-                <td class="infotablecell">100% (Threshold Conjuring)</td>
+                <td class="infotablecell">Source</td>
+                <td class="infotablecell">Resurrected aggregate puppet mass</td>
               </tr>
               <tr>
                 <td class="infotablecell">Durability</td>
-                <td class="infotablecell">2/10</td>
+                <td class="infotablecell">14/10</td>
               </tr>
               <tr>
                 <td class="infotablecell">Strength</td>
-                <td class="infotablecell">Physical: 0/10<br>Psionic: 1/10<br>Magical: 3/10</td>
+                <td class="infotablecell">Physical: 9/10<br>Psionic: 7/10<br>Magical: 0/10</td>
               </tr>
               <tr>
                 <td class="infotablecell">Specials</td>
-                <td class="infotablecell">Flight<br>Magical transfer<br>Transmutation of arcane energies</td>
+                <td class="infotablecell">Gangrenous puppet creation<br>Gangrene manipulation</td>
               </tr>
               <tr>
                 <td class="infotablecell">Personality</td>
-                <td class="infotablecell">Frenetic, but moody</td>
+                <td class="infotablecell">Variable; tends towards clinginess</td>
               </tr>
             </table>
           </div>
-          <p>Weirs are psionomagical subpuppets conjured by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/gangrene.html">Thresholds</a> when high energy currents are present. They act as magical couriers and transmutators, converting excess magical energies into various useful forms. A group of Weirs is known as a conduit.</p>
-          <div><h3>Variants</h3></div>
-          <p><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a> - <b>Weirs</b></p>
+          <p>Gangrenous Archons represent the culmination of many long-deceased puppets being forcefully resurrected with powerful magic. While they lose access to magic, they have greatly enhanced spawning abilities over other Archons with a wide spread of influenced puppet types.</p>
           <div><h2>Physical Description</h2></div>
-          <p>Weirs can be seen as a counterpart to Wisps, though there is some discourse on whether they are truly gangrenized Wisps, or if they are just a closely related conceptual organism. Regardless of exact relation, Weirs do support all the hallmarks of a gangrenized puppet: Their bodies are more robust, their spellcasting abilities are less so, and they also differ reasonably in size (standing at 1' 7", or 48cm). They also share the same "fibreglassy" texture, as well as a faint glow that they radiate consistently. Most notable are their long, curly tails, which are actually partially-solidified via keratinization. It is common to see coalesced globules of magic within the curls of a Weir's tail, being ferried where they need to go.</p>
+          <p>Gangrenous Archons, so named for the large pockets of gangrene that make up parts of their body, are a variant of a wider class of <a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a> specializing in physical durability and puppet spawning. Among their peers, their defining traits number more in what they lack than what they possess: They lack any sort of horn structure for conducting even simple magic. They do, however, have a large bed of dark-tainted verdant mass that grows on their backs, and correspondingly, they do show some reception to the verdant magics emitted by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a>.</p>
           <div><h2>Behaviour</h2></div>
-          <p>Weirs, superficially, act similar to Wisps, staying near their host Threshold in preparation for the necessity of a magical delivery. They are typically quite sedate in this waiting state, spending time either resting on their Threshold or chittering amongst themselves. When the order for magic comes in, however, Weirs work very hard to fill it: They swiftly attach to one of the Threshold's horns, drawing the necessary magic out in the form of up to eight globules, each one encompassing the approximate magic storage of a <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Trickster</a>. They then take these globules (and potentially more of their fellows, if even more magic is required) and swiftly flit towards their target.</p>
-          <p>At the site of delivery is when the Weirs' second key ability comes in: Transmutation. Weirs are capable of converting magical energy between various usable forms, be it purified magic for regular puppets, gangrenous energy for gangrenous ones, plant magic for verdants or farming, healing water for medical purposes, elemental energies for maintaining elementals, or most surprisingly, raw Haetin. How exactly they know how to convert between these energies is unknown.</p>
-          <p>Weirs do not act particularly differently in or out of combat. They have a single job that they do well; the only difference is the circumstances it is done in. In battles, they will often bring energy to fatigued puppets, or they will stock <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> and <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a> with spare raw Haetin.</p>
+          <p>As Archons, Gangrenous Archons primarily exist to increase the speed of growth of a puppet clan. Amidst their peers, they excel at this; whereas other archons seldom spawn more than one puppet as a time, Gangrenous Archons have been seen spawning up to six puppets in a single impulse; a feat owed to the uniquely bifurcated spawning orifice that occupies most of their stomach. They also possess the ability to take temporary psionic control of other puppets (though they of course cannot supersede the will of the Archmother, even among the puppets the archon itself has spawned), allowing the clan to more effectively coordinate multiple large-scale tasks.</p>
+          <p>While not strictly magical in nature, Gangrenous Archons do seem to possess some ability to manipulate gangrenous energy within their own bodies. This can lead to temporary feats of incredible strength on the archons' part, and is also believed to be why their already durable bodies knit so quickly. Their sphere of influence is, however, very limited, though they have been seen aiding the regeneration of other gangrenous puppets.</p>
+          <p>With a greater independence than normal puppets, Gangrenous Archons can display a considerable variety of behaviour depending on the individual's temperament. They do, however, have a tendency towards clinginess and typically abhor being alone; they will often seek out groups of other puppets, or even their Archmother, for no other reason than simple company; to which failing to find the target of their clinginess can lead to issues as the archon gets more and more upset.</p>
+          <div><h2>Puppet Variations</h2></div>
+          <p>Gangrenous Archons feature the widest variety of variant puppets, affecting seven in total and causing the creation of two new types of subpuppet in the process. A consistent pattern in their various mutations is a tendency towards greater durability and weaker specialied traits. The full list is:</p>
+          <ul>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules/gangrene.html">Planara</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a>; spawned by Reconcilants)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators/gangrene.html">Macerators</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a>)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/gangrene.html">Demulcents</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a>)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae/gangrene.html">Metastae</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a>)</li>
+            <li style="margin-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae/squallids">Squallids</a> (spawned from Metastae)</li>
+            <li style="margin-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae/squallids/gangrene.html">Angiites</a> (spawned from Metastae)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors/gangrene.html">Paladins</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a>)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/gangrene.html">Thresholds</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a>)</li>
+            <li style="margin-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps/gangrene.html">Weirs</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a>)</li>
+          </ul>
           <div><h2>Genetic Description</h2></div>
-          <p>Like Wisps, Weirs lack any true genetic code, being psionomagical creations. They also have replica internal organs, however, and they imitate the appearance of being partially gangrenized. Attempts to make a Weir manipulate itself or one of its other fellows into a different magical form, however, have proven utterly unsuccessful, so there is most certainly something anchoring Weirs to their current forms.</p>
+          <p>Gangrene is a very strange energy that interacts with puppets in a variety of ways. It is known to directly harm spellcasting ability, as seen in Thresholds and Weirs, and even the Gangrenous Archons don't seem immune to these effects. However, due to its often homogenous nature, it regenerates quickly, and is very difficult to damage without simply eradicating an entire sample.</p>
+          <p>Gangrenous Archons themselves are one of a select few Archon types that can arise purely from a single Archmother's genetic code, being an aggregate of multiple puppets spawned by the same Archmother.</p>
+          <div><h2>Hyacinth's Thoughts</h2></div>
+          <p><i>The Gangrenous Archons; my little shadows, as I sometimes call them. They vie for my attention more than just about any of the others; attention I'm more than happy to give, of course, though occasionally I'm not available to spend as much time as they'd like. Their other sisters can help stave off their loneliness, as can putting them in charge of large projects with lots of their siblings involved, but I always feel a bit guilty when I do so. If only I had more time...</i></p>
           <div><h2>Metanarrative</h2></div>
-          <p>Weirs round out the <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totem</a>/Threshold dichotomy by providing a counterpart to Wisps, reflecting not only body, but ability as well. Weirs focus more on the logistical side of magic, abandoning spellcasting entirely for the sake of magical support. I was originally going to make a whole set of alt-elementals, but couldn't come up with enough ideas that I liked to commit to it.</p>
+          <p>Gangreous Archons were the first Archons to be conceptualized. The concept of a puppet that spawns other full puppets arose from the logistical nightmare of cases like Stellaris, where it's implied Hyacinth has somehow spawned multiple quadrillions of puppets all by themselves, which even accounting for subpuppets, is highly unlikely.</p>
+          <p>Gangrenous Archons in particular are a story creation, brought about from a mythos where Hyacinth is an eldritch sort of thing that has gone through cycles of living, dying, petrifying, and resurrecting. Gangrenous Archons are what happens when you try to brute force resurrecting dead puppet mass.</p>
       </div>
       <div class="spacer"></div>
       <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
           <div><h1>Gallery</h1></div>
-          <div><img src="weir.png" alt="A reference image of a Weir." width="520" height="668"></div>
+          <div><img src="gangrenousarchon.png" alt="A reference image of a Gangrenous Archon." width="520" height="476"></div>
         </div>
     </div>
     </body>
