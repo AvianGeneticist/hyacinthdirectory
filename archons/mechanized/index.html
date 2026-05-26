@@ -1,0 +1,302 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanized Archons</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+                
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 740px);
+          min-width: 360px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .infobox {
+          float: right;
+          width: 340px;
+          height: 400px;
+          padding: 5px;
+        }
+
+        .infotable {
+          border-collapse: collapse;
+          width: 100%;
+          height: 100%;
+        }
+
+        .infotablecell {
+          border: 2px solid rgba(214,145,210,0.5);
+          padding: 5px;
+        }
+        
+        /* Clear floats after the columns */
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Mechanized Archon Overview</h1></div>
+          <div class="infobox">
+            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
+              <tr>
+                <td class="infotablecell">Source</td>
+                <td class="infotablecell">Surgical adjustment of a damaged Archon</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Durability</td>
+                <td class="infotablecell">11/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Strength</td>
+                <td class="infotablecell">Physical: 4/10<br>Psionic: 11/10<br>Magical: 2/10</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Specials</td>
+                <td class="infotablecell">Mechanized puppet creation<br>Surgical superiority<br>Fabrication of modules</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Personality</td>
+                <td class="infotablecell">Variable; has difficulty conveying strong emotions</td>
+              </tr>
+            </table>
+          </div>
+          <p>Mechanized Archons are Archons who have being surgically altered by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a>. They act as nexi for all Mechanized Puppets, producing the modules needed to equip such puppets and also spawning the puppets themselves. Their magical abilities are limited, but they trade this for greater awareness of the puppets around them as they adapt to the needs of their spawn.</p>
+          <div><h2>Physical Description</h2></div>
+          <p>Mechanized Archons aren't exactly subtle in their naming, given that their defining trait is the massive fabrication unit that makes up a majority of their barrel. This offsets much of the rest of their biology; their spawning orifice, for example is located in the leg, and they lack many of the redundant organs that large equid abominations have, making them one of the frailer Archon types despite their refined haetin machinery. To offset the weight of their fabricators, at least part of the front part of their barrels and one of their front legs are replaced with machined variants with counterweights.</p>
+          <p>While they can be assembled from any other Archon type, Mechanized Archons seldom reflect whatever type they came from, even growing a horn if they were previously a <a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a> Archon before the surgery.</p>
+          <div><h2>Behaviour</h2></div>
+          <p>As Archons, Mechanized Archons primarily exist to increase the speed of growth of a puppet clan. However, compared to their peers, Mechanized Archons are particularly poor at this; they never spawn more than one puppet at a time (though they can still spawn quite frequently in stressful situations). They also possess the ability to control significant swathes of a puppet clan, and in fact seem to display a particular aptitude for coordinating extraordinarily large projects, which is typically owed to their greater psionic sensitivity.</p>
+          <p>Mechanized Archons have a very unusual specialty in the form of the large fabricator they carry in their bodies. This is a highly advanced piece of biotechnology, able to create refined Haetin directly from the archon's blood and form it into whatever the archon's puppets request for modules.</p>
+          <p>With a greater independence than normal puppets, Mechanized Archons can display a considerable variety of behaviour depending on the individual's temperament. While they do not display any particular behaviour, Mechanized Archons have a tendency towards neutrality, often appearing bored to outside observers. This is not a problem within the gestalt, as puppets and archons have a general impression of how all of their fellows are doing, but makes Mechanized Archons poorly suited to diplomatic work.</p>
+          <div><h2>Puppet Variations</h2></div>
+          <p>Mechanized Archons feature a strange variety of puppets, namely in that most puppet types are simplified and standardized to their sizes (Light, Heavy, or Superheavies), with only a couple puppets retaining unique features. Also included is the Division Analogue, which comes from an installable hangar module (seen below). The full list is as follows:</p>
+          <ul>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized/divisions">Divisions</a></li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/_lights/machine.html">Laborers</a> (from Light Puppets)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/_heavies/machine.html">Haulers</a> (from Heavy Puppets)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/_superheavies/machine.html">Shlephs</a> (from Superheavy Puppets except Anchorages)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/machine.html">Arcologies</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a>)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites/machine.html">Satellites</a> (from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a>)</li>
+          </ul>
+          <div><h2>Modules</h2></div>
+          <p>The defining trait of the Mechanized Archon is the modules it can fabricate for its puppets. Each module has a name, a slot size, and an effect, which can vary wildly from weapons, to puppet support, to more general utilities. A full list is below:</p>
+          <ul>
+            <li>Grasper - Single Slot - A significantly-sized gantry crane equipped with a grasper on the end, capable of reaching up to 5 feet up and 8 feet out, with a potential down reach of 10 feet. Made of refined haetin girders and elastic haetin cabling, a Grasper is not as flexible or articulate as a Manipulator's arm, but makes up for it in greater reach and strength. Can fold into the body when not in use.</li>
+            <li>Rocket Pod - Single Slot - The smallest defensive implement designed for mechanized puppets is a Rocket Pod, which allows the wielder to fabricate and fire off barrages of small homing missiles (comparable in effect to <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces'</a> buster missiles). The footprint of the rocket pod is quite low, as much of the machinery is installed into the floor of the single slot it occupies.</li>
+            <li>Storage Tank - Single Slot - A small storage tank optimized for the storage of liquids in a preserved environment. Raw Haetin is the most common material, but almost any liquid is a valid use of the space.</li>
+            <li>Storage Bay - Dual Slot - Storage Bays are just as they sound: Modules for storing resources, ammunition, spare components, or whatever else the Mechanized Puppet desires. The Storage module acts as a folded space, and can store roughly 10x the amount of material its volume would suggest, correspondingly offsetting the weight of that which lies within as well.</li>
+            <li>Apartment - Dual Slot - Designed for coexistence with Anchorages. Apartments provide a safe place to return to and psionic capacity for up to three Serfs, allowing Anchorages to install more productive modules rather than worry about housing. Demand for these modules is, of course, very low when no Anchorages are present.</li>
+            <li>Prospector - Dual Slot - A Prospector allows a mechanized puppet to inspect its surroundings for resources; particularly minerals buried underground, but soil fertility and even sunlight availability are also potential options.</li>
+            <li>Spinogun - Quad Slot - The Spinogun is a massive, arcane railgun turret that can fire either a single, immensely powerful beam with high penetrating potential, or a more consistent beam of abrasive particles to dig more precisely for purposes of mineral extraction. The Spinogun in particular uses a considerable amount of magic when working, and benefits from being shared magic by a <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Trickster</a>, <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totem</a>, <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisp</a>, or <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps/gangrene.html">Weir</a>.</li>
+            <li>Division Hangar - Quad Slot - Divisions are a special type of Analogue fabricated specifically from these specialized hangars (one Analogue apiece). The Hangar itself stores reserve modules, raw Haetin, and other components needed to maintain the Provision, as well as a specialized fabricator for producing smaller replacement parts.</li>
+            <li>Module Fabricator - Quad Slot - A slightly miniaturized variant of the Archon's own fabricator. It can only print single and dual slot modules, but allows puppets to take pressure off of an Archon to provide modules where needed.</li>
+          </ul>
+          <div><h2>Genetic Description</h2></div>
+          <p>Mechanized Archons, due to their wide variety in backgrounds, can have a surprising variance despite all looking and acting quite similar as a caste of abomination. However, it is known that their biggest defining trait is their blood, which contains the extra compounds and internal magic to be able to be transmuted into refined Haetin entirely at the archon's behest, which enables their fabricators' incredible production speeds.</p>
+          <div><h2>Hyacinth's Thoughts</h2></div>
+          <p><i>You'd think after enough times of seeing an archon be patched up into a Mechanized form, I'd get used to it, but... No, not at all. The surgeries do them well, and there's often no trace of their injuries. I don't even fully know if they remember. But... I remember. Every single one of them, whether they're born unwell or they came about some other way.</i></p>
+          <p><i>But, they soldier on. They all seem content with their modifications, and their ability to handle the others in considerable number while maintaining coordination. They can be a touch mute at times, but in a way, that's comforting in its own right. I do still feel responsible for them, however.</i></p>
+          <div><h2>Metanarrative</h2></div>
+          <p>Mechanized Archons were actually the third Archon type, but they were decidedly "finished" first. I like them quite a bit; they play very heavily with the RTS theming while not stepping on the toes of Anchorages particularly heavily. Plus cyborgs, of course, kick ass. The decision to make the archons themselves more emotionally mute while their puppets tend towards outward cooperation and strong displays of companionship and sociality might be a bit strange, but I think it adds some flavourful contrast.</p>
+      </div>
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Gallery</h1></div>
+          <div><img src="mechanizedarchon.png" alt="A reference image of a Mechanized Archon." width="520" height="406"></div>
+        </div>
+    </div>
+    </body>
+</html>
