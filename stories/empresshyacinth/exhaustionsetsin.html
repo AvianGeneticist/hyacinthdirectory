@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agents</title>
-    <link rel="icon" type="image/x-icon" href="../../../../favicon.ico">
+    <title>Exhaustion Sets In</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-                
+
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../../../../backgroundwhite.png), url(../../../../backgroundblue.png), url(../../../../backgroundred.png), url(../../../../backgroundyellow.png);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -47,7 +47,7 @@
 
         .column {
           float: left;
-          width: calc(100% - 740px);
+          width: calc(100% - 200px);
           min-width: 360px;
           min-height: 98vh;
           padding: 10px;
@@ -61,26 +61,13 @@
           padding: 10px;
         }
 
-        .infobox {
-          float: right;
-          width: 340px;
-          height: 400px;
-          padding: 5px;
-        }
-
-        .infotable {
-          border-collapse: collapse;
-          width: 100%;
-          height: 100%;
-        }
-
-        .infotablecell {
-          border: 2px solid rgba(214,145,210,0.5);
-          padding: 5px;
+        .column p {
+          text-indent: 16px;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
         }
         
         /* Clear floats after the columns */
-        
         .row:after {
           content: "";
           display: table;
@@ -226,57 +213,48 @@
             }
           });
         }
-
-        var heritage = document.getElementById("totemparent")
-        heritage.addEventListener("load", expandparentage());
-        function expandparentage() {
-          heritage.lastElementChild.innerHTML = '<b>-</b>'
-          heritage.nextElementSibling.style.display = "block"
-        }
-        </script>
+      </script>
+      
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Agent Overview</h1></div>
-          <div class="infobox">
-            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
-              <tr>
-                <td class="infotablecell">Commonality</td>
-                <td class="infotablecell">100.0% (Consuls)</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Durability</td>
-                <td class="infotablecell">3/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Strength</td>
-                <td class="infotablecell">Physical: 3/10<br>Psionic: 1/10<br>Magical: 2/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Specials</td>
-                <td class="infotablecell">Variety of lightning magic<br>Spawns and coordinates Agents</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Personality</td>
-                <td class="infotablecell">Devoted yet playful</td>
-              </tr>
-            </table>
-          </div>
-          <p>Agents are spawned by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a> as a form of living weaponry, being shaped into various lash shapes. Agents can act on their own, but are much stronger and more comfortable when part of a lash setup. A group of Agents is called a chain.</p>
-          <div><h2>Physical Description</h2></div>
-          <p>Agents are tiny, barely eeking out the title of "smallest puppet type" from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a> as they stand a positively diminutive 8" (20cm) tall. Agents, curiously, have almost no special physical features, save for their very narrow hooves that they use for electrical conduction. Other than that, they are simply small ponies formed of electricity, with many describing touching them as like handling staticy carpet. Agents are almost always found gliding around on small stilts of electricity, which they most commonly connect to the ground, each other, or their host Consul.</p>
-          <div><h2>Behaviour</h2></div>
-          <p>Agents mostly act as extensions of their host Consul in combat, but if left separate they are not entirely helpless. They will occasionally hang back and contribute to <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays'</a> combined lightning attack, and in fact an Agent can deflect the attack across multiple targets who are close together. When that isn't an option, however, Agents will lash out with their own, small, independent arcs of electricity, though the actual output is no greater than about half of a lone Array.</p>
-          <p>Agents don't take damage from electrical sources, but unlike their host Consuls, they cannot heal from absorbed electricity. However, Agents tie their lifeforce directly to their Consul's when being wielded; the Consul absorbs punishment for all connected Agents, explaining their apparent invulnerability when being whipped around through enemies.</p>
-          <p>Agents will never stray more than about twenty feet away from their host Consul when idle, though within that limited radius, they do occasionally show a playful streak, playfully giving other puppets small zaps. Occasionally they will do this to a <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilant</a>, causing it to spawn.</p>
-          <div><h2>Genetic Description</h2></div>
-          <p>Like other elementals (and ironically not like Consuls), Agents lack any sort of internal genetics, though their bodies are seemingly built around small, aggregate masses of biological proteins. Some claim that this makes Agents viruses spawned by Consuls, though no sort of virulent behaviour has ever been recorded. The most prevalent theory is that the biological proteins provide the minimal psionic response necessary for direct psionomagical communication and collaboration.</p>
-          <div><h2>Metanarrative</h2></div>
-          <p>As the first "subsubpuppets", Agents occupy and extremely weird niche. They're spawn of a summon that was spawned by a host. It was an opportunity to get really weird with their biology and lore, and also encouraged creativity with their use. Totems aren't titanic beings or anything; anything two levels down from them would have to be irresponsibly small. So, Agents act as tiny critters that form up into weaponry for their hosts.</p>
-      </div>
-      <div class="spacer"></div>
-      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Gallery</h1></div>
-          <div><img src="agent.png" alt="A reference image of an Agent." width="348" height="520"></div>
+          <p>Hyacinth's eyes flittered briefly as they worked at the castle gardens. While they couldn't abdicate the castle in case they were needed, they still knew every bit of effort mattered. The strain of maintaining all of their Auroras' full brightness, day in and day out, was beginning to get to them. Their stomach groaned, and despite their best efforts, they yawned loudly. As they continued through the gardens, they found their mind drifting to how soft the soil was. And how much closer it looked. And how it was suddenly rather poorly lit...</p>
+          <br>
+          <p>"Your highness? Your highness!" Called one of the castle nurses, shaking Hyacinth awake.</p>
+          <p>Hyacinth gasped as they awoke. They were laying in the castle infirmary, hooked up to a number of pieces of medical equipment. "A-ah..." They managed. "Did I... Doze off?" They asked.</p>
+          <p>"The castle guards found you passed out in the garden, Empress," The nurse expressed. "We've done our best to stabilize you, but..."</p>
+          <p>Hyacinth rubbed their face. "Ah, it is still daytime, isn't it? I should relight the Auroras..." They managed.</p>
+          <p>"Hold on, your highness," The nurse expressed. "We've been running some scans on you while you've been out. You're already suffering from signs of mild malnutrition, but also..." She pulled out a folder with some ultrasound photos in it. "We found this while doing a check of your internals."</p>
+          <p>Hyacinth's eyes widened as they saw the form of a small, curled equid. "The surrogacy did work..." They stammered. "How could I have forgotten?"</p>
+          <p>The nurse blinked. "Your highness?" She questioned.</p>
+          <br>
+          <p>"Before the... Incident, Celestia and I were very close," Hyacinth expressed. "We loved in secret, though she was always worried about carrying a foal for a pony of my size. So, I took on the role of a surrogate, for our own child," They elaborated, lightly hoofing at their side. "I haven't ever received confirmation that it actually worked, but... Now I know," They managed. Despite their small smile, a few tears ran down their face. "But she won't ever know," They added weakly, smile falling.</p>
+          <p>The nurse hesitated, but patted Hyacinth's side. "That's... Good news, isn't it?" The nurse expressed. "That means she lives on, in some small way."</p>
+          <p>Hyacinth smiled gently. "I suppose so," They replied. "I will... I must take care of this child, as her last memory," They expressed, sniffling a little.</p>
+          <p>The nurse nodded slowly. "That said, though... That means you have to tone down your stressors a lot, your highness. Plus, you need to be eating more," She expressed.</p>
+          <p>"Ah..." Hyacinth winced. "We are already eating most of what we produce. We ensure Equestria is fed, and then take the excess for ourselves. It is just... Replacing the sun requires so much more energy than we can make, even now," They expressed.</p>
+          <p>"How much energy does it take?" The nurse blinked.</p>
+          <br>
+          <p>"It... Oh, how to explain it?" Hyacinth began. "One Aurora, at full brightness, would burn through roughly your weight in grain in an hour," They described. "The Cambrians' energy offsets some of the cost, but running so many, constantly, gets to be quite exhausting, despite all the abstraction magic can provide."</p>
+          <p>The nurse blinked. "No wonder you farm so fervently..." She murmured. "But, if you want to take care of this foal, you need to smarten up about overexerting yourself so much."</p>
+          <p>"It's not that simple when I have a sun to supplement, dear," Hyacinth expressed with a grimace. "The people of... Not just Equestria, but Equus as a whole are counting on me. There's not much between us and a permanent ice age... Not anymore."</p>
+          <p>The nurse blinked. "The foal is Celestia's, isn't it?" She reasoned. "Think of it as long term planning. Maybe it'll get a bit rough in the short term, but in the long term, we might have a new sun princess."</p>
+          <p>Hyacinth blinked. "I won't let her child just be a tool," They expressed. "But it is something to hope for."</p>
+          <br>
+          <p>Hyacinth sighed after another moment. "I suppose I find myself between a rock and a hard place, now," They conceded with a soft chuckle. "To choose between a foal and a planet... I wish I could say it was an easier decision," They expressed with a soft sigh.</p>
+          <p>The nurse nodded. "Maybe get some members of council to help; try to lighten your workload. Maybe we just have to start rationing sunlight instead of pretending that nothing's wrong," She mused out loud.</p>
+          <p>Hyacinth closed their eyes for a long moment, pondering that thought. "Perhaps I should discuss it with the court... I must think about what's best in the long term, and clearly pretending like nothing is wrong isn't it," They expressed. "Thank you, dear," They said with a small smile, opening their eyes again.</p>
+          <br>
+          <p>"Glistening Ward, your highness," The nurse introduced herself. "I'm glad I can be of service. I know not everyone appreciates all you do, but... I owe my life to some timely intervention on your part."</p>
+          <p>"Intervention?" Hyacinth questioned, looking over the little pony.</p>
+          <p>Ward rubbed her leg. "I was... In a dark place, when the disappearance happened," She admitted. "It pushed me over the edge, and when I thought it was all over... A Seraph pulled me back. It brought me to, dropped a Coddler in my bed to keep me company... I cried for hours, I think. But they were just there. Never irate or judgmental. They had more important things to do, I'm sure, but-" She rambled on, only stopping once interrupted.</p>
+          <p>Hyacinth gently pulled Ward into a hug. "The Seraphs... Seem to know things that I don't always understand. Patterns and rhythms that are sensical only to them," They expressed softly. "But making sure that all is well is never unimportant," They added in a gentle tone, giving the mare a light squeeze before letting her go.</p>
+          <br>
+          <p>Ward nodded a little, taking that in for a moment. "Ah- Let me... Get all this plumbing off of you," She commented, pulling out the menagerie of intravenous needles that had been stuck into Hyacinth's legs. "Please take care of yourself, your highness. We'd all be worse off if something happened to you," Ward requested as she worked.</p>
+          <p>"Thank you, dear," Hyacinth replied gently. "Though, knowing now, what's coming to fruition... I'm going to need a maternity nurse to keep me on the right track," Hyacinth expressed, giving a wink.</p>
+          <p>Ward blinked, processing that for a moment. "You want me to... Yes, of course, your highness. Whatever I can provide," She expressed.</p>
+          <p>"Thank you, dear," Hyacinth expressed softly, beginning to move themselves off the infirmary cot now that their needles had been removed. "I should be off, now... I have much to ruminate on. I'll be thinking about what we've talked about," They expressed.</p>
+          <p>"Of course, Empress. Please be well, and take care of yourself," Ward expressed, bowing her head respectfully to the large equine.</p>
+          <p>"You as well, dear," Hyacinth replied gently. "Knowing my children and I can make a difference means a lot," They expressed as they began walking out of the infirmary.</p>
         </div>
     </div>
     </body>

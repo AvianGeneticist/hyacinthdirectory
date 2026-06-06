@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agents</title>
-    <link rel="icon" type="image/x-icon" href="../../../../favicon.ico">
+    <title>Empress Hyacinth</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-                
+
         .row {
           display: flex;
         }
 
         #base {
           background-color:rgb(26,0,27);
-          background-image: url(../../../../backgroundwhite.png), url(../../../../backgroundblue.png), url(../../../../backgroundred.png), url(../../../../backgroundyellow.png);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
           background-repeat: repeat, repeat, repeat, repeat;
           background-position: left top, left bottom, right top, right bottom;
         }
@@ -47,7 +47,7 @@
 
         .column {
           float: left;
-          width: calc(100% - 740px);
+          width: calc(100% - 200px);
           min-width: 360px;
           min-height: 98vh;
           padding: 10px;
@@ -60,27 +60,8 @@
           min-height: 98vh;
           padding: 10px;
         }
-
-        .infobox {
-          float: right;
-          width: 340px;
-          height: 400px;
-          padding: 5px;
-        }
-
-        .infotable {
-          border-collapse: collapse;
-          width: 100%;
-          height: 100%;
-        }
-
-        .infotablecell {
-          border: 2px solid rgba(214,145,210,0.5);
-          padding: 5px;
-        }
         
         /* Clear floats after the columns */
-        
         .row:after {
           content: "";
           display: table;
@@ -226,57 +207,19 @@
             }
           });
         }
-
-        var heritage = document.getElementById("totemparent")
-        heritage.addEventListener("load", expandparentage());
-        function expandparentage() {
-          heritage.lastElementChild.innerHTML = '<b>-</b>'
-          heritage.nextElementSibling.style.display = "block"
-        }
-        </script>
+      </script>
+      
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Agent Overview</h1></div>
-          <div class="infobox">
-            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
-              <tr>
-                <td class="infotablecell">Commonality</td>
-                <td class="infotablecell">100.0% (Consuls)</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Durability</td>
-                <td class="infotablecell">3/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Strength</td>
-                <td class="infotablecell">Physical: 3/10<br>Psionic: 1/10<br>Magical: 2/10</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Specials</td>
-                <td class="infotablecell">Variety of lightning magic<br>Spawns and coordinates Agents</td>
-              </tr>
-              <tr>
-                <td class="infotablecell">Personality</td>
-                <td class="infotablecell">Devoted yet playful</td>
-              </tr>
-            </table>
-          </div>
-          <p>Agents are spawned by <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a> as a form of living weaponry, being shaped into various lash shapes. Agents can act on their own, but are much stronger and more comfortable when part of a lash setup. A group of Agents is called a chain.</p>
-          <div><h2>Physical Description</h2></div>
-          <p>Agents are tiny, barely eeking out the title of "smallest puppet type" from <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a> as they stand a positively diminutive 8" (20cm) tall. Agents, curiously, have almost no special physical features, save for their very narrow hooves that they use for electrical conduction. Other than that, they are simply small ponies formed of electricity, with many describing touching them as like handling staticy carpet. Agents are almost always found gliding around on small stilts of electricity, which they most commonly connect to the ground, each other, or their host Consul.</p>
-          <div><h2>Behaviour</h2></div>
-          <p>Agents mostly act as extensions of their host Consul in combat, but if left separate they are not entirely helpless. They will occasionally hang back and contribute to <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays'</a> combined lightning attack, and in fact an Agent can deflect the attack across multiple targets who are close together. When that isn't an option, however, Agents will lash out with their own, small, independent arcs of electricity, though the actual output is no greater than about half of a lone Array.</p>
-          <p>Agents don't take damage from electrical sources, but unlike their host Consuls, they cannot heal from absorbed electricity. However, Agents tie their lifeforce directly to their Consul's when being wielded; the Consul absorbs punishment for all connected Agents, explaining their apparent invulnerability when being whipped around through enemies.</p>
-          <p>Agents will never stray more than about twenty feet away from their host Consul when idle, though within that limited radius, they do occasionally show a playful streak, playfully giving other puppets small zaps. Occasionally they will do this to a <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilant</a>, causing it to spawn.</p>
-          <div><h2>Genetic Description</h2></div>
-          <p>Like other elementals (and ironically not like Consuls), Agents lack any sort of internal genetics, though their bodies are seemingly built around small, aggregate masses of biological proteins. Some claim that this makes Agents viruses spawned by Consuls, though no sort of virulent behaviour has ever been recorded. The most prevalent theory is that the biological proteins provide the minimal psionic response necessary for direct psionomagical communication and collaboration.</p>
-          <div><h2>Metanarrative</h2></div>
-          <p>As the first "subsubpuppets", Agents occupy and extremely weird niche. They're spawn of a summon that was spawned by a host. It was an opportunity to get really weird with their biology and lore, and also encouraged creativity with their use. Totems aren't titanic beings or anything; anything two levels down from them would have to be irresponsibly small. So, Agents act as tiny critters that form up into weaponry for their hosts.</p>
-      </div>
-      <div class="spacer"></div>
-      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div><h1>Gallery</h1></div>
-          <div><img src="agent.png" alt="A reference image of an Agent." width="348" height="520"></div>
+          <div><h1>Overview</h1></div>
+          <p>Empress Hyacinth is a collection of semi-connected scenes all taking place in the same timeline. The links below are arranged in the canonical order, though they may have been written or posted out of order.</p>
+          <p>To aid in comfort of reading, each entry will be given a length in words (approximated to the hundred and formatted as "x.yk").</p>
+          <div><h2>Chapter List</h2></div>
+          <ul>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth/coronationday.html">Coronation Day</a> (1.1k words)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth/exhaustionsetsin.html">Exhaustion Sets In</a> (1.2k words)</li>
+            <li><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth/cardion'sbirthday.html">Cardion's Birthday</a> (3.6k words)</li>
+          </ul>
         </div>
     </div>
     </body>
