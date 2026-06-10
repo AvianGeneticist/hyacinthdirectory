@@ -1,0 +1,318 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursory Report</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p><i>A Cursory Report on the Hyacinth Gestalt Consciousness and Superorganism</i></p>
+            <br>
+            <p><i>Authored by Alloyed Heart</i></p>
+            <p><i>Co-Authored by Antecesse</i></p>
+            <br>
+            <h3>INTRODUCTION</h3>
+            <p>The Gestalt Consciousness headed by the foreign minister Hyacinth has been the impetus for a new field of study known as Gestology, entirely responsible for cataloguing Gestalt Organisms and their anatomy, physiology, ecology, and sociology. There are many specificities involved in a study such as this, and while there are opportunities for the development of specialists in this field, this report will be written from the perspective of a general study encompassing a cursory view of all fields involved.</p>
+            <br>
+            <p>The definition of a "Gestalt Consciousness" has varied significantly in modern times, and the exact requirements an organism must fulfill to be a part of one have shifted over time. As such, in writing this report, one of the aims is to define what a Gestalt Consciousness is, of which three key points have been identified:</p>
+            <ol>
+              <li>A Gestalt Consciousness must have some sort of defined "progenitor" that the Consciousness cannot function without, henceforth referred to as the "Nexus".</li>
+              <li>All of the entities within the Gestalt must have some form of connection to and from the Nexus, such that coordination is achieved through the Nexus' action.</li>
+              <li>Entities within the Gestalt must have either no free will, or heavily suppressed free will (insofar that their eccentricities are ineffectual to the gestalt's activities).</li>
+            </ol>
+            <br>
+            <p>Hyacinth and their lessers (henceforth referred to as "Puppets") meet all three criteria, though there is some debate on whether Puppets meet the third point due to their occasionally vibrant personalities, which occasionally show some level of discoordination or even outright incongruity with the larger gestalt's wishes.</p>
+            <br>
+            <p>In the beginning of this report, the term "Superorganism" was used to describe the Hyacinth Gestalt. The use of this term is due to observed traits that imply a lack of physical disconnect between Puppets, such as the distribution of nutrients across the Gestalt with no active input.</p>
+            <br>
+            <p>An important facet of this report will be the distinguishing factor between "Magic" as ponies know it and the "Psionics" that tie Hyacinth's Gestalt together, as they are both utilized by Hyacinth in varying ways. As it is currently understood, Psionics are tied to parts of Hyacinth's biology that are not clearly visible to the naked eye under normal circumstances. It is believed this Psionic connection is what grants the Gestalt its large scale communication and coordination abilities, as well as more niche uses like allowing all entities within to efficiently share nutrients. It is also understood that a Psionic connection is needed for a Puppet to operate in the first place.</p>
+            <h3>HYACINTH - Ch. 1</h3>
+            <p>The entity we perceive as "Hyacinth" is the Nexus of the wider Gestalt. They are seemingly at least partially aware of their status, as when asked of their living condition, they refer to themselves as the Gestalt's "Archmother". This term carries a certain particularity to it, which relates to Hyacinth's role in the Gestalt's overall operations.</p>
+            <br>
+            <p>Hyacinth's role in the Gestalt can be broken down into three major roles, each of which are detailed below:</p>
+            <ol>
+              <li>Nexus duties: As the Nexus of the Gestalt, Hyacinth carries the immense neurological burden of maintaining the bodies of every single puppet. They achieve this by "patterning" the bodily processes of similar puppets and organs together, allowing the cadence of one section of brain mass to handle dozens or hundreds of individual puppets.</li>
+              <li>Outreach: While puppets are rarely capable of limited speech, Hyacinth is by far the most articulate within the Gestalt, and typically handles interaction with outside individuals.</li>
+              <li>Creation of new Puppets: Hyacinth acts as an ultimate source for all of the puppets within the Gestalt. While other puppets may spawn lessers to enhance their abilities or perform their own tasks, these "Subpuppet" spawn can all trace their heritage directly to Hyacinth when necessary.</li>
+            </ol>
+            <br>
+            <p>While included within the general duties of the role of Nexus, of note is the ancillary duty of aggression and hazard management. Many Puppets, particularly those that are larger (and correspondingly more powerful) pose great risks to their surroundings, while others can be highly territorial or protective of their lessers. Hyacinth appears to have a placating effect on the Puppets within the Gestalt, suppressing their most lethal traits in day to day function and generally fostering a more temperate, patient personality.</p>
+            <br>
+            <p>There are fears that if something were to happen to Hyacinth it may cause these puppets to go beserk, but there are no precedents for these assumptions, particularly given the fact that puppets either enter a comatose state or undergo a spontaneous, accelerated decohesion when their connection to a host is severed.</p>
+            <h3>PUPPETS - Ch. 2</h3>
+            <p>The definition of a "Puppet" has grown and changed over time, and there are rivalling schools of thought as to how strict the term should remain. For the purposes of this report, "Puppet" will refer to the umbrella term established by Tucked Quill et al. in the report <i>Puppet Class Dissemination and Digression</i>, which outlines the term as follows:</p>
+            <br>
+            <p><i>"A Puppet must:</i></p>
+            <ol style="font-style:italic;">
+              <li>Depend on a psionic connection to an Archmother (such as Hyacinth), directly or indirectly.</li>
+              <li>Have no overarching control over other peers of its Gestalt."</li>
+            </ol>
+            <br>
+            <p>While this definition is very lax, it provides a framework to account for everything that Hyacinth themselves considers to be part of their Gestalt, including even entities that do not explicitly appear Puppet-like, such as Analogues (which have most of their bodies comprised by a metalloid substance) or Elementals (which are conjured by magic and subsequently given a permanent spot in the Gestalt's brainspace).</p>
+            <br>
+            <h4><i>MASS VARIATIONS - Ch. 2A</i></h4>
+            <p>Puppets come in a vast number of shapes and sizes, but there is some consistency to them. There are expectations that can be made of a puppet's overall faculties based on its size class, which is seemingly broken into a level of "psionic weight", representing the level of activity of a Puppet's neural mass. This generally correlates with size, with larger Puppets having a heavier weight to them, but is not linear: Puppets can be roughly broken up into four psionic weight classes:</p>
+            <br>
+            <p>Light Puppets use what seems to be a baseline amount of psionic weight, or what this report will refer to as "1x". While this is a relatively small amount of brainpower, the Light Puppets' much smaller and usually simpler bodies means the Light Puppets have proportionally greater amounts of brain mass for creative thinking and problem solving, leading to Light Puppets often being very versatile.</p>
+            <br>
+            <p>Heavy Puppets use double the psionic weight of their Light siblings, and portray this by having much larger and more robust bodies. Heavy Puppets usually have a more "defined" set of skills than Light Puppets, relying more on innate bodily features and abilities.</p>
+            <br>
+            <p>Superheavy Puppets continue the tradition, with quadruple the psionic weight use of Light Puppets and having considerably powerful abilities. It is at this point where a Puppet tends to become more of a tool to the Gestalt than an individual unit, and most Superheavies have a slightly wider degree of applications due to this. Despite this bodily excellence, Superheavies display a certain behavioural inflexibility, often needing significant coaxing to break out of their defined roles.</p>
+            <br>
+            <p>Lastly are Titans, which are special, supermassive Puppets. They are not created all at once like most Puppets, instead being gestated over the course of numerous spawning cycles and assembled over time by lesser Puppets. Their psionic weight usage is hard to quantify, but rough estimates suggest a single Titan uses 256 times the psionic weight of a single Light Puppet, representing an investment incredible in not just physical or temporal, but also neurological cost.</p>
+            <br>
+            <p>While not technically a "size class", Subpuppets (Puppets spawned by other Puppets) also have some form of psionic weight usage, which is generally carried by the spawning Puppet. Subpuppets come in numerous shapes and sizes, though most often, all subpuppets from a single type of parent share a similar psionic weight burden, with only a handful of exceptions. Reconcilants, with their Light-Heavy-Titan trichotomy of Subpuppet types, are the only Puppets to truly attempt to replicate the various weight classes Hyacinth manages.</p>
+            <br>
+            <h4><i>MATERIAL VARIATIONS - Ch. 2B</i></h4>
+            <p>Beginning this section in earnest is a brief synopsis about "True" Puppets. These fulfill the above criteria, with the additional stipulation that they must be made of a special biological "slurry". Puppet Slurry acts as a rich mass of proteins and stem cells that the Gestalt "molds" into the shape of the desired Puppet, rather than the Puppet's body being solidly grown over time. It is this process that allows Puppets to be spawned in such great number, and what makes the "construction" of Titans possible.</p>
+            <br>
+            <p>This Slurry-based psionic construction also has a critical effect on the damage resilience and death cycle of a Puppet. While Puppets do sport some internal organs, the plentitude of which seems to have an effect on their durability, they do not accept damage in the same way "hard"-bodied creatures like Ponies do. Instead, all parts of their bodies are connected to a "Root" that accrues damage as the body does, and if the Puppet sustains too much damage to its Root, its psionic connection fails, resulting in a catastrophic decoherence of the body, leading the Puppet to melt back into its original slurry content.</p>
+            <br>
+            <p>In addition to "True" Puppets, three other puppet types have been notated based on their body compositions: Analogues, Elementals, and Fibrates. These all obey the overarching rules of Puppet behaviour, but are made of different materials and typically spawned in nonstandard ways:</p>
+            <br>
+            <p>Analogues resemble sentient machines, identifiable by their deep reddish-brown hulls and the glowing purple irises at the center of their eyes. They are the only puppets to have such detailed eyes, though they seem to replace the full eye for the sake of emoting, as they have been seen changing shape to aid in communication, even bending into particularly unusual shapes like musical notes or blueprints. Analogues are noteworthy for their exceptional durability relative to their size, owed to the high-quality materials they're constructed from. They also respond normally to psionic signals from Hyacinth, suggesting some level of biological material presence, though no autopsies or deconstructions have been authorized to prove these theories.</p>
+            <br>
+            <p>Elementals are a much more diverse caste. Their bodies are (as the name implies) formed largely by magic, though unlike the few ponies who have managed Elemental summoning, the Elementals belonging to Hyacinth appear to have a biological component that allows the Gestalt to sustain them, rather than an individual's concentration. By their nature, all Elementals have particularly unusual body layouts, though curiously, the common thread through all of Hyacinth's Elementals are their eyes, which retain a blank look similar to regular Puppets.</p>
+            <br>
+            <p>Lastly and most unusually, are Fibrates. These are creatures spun entirely from energy, be it magical or psionic. Fibrates are somewhat of an enigma to researchers, as the two examples (Phalanxes and Wisps) come from entirely different sources, energies, and operate in extremely different roles. The best definition that comprises both is simply "nonelemental energy-based organisms", but otherwise, they are completely unalike in all but name and approximate texture.</p>
+            <br>
+            <h3>GESTALT BEHAVIOUR - Ch. 3</h3>
+            <p>The Hyacinth Gestalt is an unusual hivemind in that its castes are very specialized, rather than being a uniform species of drone that are delegated into roles by simple chance. As such, the behaviour of the Gestalt is much more comparable to that of a single superorganism: Puppets may be Laborers, Communicators, Security Guards, Replicators, or Spellcasters, all coordinating to use their talents effectively between one another.</p>
+            <br>
+            <p>Despite their specializations, Puppets can oversee a potential number of roles. Howitzers, for example, in addition to excelling at launching payloads across long distances, can also have their pyroclastic shells harvested for use in oven equipment. Praetors, while chiefly acting as security, will volunteer their tentacles for usage as ties or ropes if necessary. It is in this way that the Gestalt ensures every Puppet has something to do, obtaining a substantial level of efficiency. Even Puppets that do not have particularly effective laboring skills can still contribute to the Gestalt by consuming food, allowing the rest of the Gestalt to spend less time doing so.</p>
+            <br>
+            <p>While at the time of writing 35 Puppet types have been discovered, the variety seems to grow over time as the Gestalt adapts to new stressors and changes. Exactly what divides a simple spawning stressor from a Puppet variety-developing one is unclear, but the result of the latter is often immediate, with the next several spawns at minimum producing only the new Puppet variety, seemingly attempting to meet some unknowable threshold.</p>
+            <br>
+            <h3>CONCLUSION</h3>
+            <p>The Hyacinth Gestalt is an extremely fascinating subject of discovery, and the expectation is that a vast majority of this report will become outdated as research continues. With deepening diplomatic ties ensuring more opportunity for cultural mingling, the hope is that many of the more mysterious aspects of the Gestalt will become more apparent with time. Of key importance is finding a way to translate effectively between Ponish and the mixed-noise tongue that Puppets commonly speak in, though sadly no breakthroughs are even perceivably in reach at the time of writing.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
