@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evocation</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>Hyacinth heaved a soft sigh as they brushed Cardion's mane, wincing a bit as they felt all the knots be pulled through.</p>
+            <p>"It hurts, mother," Cardion expressed softly, pressing tightly to her parent's front.</p>
+            <p>"I know, dear," Hyacinth promised gently. "The first time is always the worst, but it gets easier as your mane remembers," They explained. "I've almost got the worst of it." With a harsh yarding of the comb through a particularly thick tangle, Cardion yipped softly. From the bifurcated orifice in her stomach tumbled out a pupa. The pupa swelled a bit before hatching into a strange little puppet that resembled a Manipulator, but with its arm replaced with an elongated, gangrenous limb tipped with a large mace.</p>
+            <br>
+            <p>"Oh! I'm sorry, dear," Hyacinth expressed, rubbing Cardion's head gently.</p>
+            <p>Cardion leaned into the head rubs, looking down at the puppet curiously. "This one is..." She blinked, tracing a hoof along the puppet's limb. "This one is not a Manipulator," She whined.</p>
+            <p>Hyacinth rubbed their chin. "It's certainly close," They mused. "But there's something different about it, for sure."</p>
+            <p>Cardion blinked. "Is it broken?" She asked, looking up at Hyacinth.</p>
+            <p>Hyacinth shook their head. "No, dear," They replied gently. "You are different, and yet you're not broken," They reasoned. "Perhaps we should give the little one a different name, given it's different from the others."</p>
+            <p>Cardion nodded a little. "Yes," She agreed curtly. "Thos one needs a name," She expressed.</p>
+            <p>Hyacinth smiled. "I think you should name it, dear," They expressed. "It's yours, after all."</p>
+            <p>Cardion gasped a little, her eyes lighting up. "This one gets to name it?" She chirped excitedly.</p>
+            <p>"Of course," Hyacinth nodded with a smile.</p>
+            <br>
+            <p>Cardion blinked. "Err... This one thinks..." She stammered, caught up in the excitement. "A... Mace...rator," She decided clumsily, tapping her chin.</p>
+            <p>Hyacinth smiled. "I suppose that's fitting, hm?" They mused, patting both Cardion's and the Macerator's heads.</p>
+            <p>Cardion hugged the small puppet to her chest and giggled. "Thos one likes thos' name," She expressed with a soft giggle.</p>
+            <p>Hyacinth nuzzled both of them, a puff of contentment leaving their nose. "Oh, good," They replied, squeezing Cardion and the Macerator softly. "Hmm... Perhaps the others you spawn will have similar differences to the others," They mused. "I suspect you'll get quite a lot of practice naming them," They grinned.</p>
+            <p>Cardion nodded a little, her mind already racing at the thought of what other puppets might look like under her influence.</p>
+            <br>
+            <p>The three were interrupted by a gentle knock on the door. Hyacinth sighed softly. "Ah... It is time for us to go address the court," They expressed. "I would like everyone to meet you. It has been a few days, and they should be kept in the loop with us as they keep us in the loop with them," They explained as they got Cardion's mane into a roughly presentable state.</p>
+            <p>Cardion nodded. "Will they not be afraid of this one?" She asked, looking up at Hyacinth as they stood up. "Those ones have not had any experience like those have had with mother," She expressed.</p>
+            <p>"It will be okay," Hyacinth promised with a gentle smile, pressing a light kiss to Cardion's forehead. "You are still my child. I will make sure nothing untoward happens to you."</p>
+            <p>Cardion nodded a little as she stood up to follow Hyacinth. "Okay, mother," She replied softly, following tightly behind Hyacinth as they walked towards the door.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>Hyacinth heaved as they looked at the large doors to the court podium. "It's just through this door here, dear," They said gently to Cardion. "Be proud. You're my daughter, and I know you'll do great things for us," They expressed, pulling the young one into a hug.</p>
+            <p>"Thank you, mother," Cardion replied softly, squeezing Hyacinth tightly. She clung to them for a moment, before letting go so they could lead the way inside.</p>
+            <p>Hyacinth took a deep breath and stepped through the doors, holding it open just long enough for Cardion to slip inside after them.</p>
+            <p>The court was a messy collection of not just those representing Equestria's interests, but foreign ministers representing other lands Hyacinth had been providing sunlight and feed to. Creatures of all kinds and sensibilities were represented.</p>
+            <br>
+            <p>Hyacinth stepped up to the microphone, clearing their throat before beginning to speak. "Thank you for coming, everyone," They began. "Before I begin with the bigger picture proceedings, I would like to introduce to you my daughter, Cardion." They stepped aside just a bit to show the new puppetine creature. "She is still acclimating to her position. I hope you will be kind to her; she is as much a part of me as any of my other children," They expressed.</p>
+            <p>Cardion felt the urge to say <i>something</i>, stepping forward timidly to rub up against Hyacinth's side. The sight of so many individuals was... Scary, really. Hundreds of unknowable streams of thought, entirely outside her realm of perception. She pressed tighter to Hyacinth. "Th-this one is, puh-pleased to meet thase ones," She began, gesturing out at the crowd with a hoof. "This one h-hopes to be a h-help to mother and thase who need it."</p>
+            <p>Hyacinth smiled gently at her, draping an arm over her back. "You're doing wonderful, dear," They promised softly.</p>
+            <br>
+            <p>"What is the purpose of having another Archmother?" One of the councillors asked, looking skeptically at the two.</p>
+            <p>Hyacinth winced slightly. "Cardion is not an Archmother like myself. She is... Something else. I don't fully understand her, yet," They admitted, rubbing Cardion's back. "But I do know she can rear her own siblings, and that she'll make coordinating all of the others much easier on myself. I will have more time for my other duties with her handling the others." They forced a smile. A thought flashed through their mind: Cardion didn't need a "purpose". She was allowed to exist just as anyone else was. But, they didn't wish to say that; it would start a fight.</p>
+            <p>Their feelings were worsened by the way Cardion shrank away after the question had been asked, a parental protectiveness welling up inside of them.</p>
+            <br>
+            <p>Hyacinth gently stepped back in front of Cardion and cleared their throat. "Now that you are acquainted, I would like to begin with the main subject of our meeting," They began once again. "It... Brings me no pleasure to say this, but my children and I are at our limits. We are running out of reserve energy, and have been for some time. So, we are faced with a choice: How do we choose to ration sunlight?" They mused aloud. "The first option is reducing the amount of daytime we have. Having the Auroras on for less time would significantly reduce the energy drain, though I do not favour this choice, as having shorter daylight hours would also give us less time to grow feed," They elaborated. "The second option, however, is more... Severe. It would involve an effort to encourage mass immigration into Equestria, consolidating everyone into a smaller and easier-to-maintain space," They continued.</p>
+            <br>
+            <p>The court had already burst into discordant murmuring at even the mention of the second idea. One of the foreign councillors stood up. "You want us to abandon our homes!?" He shouted. "Absolutely not. It's out of the question. Nevermind how you'd even fit everyone into such a massively smaller space," He growled.</p>
+            <p>Hyacinth winced, closing their eyes. They should have prepared for this, and they had to some extent, but the dissidence still bit into them. "I know it's not a reasonable request," They attempted. "But I must be honest with you: I'm not sure how much longer we can maintain the whole planet. You may eventually not have a choice," They expressed, lowering their head.</p>
+            <p>The court, already agitated, erupted now into insults. "Tyrant", "Monster", "Dictator". Hyacinth squeezed their eyelids, forcing the tears to remain in for now. They lifted their head, slowly opening their eyes after a deep breath.</p>
+            <br>
+            <p>"And who's to say it's us who has to give something up!?" Someone else shouted. "What are the Perditioners doing other than sucking up all the excess food!?"</p>
+            <p>Hyacinth flinched. Benefit of the doubt couldn't help them here; the implication was obvious. That spark of parental protectiveness flared up again. They stamped their hoof sharply, the harsh crack loud enough to not just settle the court somewhat, but also make Cardion squeak, spawning another pair of pupae. "The Perditioners work hard to ensure we are making the best usage of our landmass possible," Hyacinth replied sharply, before taking a deep breath and slowly lifting themselves to a tall posture. "If you are attempting to imply what I think you are, it's out of the question. The loss of even one Perditioner would be crippling. It would be like if I told you to remove your spine in the service of losing weight," They replied, forcing their voice into a muted, neutral register.</p>
+            <br>
+            <p>More angry rumblings retorted back towards them. "You're putting yourself before us," Someone eventually accused. "You're taking advantage of your dominant position!"</p>
+            <p>Hyacinth, again, winced. They considered that for a moment. They <i>did</i> hold the power here, after all. That thought tempted them, if only briefly. "Perhaps," They conceded. "But I also know that taking care of myself and my children is the only option. What other options do we have?" They asked, their tone now slightly biting in retort.</p>
+            <p>The rumblings in the room had largely quelled. Hyacinth took the opportunity to continue. "The sun and moon are <i>gone</i>. You realize what that entails, right?" They asked seriously. "There is no sun to grow plants for biomass. No moon to power tidal plants. No solar heat to power the water cycle. Fossil fuels won't last long. You might get some mileage tapping Equus' latent heat, but that's the best you have," They commented. "So I will ask again: How do we move forward in a way that rations what we have?" They asked.</p>
+            <br>
+            <p>More rumbling and murmuring. Hyacinth thought, just for a moment, they might have actually managed to get their point across. Then the dissenting voices popped up again. "You're threatening us, now! What can you do that we can't? Grow plants? Build housing?" Someone asked.</p>
+            <p>Hyacinth bit their tongue at how trivialized their efforts had been made. "It is about scale. Do you know how much you would have to give up to live under mere geothermal power?" They asked. "You would never go outside again. The land around your home would freeze. Expansion would only be possible underground, and even then, each passing year, it would get colder and colder," Hyacinth explained, voice getting increasingly sharper. "You would be prisoners under ice in a matter of years." Hyacinth sighed. "I do not wish to strongleg anyone. But I must do what I perceive is best," They eventually said. "I know I would be upset if someone asked me to leave my home behind. Know that I don't ask it unkindly. If I had better solutions, I would offer them," They expressed.</p>
+            <br>
+            <p>"How much daylight would we lose if we took the other option?" Another councillor finally asked.</p>
+            <p>Hyacinth cleared their throat. "Right now, we're running fourteen hours a day. This gives us ten hours to rest, eat, and recuperate. We're... A long ways off of the point where having more Auroras would lighten the load," They expressed.</p>
+            <p>Hyacinth's horn lit, drawing a large map from the side of the podium and unfurling it over the large court table. Neatly pegged were hundreds of small pins, mostly concentrated over the landmasses. "This is our current spread of Auroras. We already neglect the oceans, save for the sea that the hippogriffs reside in," They explained. "As you can see, some of the larger continents are... Sparsely lit. We would have to fill in the twilit patches before we think about allowing some of the Auroras to spend some daylight cycles resting and recuperating. As a basic estimate... We've 372 Auroras now, so we'd likely need at least 500 or so to be any sort of comfortable. A number that is... Unsustainable, without at least a few more Cambrians. And they do not come regularly enough for that to be reliable," They sighed.</p>
+            <br>
+            <p>"Well, get to it then," Someone piped up. "Find a way to make more Cambrians, if that's what it takes. Surely that's easier than making all of us uproot," They reasoned.</p>
+            <p>Hyacinth grimaced. "There is more to it than simply 'making more'," They puffed, stamping their hoof again. "You do not have to deal with all the logistics we do. The energy balancing, fatigue management, maintenance. Don't act like you know things you don't." They stared harshly at the councillor who had piped up. Thoughts raced through their head; anger at those who demanded (almost literally) the world of them. It made them want to leave the ungrateful behind. That thought echoed in their mind. Leaving. Abandoning everything. It was a siren's song. The song of something new. They grit their teeth.</p>
+            <br>
+            <p>Hyacinth closed their eyes. They took a deep breath in. And then out. Air was not the only thing that escaped them, however. From their various orifices loosed six pupae that each swelled to significant size, with Cardion similarly loosing two. As they cracked open, they revealed not fully-formed puppets, but instead long strings of tissue. Maybe pieces of a leg muscle, or an intestine. Truly huge organ components. Hyacinth sighed, horn lighting to conjure a number of magic hands to scoop up the fresh materials. "Well, you might be pleased to know this is the start of a new titan," They remarked.</p>
+            <p>Some more rumblings. "Another Cambrian?" The councillor who'd originally accosted them asked.</p>
+            <p>"I don't know yet. It is too early to tell," Hyacinth replied. "But I think with this I am going to take my leave. Consider the proposals I have made. You have until the end of the month to reach some kind of consensus," They remarked. "After that, I'll decide for you. I can't wait forever," They concluded, turning away to leave without waiting for a response. "Come, Cardion," They cooed softly, leaving the room as a number of councillors began to shout after them. At this point, they no longer cared. It was clear nothing they said would have been appreciated anyway.</p>
+            <br>
+            <p>Cardion looked up at her mother nervously as they walked through the hall, followed closely by the three puppets she had spawned earlier. "Will something bad happen if the ponies are angry, mother?" She asked nervously.</p>
+            <p>"They know better," Hyacinth replied flatly, expression falling. They closed their eyes. "Ungrateful..." They murmured under their breath.</p>
+            <p>Cardion looked down. "It is this one's fault," She whined softly.</p>
+            <p>"No, dear," Hyacinth began, shaking their head.</p>
+            <p>"But mother," Cardion interjected softly. "It took so much energy to make this one... Energy that mother needs," She expressed.</p>
+            <p>"You were worth every calorie," Hyacinth promised, gently pressing their muzzle to Cardion's cheek. "Your new siblings will need an older sister, soon. An older sister who can teach them the ways of the world."</p>
+            <p>Cardion blinked. "This one will be the older sister..." She pondered softly.</p>
+            <p>"You will," Hyacinth smiled broadly. "I... Wish I had more time, but with managing everything else... It will likely be you who spends much of your time tending to them," They expressed with a soft sigh, expression falling.</p>
+            <p>Cardion pressed a little into Hyacinth. "This one will find ways to take over for mother, so the little sisters can spend time with thas one," She promised, nuzzling her mother.</p>
+            <br>
+            <p>"Thank you, dear," Hyacinth smiled weakly, a few tears dropping from their face. "Hah... Goodness, things have gotten so incredibly busy all of a sudden."</p>
+            <p>"Don't cry, mother," Cardion whimpered. "This one has trouble not crying when thas one does," She expressed, a few tears pricking at her own eyes.</p>
+            <p>Hyacinth chuckled weakly. "We will cry together, then," They expressed between sniffles. "It's okay to cry, dear. I promise," They insisted.</p>
+            <p>Cardion whined a little, crying softly into her mother's leg. "Th-this one is glad this isn't a-alone anymore," She whined quietly.</p>
+            <p>"I know, dear," Hyacinth managed quietly. "Mother is here," They promised.</p>
+            <br>
+            <p>A few moments passed before Hyacinth realized something. "A-ah, goodness... I was so wrapped up in the politics that I'd hardly taken note of your new arrivals..." They remarked softly, looking back behind them.</p>
+            <p>The two puppets on display were of strange, gangrenous construction. A massive, shelled equid and a much smaller puppet with three flippers spread over its back and sides. Cardion looked back at them. "This one was thinking of names for those ones while mother was talking," She expressed with a soft sniffle. "The larger, Praetor one is a Paladin. The smaller one is Demulcent," She explained quietly.</p>
+            <p>Hyacinth smiled. "Those are lovely names, dear... You make me so proud," They beamed, nuzzling Cardion gently.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>Hyacinth took a deep breath as they walked into a massive, hollowed-out area of Canterlot castle. It was beneath the castle, close to the supports. A number of Anchorages laid around a colossal, tiled space. "This, my dear, is where the titans are assembled," They introduced.</p>
+            <p>"It is... Empty," Cardion blinked, looking around.</p>
+            <p>Hyacinth chuckled. "It is," They replied. "I try to leave the Serfs plenty of room to work," They expressed, gently setting down their load of puppet pieces. They rubbed their chin as a few curious Serfs flitted over to get to work, already organizing the bits and pieces of internal organry across the floor.</p>
+            <p>"Is something wrong, mother?" Cardion asked, looking up at the pensive equid.</p>
+            <p>"Not... 'Wrong' per se, but the outline seems awfully big. A Cambrian wouldn't be this large," Hyacinth expressed.</p>
+            <p>"Is it a new type, then?" Cardion asked.</p>
+            <p>That thought sat with Hyacinth. "Perhaps. Perhaps..." They trailed off in thought.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
