@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body And Mind</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>Hyacinth heaved theirself out of bed with a heavy grunt, shaking themselves off. A loud pop of one of their bones made them jump a bit, accompanied by a pair of pupae tumbling from their frame as they stirred. They rubbed their face a bit as wakefulness rippled out from them and into the puppets; an immense body, booting up in what many would perceive as almost slow motion.</p>
+            <p>This time, however, they weren't alone; a Praetor and a small hoofful of Imps and Serfs. Assembling a Titan afforded them the luxury of some company, since the pieces typically couldn't transport themselves. The newest Titan's pieces were no exception; in fact, with their sheer size they only proved the rule, most being heavy enough that a Praetor was needed to manually haul them rather than leaving it to smaller, more plentiful, flighted subpuppets.</p>
+            <br>
+            <p>Hyacinth sighed as they watched the puppets already working to gather up the hatched pieces of Titan; it seemed their consistent push towards work had bled into their children as well. Still, they gently pulled the Praetor into a hug, the other puppets quickly latching onto either of them. "I know, my children," They murmured gently. "One day we'll have time to relax. One day," They promised.</p>
+            <p>The puppets responded with a few simple verbalizations; a mix of warbling, squeaking, and chittering. Hyacinth couldn't help but chuckle, nuzzling the Praetor and a few of the smaller puppets they could reach before letting go to let the puppets do their thing.</p>
+            <p>The Praetor and its cohort got back to work, scooping up the pieces of muscle and organ to take them to the assembly room.</p>
+            <p>Hyacinth rubbed their chin as they watched the others worked. "Hopefully that room is big enough..." They murmured as they walked to their calendar to see what was on their agenda for the day. Their day was fairly sparse, save for a checkup with the castle doctors, which was scheduled for the morning. So, as they sent out the signal to light the Auroras, they began walking towards the castle infirmary.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>"Good morning, your highness!" Glistening Ward greeted as Hyacinth walked into the infirmary. "You're here for your checkup, right?" She asked.</p>
+            <p>Hyacinth nodded. "That's right, dear," They replied with a gentle smile.</p>
+            <p>"Well, I don't want to keep you waiting, just this way, your highness," Ward expressed, waving Hyacinth down the hall.</p>
+            <p>"It's really no trouble at all," Hyacinth commented as they followed Ward toward the examination room. "This checkup is the closest thing I get to a chance to relax," They conceded.</p>
+            <p>Ward briefly looked back at Hyacinth, a mix of confusion and concern painting her face. "Well... I don't have anything invasive planned. Just a quick view through the ultrasound to check on the babies and some basic collections for tests," She reassured.</p>
+            <p>Hyacinth nodded, seating theirself on the floor of the examination room as they arrived.</p>
+            <br>
+            <p>Despite Hyacinth sitting neatly, Ward still procured a stepstool to ensure she wouldn't have any trouble reaching anywhere on the colossal equid in her care. She grabbed a clipboard. "Alright, your highness, any changes I should know about?" She asked. "I know it's only been a few weeks since your last visit, but you never know."</p>
+            <p>"Ah, well... There's been quite a lot, actually," Hyacinth admitted. "Two big things: Cardion was delivered to me not too long ago, and I've started spawning another Titan," They explained.</p>
+            <p>Ward blinked. "Ooo...kay, one at a time, please, your highness. I have a friend who's done some studies into you, but it's not really my field," She admitted, rubbing her neck.</p>
+            <p>"Oh, well... Cardion is different from my other children," Hyacinth replied, rubbing their chin. "It is difficult to explain to someone who doesn't perceive these things... She can wrest control of some of my children from me for periods of time. Never enough to sever our connection, but it does feel a bit like a large muscle movement whenever she tries it," They explained. "As for the Titan, I've noticed I spawn in larger quantities and more frequently when they're coming around."</p>
+            <br>
+            <p>Ward nodded a bit. "So... We're probably looking at some neural strain and metabolic increases, then," She mused as she wrote down what she could for the time being. "Let's... Hm. Maybe we should do a quick round of tests, then. Are you busy today?" She asked.</p>
+            <p>"Not aside from my usual duties," Hyacinth replied, shaking their head. "I have the time," They smiled softly.</p>
+            <p>Ward nodded. "Alright, I'd like to do an ECG, a couple blood samples, and the usual heart rate and breathing checks, then. I need to get an idea as to how these changes will affect you relative to your old baseline," She expressed. "Just give me a moment and I can grab everything," She added, quickly trotting out of the room.</p>
+            <p>Hyacinth smiled a bit as they watched her go, chuckling softly.</p>
+            <br>
+            <p>The typical suite of tests was nothing Hyacinth was a stranger to. A few painful interactions with the electrocardiogram nodes and their fur yielded some spawns from them, though this wasn't out of the ordinary.</p>
+            <p>It was during the blood collection that Ward was caught off-guard by another pupa tumbling from the orifice in Hyacinth's back. "A-ah, I'm sorry, your highness," She expressed. "Did I hit something sensitive? You don't usually spawn from that little prick."</p>
+            <p>Hyacinth looked at the needle in their leg curiously. "I can't say it's bothered me before," They admitted. "And it didn't hurt any more than usual. I hardly notice it over the usual aches," They mused.</p>
+            <p>Ward rubbed her head. "Well, you said you spawn more when you're spawning a Titan," She mused. "If I had to guess, it's your body being 'eager' for something to react to. Hopefully that doesn't cause you allergy problems down the line," She expressed softly, rubbing her chin.</p>
+            <p>Hyacinth nodded. "I can't say it's caused me or my children problems so far," They mused, watching as a Praetor snuck in (as much as a some 7 foot tall equine could sneak) to take away the dropped pieces.</p>
+            <br>
+            <p>Ward watched the Praetor go with its payload. "You must have a very strong immune system," She commented. "Exposed tissues normally can't survive deconstructed like that all on their own."</p>
+            <p>"I suppose you're right," Hyacinth nodded. "Though it's not particularly common for a Titan to take very long to construct: It's usually maybe a month at most. This newest one, however... It's beginning to worry me. Cardion and I have spawned hundreds of times and the only thing we've finished is a single eye," They expressed.</p>
+            <p>"Must be something big, then..." Ward murmured, rubbing her chin. "Just keep an eye on it, okay? We can have some medical staff go and check on it if you're worried about it starting to rot."</p>
+            <p>"Thank you, dear," Hyacinth replied with a gentle smile. "I have my children keeping a close eye on it. I'll make sure they know to come and get some of you if something seems wrong."</p>
+            <p>"Of course, your highness," Ward replied, offering a smile. "Now, just a few more tests and we can check on the baby..." She continued, guiding Hyacinth through a basic heart beat and breathing test.</p>
+            <br>
+            <p>"Okay... Your hearts are about as normal as they can get, it seems like. Airflow all seems good, too, nothing out of the ordinary in your lungs," Ward commented as she set her stethoscope back on her neck. She rubbed her chin. "Just in case, here. It's not a precise metabolic measurement, but now that you've been resting a while, let's check your temperature," She commented, taking a thermometer and placing it under the tongue of one of the heads on Hyacinth's side, which lightly gummed down on it. It was a trick she'd learnt on one of their earlier checkups: It measured body temperature more accurately than going through Hyacinth's actual mouth.</p>
+            <p>Ward waited for a moment, before checking the thermometer. "Aha. Knew it," She remarked. "You're a bit warm, your highness, even for your usual standards. If I had to guess, that's your body kicking up a gear," She commented, pulling the thermometer out and setting it near the sink so she could clean it.</p>
+            <p>Hyacinth nodded. "I suppose that makes sense. I do tend to eat quite a bit more when I'm spawning a Titan," They mused.</p>
+            <br>
+            <p>Ward nodded. "Right," She replied, making a mental note to tell Alloyed Heart about that tidbit later. "Now, time for the fun part. Ready to check on the foal?" She smiled.</p>
+            <p>Hyacinth giggled a bit. "Of course, dear," They replied. "I hope they're growing well. I have been trying to eat more where I can," They expressed with a soft sigh.</p>
+            <p>Ward grabbed her ultrasound probe, fidgeting with a few settings as she padded over. "Same process as last time, I'm going to start it on low power, but I might have to up it given how big you are," She commented. "You don't have much of a pregnancy bump, at least that I can tell, so I'm guessing I'll have to bump it up a few notches."</p>
+            <p>"That's fine, dear," Hyacinth smiled. "I know you're just trying to be cautious."</p>
+            <p>Ward nodded, leg trembling just a bit as she settled the probe against Hyacinth's belly. She wondered, briefly, how she managed to be the Empress' favourite nurse. She shook herself out of that line of thought, looking up at Hyacinth. "Alright, your highness. Might be a little tickly, just try to relax and focus on your breathing," She managed.</p>
+            <br>
+            <p>Hyacinth nodded, taking a deep breath, trying to settle themselves as the probe lightly vibrated against their stomach. The initial screening didn't show much; just the flesh.</p>
+            <p>"Yeah, see, this is what I was talking about. Let's go up just a notch..." Ward murmured, pushing a dial on the probe gently. The image showed some more detail, now showing some of the womb and ovaries. "Alright, just one more..." She decided, upping the power again. The image was now much clearer, showing Hyacinth's internals in just about as much clarity as it could. "Bingo," Ward smiled a bit, maneuvering the probe around to find the foals proper now. "And..." She paused as she looked at the screen, squinting at it. "...Hm. That doesn't..." She rubbed her chin. "I know your kids usually grow quick, but that seems anomalous," She expressed, readjusting the probe to try and get some different angles.</p>
+            <p>"Is something the matter, dear?" Hyacinth asked.</p>
+            <p>"Hold on a moment, your highness," Ward requested, finagling with the probe's location and orientation a bit more. Her eyes widened a bit as she finally managed to angle it just right. "A-ah, your highness..." She stared. "I think... You have twins," She expressed, pointing at the screen with her free hoof. "It's a little hard to see; I think your womb is somehow angled differently than most, but if you look here..." She pointed above the most visible fetus, at a fainter picture behind a membrane, "There it is. Another sibling," She smiled a little.</p>
+            <br>
+            <p>"Oh, my..." Hyacinth stared, tearing up a little. "Goodness, to think I'd h-hide something like that from myself..." They murmured, lightly covering their muzzle with their hand. "Aha... To think she left me two little gifts..." They sniffled, closing their eyes for a moment.</p>
+            <p>"One last surprise," Glistening Ward commented, holding the ultrasound for a bit longer so Hyacinth had time to take in the sight. "Twins... I hope that's not too hard on your body," She expressed.</p>
+            <p>"I'll m-make sure it's not," Hyacinth promised softly. "I'll take care of them."</p>
+            <p>"Just be sure to take care of yourself. That's the best thing you can do," Ward expressed. "Don't overexert yourself, eat as much as you need, all of that. I... Don't know how it all works with you and your children, but the usual advice for pregnant ponies is to keep snacks nearby at all times, since it'll get harder to eat full meals as the foals grow," She explained.</p>
+            <p>Hyacinth nodded. "I'll keep that in mind, dear," They replied. "I've put forth some ideas on how we can conserve our energy. They're... Not popular, but we're running out of time to find a 'good' solution that everyone is happy with," They sighed softly.</p>
+            <br>
+            <p>Ward rubbed her chin. "I guess it'd be easy for them to take it as selfish," She remarked. "But you do need to take care of yourself if you want the foals to be healthy. Have you told them about the pregnancy?" She asked.</p>
+            <p>"No," Hyacinth conceded. "If they already want me to start slaughtering my own Perditioners, I don't want to know what they'd say about unborn foals," They grimaced, tone sharpening slightly.</p>
+            <p>Ward flinched. "Th-that's..." She looked down, ears drooping. "I'm sorry, your highness. No one should have to choose something against their own child," She expressed, rubbing her leg.</p>
+            <p>"It's not your fault," Hyacinth sighed. "I am still irritated over the last court meeting... I think it put into perspective just how little they understand the situation," They admitted. "But, that's enough of that. It's not a problem you should have to contend with."</p>
+            <p>Ward finally shut off the probe, setting it aside for now. "You don't have to suffer alone, your highness," She expressed softly. "A lonely pony is a vulnerable pony... Do you have anyone else to talk to about this?" She asked.</p>
+            <br>
+            <p>Hyacinth stopped for a moment. "...No," They finally admitted. "While I can talk to my puppets about things, they always tend to echo my general sentiments... Cardion is a bit better, but my own mood still has influence on hers," They rattled off. "And with the courts as they are, I doubt I'd make any personal connections there. So I suppose I'm just... On my own," They mused, closing their eyes.</p>
+            <p>"You don't have to be," Ward promised. "There are others who care about you, who want to see you succeed. Myself included," She added. "I know there's kind of a... A power imbalance between us, but if you really don't have anyone else to talk to..." She looked up at Hyacinth concernedly.</p>
+            <p>Hyacinth looked down at her, smiling weakly. Their eyes were still wet. "Thank you, dear," They replied gently, pulling Ward into a tight hug. "Thank you," They added with a soft sniffle.</p>
+            <p>"Of course, your highness... Anything I can do to help," Ward replied quietly, hugging back the best she could.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
