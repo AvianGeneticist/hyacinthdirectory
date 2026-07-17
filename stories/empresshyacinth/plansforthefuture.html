@@ -1,0 +1,326 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans for the Future</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>"Mother does not want this one to come with her?" Cardion asked, tilting her head.</p>
+            <p>"After last time, I don't know what the response from the council will be," Hyacinth expressed with a soft sigh. "Should they be aggressive, or even violent, I would feel more comfortable if you were safe elsewhere," They said, gently stroking Cardion's mane.</p>
+            <p>Cardion frowned a little. "This one wishes to be able to protect mother if those ones become violent," She expressed softly.</p>
+            <p>Hyacinth looked at Cardion curiously. "You wish to protect me? I don't want to sound unappreciative, dear, but usually it's the other way around," They expressed gently.</p>
+            <p>"Mother gets hurt enough from the stress and the nightmares," Cardion puffed softly. "It would be easier on mother if this one was there, wouldn't it?"</p>
+            <p>Hyacinth hesitated, but managed a small smile. "If you're really sure of it, dear," They replied, pulling Cardion into a hug. "I love you."</p>
+            <p>"This one loves mother, too," Cardion replied, hugging back tightly and nuzzling into Hyacinth a bit.</p>
+            <br>
+            <p>After a quiet moment, the two separated, and Hyacinth stood up, turning to face the council door. "Alright, dear," They said softly. "We shouldn't keep them waiting too much longer, then."</p>
+            <p>Cardion nodded, following Hyacinth into the court once again.</p>
+            <p>The court was already rumbling with activity as the two walked in, and Hyacinth earned a few aggravated looks as they stepped up to the podium. Hyacinth cleared their throat before speaking: "Good afternoon, everyone," They began. "I hope you've all had time to consider the options I presented last week," They commented.</p>
+            <p>The reaction came as a roll of different voices from the crowd, most of which did not sound happy. Hyacinth sighed, motioning for things to settle down with a hoof. "One at a time, please," They requested.</p>
+            <p>"Your proposed ultimatum did not leave a good impression," Came a single reply, followed by some murmurs of agreement. "It is unreasonable to expect everyone to abandon their homes."</p>
+            <p>"I simply said you had to decide on something. I said nothing about it being either of my proposed suggestions," Hyacinth replied.</p>
+            <br>
+            <p>The court went quiet. The silence was deafening. Finally, a noise broke the tension: A short zebra mare. "We have been considering your proposals," She began. "Your concerns are with lightening your workload, yes?"</p>
+            <p>"Finding some means to conserve energy, yes," Hyacinth nodded. "We cannot continue overexerting ourselves as much as we have."</p>
+            <p>"We have considered a plan of our own in regards to reducing your energy requirements," The zebra continued. "It would take considerable upfront cost, but we believe you could manage it. The idea is simple in concept: Bring all the land close together," She explained.</p>
+            <p>Hyacinth stopped and stared for a moment. Finally, an actual constructive voice. They sat clumsily, now looking at the zebra with their full attention. "Continue," They requested curtly.</p>
+            <p>"The Perditioners are capable of immense feats of tectonic and continental engineering. It would represent a considerable upfront cost, and would likely be a shock to all biospheres involved given the scale of moving such landmasses. But, it would greatly reduce the amount of uprooting we would have to do. You could develop the land as it's being moved, to help shore up the costs in the short term," The zebra explained.</p>
+            <br>
+            <p>Hyacinth rubbed their chin. "Now... You do realize that, with our current overdraw, that would represent weeks or months with heavily reduced or even absent sunlight, yes?" They asked.</p>
+            <p>"We are aware," The zebra replied. "It would require considerable-scale development on the lands you would be working to pull together. Some colleagues of mine have begun researching the feasibility of building arcologies underground, powered by artificial sunlight produced from pony or dragon magic. Make no mistake: It would be all hooves on deck for this project," She looked out at the rest of the court. "Everyone would be expected to contribute some of their land to the development cause."</p>
+            <p>There was a rolling murmur that went through the court. Discordant voices; dissent and contemplation in decidedly more equal measure compared to that with Hyacinth's suggestions a week prior. Hyacinth almost felt a bit embarrassed at how obvious it felt: Of course moving the landmasses together would've made it easier to maintain all of them. It would be so much less ocean and space to manage!</p>
+            <br>
+            <br>
+            <p>"With those stipulations in mind," Hyacinth began, "Those are sacrifices I am willing to make. But it would be a heavy sacrifice for every nation involved in the decision as well, I'm sure. We cannot afford the luxury of a unanimous vote, but I am willing to put it up to majority, with myself breaking a close race if need be," They mused. "But if the vote does not succeed, I will be choosing myself what path we take forward."</p>
+            <p>There were a few rumblings in reply to the lattermost part of their explanation, but as the court seemed willing, Hyacinth conjured up a number of magic hands to dole out ballots for. It was a simple ballot system, really: Pre-printed slips of paper with "Yes" and "No" printed on them. Pens were always available to the court, but papers were only given out as needed to avoid dishonest voting.</p>
+            <p>The room was quiet as the votes were made and subsequently recollected, dozens of hands making light work of the task of collecting each ballot. The ballots were subsequently stacked up, before Hyacinth handed them off to Cardion. "Could you count these for us, dear?" They requested gently.</p>
+            <p>Cardion nodded. "Yes mother," She replied quietly, taking the stack to sort through each ballot.</p>
+            <br>
+            <p>Another quiet moment passed. Hyacinth took a deep breath. They hoped this solution would be agreeable, lest they either pick something even less popular, or pick a decision that would hurt them even more in the long run.</p>
+            <p>Finally, Cardion finished the tally. "The votes are 61 in favour to 21 opposed," She reported.</p>
+            <p>Hyacinth smiled a bit. "Thank you, dear," They hummed, before looking back to the court. "That's a majority vote in favour, then. I believe we should move forward with the project as quickly as is feasible," Hyacinth expressed. "We are working with increasingly slimmer tolerances for error or delays in action."</p>
+            <p>Finally, the zebra who had originally suggested the project spoke up again. "We had planned to do it in stages, by continent. We would need to move a continent first before we could establish a full scale timeline," She explained.</p>
+            <br>
+            <p>Hyacinth nodded. "That seems reasonable," They replied. "Did you have a candidate for which to move first?" They asked.</p>
+            <p>"Zebrica," The zebra replied. "It would be irresponsible to suggest something so radical and not be the ones to undergo the first test. It is also a fairly large continent, so it would be a good example of how much energy and time would be needed for the subsequent moves."</p>
+            <p>"Very well, then," Hyacinth mused, rubbing their chin. "If possible, I would like you to stay with us in the castle for some time as we prepare such a plan. The rest of the court may be dismissed for now; you may all await further instructions as we move forward with this proposal," They expressed.</p>
+            <br>
+            <p>Hyacinth watched as most of the court fairly efficiency filed out of the room, though of course there were a few stragglers. Meanwhile, the zebra walked up to the podium to meet Hyacinth and Cardion. "I must say, it's an honor to have our proposal picked, your highness," The zebra expressed, bowing her head respectfully to Hyacinth.</p>
+            <p>"It's a pleasure to have someone on our side," Hyacinth expressed, turning to face the zebra with some effort and offering a hoof for a hoofshake, "Miss...?"</p>
+            <p>"Mercedes," The zebra replied, shaking Hyacinth's hoof with two to account for the size difference. "I do not normally represent Zebrica as a whole; I'm a climatologist. Given the circumstances, however, it was requested that I be an acting ambassador and consultant over our current crisis."</p>
+            <p>"Well, it's a pleasure to meet you, Mercedes; though I wish it were on less stressful terms," Hyacinth replied with a soft chuckle. "I'm sure you're fairly well acquainted with myself and my daughter Cardion by now."</p>
+            <p>"I've worked with some of yours before; the Totems, I think you called them. They are good at managing the weather," Mercedes replied.</p>
+            <p>Hyacinth smiled. "They're very talented at such broad swathes of magic," They replied. "I'm proud of them and all my children for how well we've been able to make do."</p>
+            <br>
+            <p>Mercedes nodded. "Now... I did have some more detailed plans, if you would hear them out," She expressed, gesturing to some rolled up papers tucked under one of her legs.</p>
+            <p>Hyacinth slowly stood with a heave of effort. "Would you care to join us for dinner? We would have plenty of time to discuss then," They expressed.</p>
+            <p>"That sounds nice," Mercedes replied. "I would be honored to join you."</p>
+            <p>Hyacinth smiled. "Follow us, then," They commented. "Come, Cardion," They cooed.</p>
+            <p>Cardion nodded quickly, standing up to follow her mother out of the court.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>The dining room wasn't used particularly often anymore, but Hyacinth had tried to keep it tidy in the event they had guests who needed to eat for themselves. As they sat down at the head, they watched as Cardion and Mercedes sat on either side. "Now, you mentioned you had some plans drawn up?" Hyacinth asked.</p>
+            <p>"Oh, yes. We'd already been thinking about continental reshaping as a way to make more efficient use of what we have to work with," Mercedes explained. "There are... <i>Others</i> who seem willing to rest on their haunches and expect you to do everything, but the nations of Zebrica knew that could only get everyone so far. Most of our preparation has been in regards to large scale arcology designs we could use to make better use of our lands," She elaborated, removing one of the rolled up sheets of paper from her grasp to lay it out on the table.</p>
+            <br>
+            <p>The arcology design consisted largely of greenspace domes with housing and other facilities between them. "Housing would be centered around the domes, allowing the sun lamps used to not just be for growing food, but also to help combat the cabin fever caused by an otherwise subterranean design. Each module is designed in such a way that it should be able to be built out both horizontally and vertically as needed. They would most likely not be self-sufficient without the aid of magic, but it would be a better use of space than simply acting as though high mountains do not exist," Mercedes described.</p>
+            <br>
+            <p>Hyacinth nodded. "And your people are willing to foot the costs of such a project? That's quite an undertaking, even for a whole nation," They expressed as they listened. "We would of course provide aid where able, but I suspect we will be very busy with moving the continents."</p>
+            <p>"We would need to borrow a single Perditioner for the initial blast out of the mountain. One of them can do in a few hours which would take us months or years," Mercedes conceded. "Otherwise, resource acquisition and construction would fall entirely to the participant nations."</p>
+            <p>Hyacinth nodded. "That would be alright, I think. Hollowing out a mountain or two would be far easier than the <i>other</i> part of the project," They supposed.</p>
+            <p>"I have no doubt," Mercedes nodded. "Speaking of, we're... Not entirely sure what the continent moving procedure would look like. The arcologies are already projects on a scale beyond that of which we've ever done before, nevermind the process of moving a continent. We only have a few theoreticals... Mostly that we would need to be able to clear the oceans to avoid causing enormous tidal disturbances, and that the maximum comfortable speed would be roughly 14 kilometers per hour, which means the trip would take roughly seven months to complete."</p>
+            <br>
+            <p>Their thought process was interrupted by a small gaggle of puppets coming out with numerous baskets of lumpy bread. They were slightly uneven, with some being darker or lumpier or more bespeckled than others, but it all appeared to be largely the same thing. It was also served with a considerable amount of water.</p>
+            <p>"Ah, here we are," Hyacinth smiled. "Please, take as much as you'd like."</p>
+            <p>Mercedes stared at the bread. It looked... Very plain. Some of loaves did have speckles of something in them, of course, but otherwise, the food looked painfully utilitarian; almost primitive. She took a loaf and bit into it, grimacing at the effort of biting through. It was very plain bread; flour and salt were the only tastes of any meritable presence, aside from a very faint honeyed sweetness.</p>
+            <br>
+            <p>"Forgive my bluntness, your highness, but is this what you normally eat?" Mercedes asked.</p>
+            <p>"Of course," Hyacinth replied with a nod, taking a hunk of the bread to bite it down. "We mix honey or insect meat into it to give it some more nutritional value, but this is our gold standard of sorts. It is cheap, easy to make, and allows us to give more pleasant food to the others," They explained.</p>
+            <p>"This is..." Mercedes fought to gulp down another bite; not due to an unpleasant taste, but the dense and dry texture. "Well, I can't say I would expect royalty to settle for this."</p>
+            <p>"My children do not mind it, and neither do I. It is easier for everyone if we eat plainly," Hyacinth replied.</p>
+            <p>Mercedes nodded, considering that. She wasn't sure how to feel that the people responsible for keeping the planet alive were eating such basic food.</p>
+            <br>
+            <p>Hyacinth rubbed their chin as they swallowed another bite of bread. "Now, where were we...? Seven months, hm?" They mused softly.</p>
+            <p>"That would be shoreline to shoreline, though we would likely want to leave some sort of gap to allow water to continue to in- and outflow," Mercedes expressed, snapping out of her pondering.</p>
+            <p>"That would be considerable timescale to run the Perditioners at such a high energy level," Hyacinth conceded. "Though I suppose once the continent is uprooted, they would be unnecessary: The Barycenters would be able to take it from there."</p>
+            <p>"The Barycenters?" Mercedes questioned.</p>
+            <p>"They can alter gravity in a fairly sizeable area around them, and it doesn't seem to require much energy on their part. They can maintain such fields in their sleep," Hyacinth explained. "We simply need to get enough Barycenters underneath the continent that an inverted gravity cancels out the regular gravity."</p>
+            <p>Mercedes stared. "That... That sounds incredible, your highness. Do you have proof that that can work?" She asked.</p>
+            <p>"Of course. We do it all the time for maintaining the floating islands we use to farm extra materials on," Hyacinth smiled.</p>
+            <br>
+            <p>Mercedes wasn't sure how to process this. Replacing the sun, speeding up agriculture, reshaping continents, and now negating gravity. For a moment, she wonder how outlandish a request would have to be for Hyacinth to at least theoretically be able to grant it. "Well... Perhaps we should begin with a small island, then. As a test of all the potential systems in play," She mused. "Not that I don't believe in your children, of course; it's just incredible to think you would have problems at such scale already 'solved'," She expressed.</p>
+            <p>Hyacinth smiled a bit. "We do our best to surprise, dear," They commented. "There's a decently-sized island near Zebrica, is there not? We could start with that and go from there."</p>
+            <p>Mercedes nodded. "That... Sounds acceptable, your highness."</p>
+            <p>"Excellent," Hyacinth beamed, happy to finally have some sort of actionable plan to make things better.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
