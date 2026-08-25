@@ -1,0 +1,474 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psionotropism</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>Hyacinth groaned as they stirred awake early in the morning, wincing as their underbelly went tight on them. They snorted from the pain, but were caught off guard as no puppets came forth. They forced themselves to their hooves, grimacing.</p>
+            <p>Cardion looked over at them groggily. "Mother?" She questioned. "Is mother alright?" She asked, following Hyacinth out of the bed.</p>
+            <p>"I don't... I don't know, dear," Hyacinth expressed, taking a deep breath. "Something's wrong."</p>
+            <p>Cardion blinked. "Mother needs the doctor," She decided. She didn't wait for approval or even an answer, ducking herself under Hyacinth's legs to scoop them up. With Hyacinth secure, the Archon quickly burst through the door and into the hallway, trying to move quickly.</p>
+            <br>
+            <p>Cardion's gaze flicked around as she moved hurriedly through the castle. She could feel it: the whole gestalt reacting to Hyacinth's discomfort. Puppets clambered through the windows, the normally dull roar of thoughts whipped into a frenzy. Whatever was happening, the whole gestalt wanted to be near the Archmother. Cardion tried to quell the worst of the frenzy, mind now in multiple places as Hyacinth squeezed her and snorted again.</p>
+            <p>"Please hold on, mother..." Cardion winced as she made her way down the stairs. "This one will get you to the doctor," She promised.</p>
+            <p>"J-just be careful, dear," Hyacinth murmured, clinging to Cardion tightly.</p>
+            <p>Cardion nodded, looking around as she entered the lower floors of the castle. A fair few puppets had entered the castle by now, including a couple of Cardion's own Paladins. They were making aisles for her, ensuring she had a clean route to the infirmary. A few Praetors were even cordoning off regular castle staff, ensuring nothing could get in her way.</p>
+            <br>
+            <p>The infirmary itself had largely been spared from the amassing puppets, though a few Anchorages lingered within despite the medical staff's attempts to get them to leave. As Cardion rushed in, she screeched to a halt on the tile floor just in front of one of the nurses.</p>
+            <p>The nurse looked up at her. "Woah, woah, what's the emergency?" She asked.</p>
+            <p>"Something is wrong with mother," Cardion expressed nervously. "Mother's stomach is tight, and it is making these ones restless."</p>
+            <p>"Their stomach is... Oh, goodness, just come with me," The nurse replied. "Your mama's going to be okay, hun," She promised.</p>
+            <p>Cardion was a bit confused by the assurance, but followed the nurse. It was her who had instilled the sense of urgency, after all, and talking was getting difficult with calming the whole clan on her mind.</p>
+            <br>
+            <p>Cardion followed the nurse into a large room with a significantly sized cot. The nurse looked up at her. "Just set their highness down here, alright hun? We'll get a few nurses and a doctor in to take care of them," They said.</p>
+            <p>"Does thas one know what is happening?" Cardion asked as she walked toward the cot, allowing Hyacinth to sidle down off her back.</p>
+            <p>"Well, it sounds to me like your mama's getting ready to foal," The nurse expressed.</p>
+            <p>Cardion blinked. "Oh, yes. Mother has been pregnant for a couple months now," She nodded, looking at Hyacinth.</p>
+            <p>"They'll be okay," The nurse promised. "Twins are hard on anyone, but we've gotten good at handling them. They're in good hooves."</p>
+            <p>Cardion tilted her head a bit. "This one would prefer to stay here," She admitted.</p>
+            <p>The nurse hesitated a bit. "I know it's scary, hun, but the doctor and the nurses are going to need the space soon. You can wait just outside, okay?" She said.</p>
+            <p>Cardion's face went neutral, but she nodded. "This one will try to keep the others calm," She expressed, giving Hyacinth one more concerned look before plodding out of the room.</p>
+            <br>
+            <p>Cardion sat in the waiting room, rubbing her head as she tried to organize the puppets around her. It was a twisting, discordant feeling, as she fought her own body and mind to stay in control. The clan, desperately, wanted all hooves on deck to assist mother, but the doctors needed space. She managed to start arranging the puppets around her, keeping a mental note of the most problematic ones. The Praetors in particular were especially irritable, to little surprise from the Archon. Regardless, she managed to keep files open and puppets from rampaging, settling deeper into her seat as she allowed herself to focus solely on keeping the orneriness in check.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>Glistening Ward took a deep breath as she got to the infirmary to start her shift. She'd noticed the more significant quantity of puppets around, including a fair number of Anchorages and Praetors in particular. She tried not to disturb any on her way into the infirmary, looking at one of the other nurses. "What's going on? I've never seen this many puppets around," She asked.</p>
+            <p>"Their highness is foaling," The other nurse replied. "You're just in time, they've been in contractions for close to an hour."</p>
+            <p>"An hour- Okay, I'll go in to check on them," Ward replied, tone picking up a bit as she recognized the urgency of the situation. She grabbed a clean pair of scrubs, quickly donned them, and skittered down to the delivery room.</p>
+            <br>
+            <p>Hyacinth had been splayed out on the cot: A low-lying pair of mattresses cumbersomely pushed together to hold their bulk. Their body convulsed, eyes squeezed shut. Despite Cardion and the medical staff's best efforts, a few puppets had made their way into the delivery room: In particular, a pair of Anchorages, and quite a few Serfs. They sat quietly out of the way, seemingly just observing carefully as they sat in the corner.</p>
+            <p>Ward didn't have time to question the puppets, trying to slot herself in amidst the other nurses. She was the closest thing Hyacinth had to a regular doctor, so she walked over to them, trying to get their attention. "Y-your highness?" She asked. "Stay with me. Just breathe, okay?"</p>
+            <br>
+            <p>Hyacinth's eyes cracked open. They were misty and unfocused, as if they were going blind. They stared through Ward, as if someone were above or behind her, breathing hard as their body locked up again.</p>
+            <p>Ward gently laid a hoof on Hyacinth's side, trying to ground them. "I'm right here. You'll be okay. Just focus here and now," She expressed gently.</p>
+            <p>Hyacinth blinked slowly. Their body fought them as they tried to relax. Their breathing grew deeper, but not slower, as they tried to wrest control from their instincts. They pressed one of their hooves hard into the cot, enough to audibly buckle some of the springs beneath. They grit their teeth, and another contraction rang through them.</p>
+            <br>
+            <p>One of the other nurses called out: "I'm seeing hooves!"</p>
+            <p>Ward perked up. "It won't be long now. Just follow your heart, your Highness," She expressed, pacing down their body to help with delivery.</p>
+            <p>A number of nurses were gathered around Hyacinth's abdomen. The first sightings of one of the foals were true to the nurse's word, as a pair of hooves poked out first. The next push bore a snout, still wrapped in amniotic sac. The nurses waited, but new better than to reach out and pull.</p>
+            <p>Another push forced the foal out up to its shoulders. Nurses now stood ready, preparing to support the foal's weight: Support that would likely be needed, as the foal was larger than any of the nurses in attendance.</p>
+            <p>Finally, the foal was guided out of Hyacinth's body, laid gently on the end of the cot with its umbilical still attached. Ward squinted to get a good look at the foal: What seemed to be an alicorn, with a horn and wings. "That's one..." She expressed, looking to Hyacinth as the second foal began to come out.</p>
+            <br>
+            <p>There were immediate warning signs with the second foal. Only a single front leg poked out at first. "Be careful," Ward said to the other nurses. "Be ready to support."</p>
+            <p>A few of the other nurses gathered around, waiting carefully. The second foal came out slower than the first, more piecemeal. The sac around the second foal seemed thicker, and was nearly opaque. Ward feared the worst, but bit her tongue as she tried to help the foal out. Carefully, she took hold of the foal's extended front leg, pulling towards herself.</p>
+            <p>The extra force made the difference, and the second foal lurched forward, revealing the crumpled, twisted form of its other front leg. Ward gulped, but stayed focused on helping the foal out of the womb. "That's it, just a little further," She cooed quietly.</p>
+            <p>With another heave, the rest of the foal came. It seemed mostly healthy at first, but in addition to its damaged leg, a large open chasm on its back revealed much of the foal's spine and interior, and the foal shivered as if it were cold. A few of the nurses had to back off to flinch at what they'd seen.</p>
+            <br>
+            <p>Ward was almost one of them, but she got ahold of herself. Hyacinth needed her right now. She gripped the sac tightly, pulling it taut around the foal to keep the open wound closed. It wasn't perfect, but it would hold for now. "Okay, okay, it's alright... The foals are both out, that's the hard part," She told herself steadfastly, despite the panic of holding a half-mangled foal setting into her.</p>
+            <p>She jumped as she felt a tap on her shoulder. One of a sextuplet of Serfs was hovering over her, its bladed limb outstretched towards the foal she was helping to support.</p>
+            <p>Ward heaved. "H-hold on, now. This one needs a bit more time," She managed, unable to read the Serfs' intent. "If we pull her away, her umbilical cord will rupture, and she'll bleed out."</p>
+            <p>The Serf nodded, gesturing patiently for Ward to set the foal down.</p>
+            <p>Ward hesitated. In a normal pregnancy, loosening her grip on a foal at this stage would be unthinkable. But then again, this wasn't a normal pregnancy. With some trepidation, Ward carefully laid the smaller twin out next to its sibling. "Alright... Just be careful," Ward requested.</p>
+            <br>
+            <p>The Serfs immediately got to work, carefully slitting open the sac around the foal's back and leg. They worked swiftly and silently, with almost supernatural coordination. Surgical cuts were made along the foal's body, cleaning the rough gash and amputating the damaged leg and the muscle around it.</p>
+            <p>Ward watched intently, trying to understand the procedure at hoof. She could tell that they were removing the damaged areas, but the damage evidently went much deeper than she understood, as parts of organs and even a section of the foal's spine were removed.</p>
+            <br>
+            <p>Once the foal's body was "cleaned" to the Serfs' liking, a number of Serfs cycled into one of the structures on the nearby Anchorage, coming out with pieces of refined Haetin metal. Piece by piece, the foal's spine was reassembled mechanically, a series of metallic plates grafted along the now cleaned gash and eventually sealed shut with a large, smooth capping plate. The leg was treated similarly: Set up with some mechanical connections and structure, before being supplanted fully with a mechanized replacement.</p>
+            <p>Ward stared as the Serfs scattered once satisfied with their work: The once shivering, damaged filly now looked nearly healthy, with just a few conspicuous pieces of metal covering what had once been life-threatening complications. Ward wondered, briefly, if this had always been the plan, or if this was just a very well-considered backup in case things went south.</p>
+            <br>
+            <p>In the moments it had taken for the surgery to be complete, the pregnancy was still progressing. The first foal's umbilical had finally given, and a few of the nurses took it to sterilize it and help the foal out of its amniotic sac.</p>
+            <p>Ward sighed deeply in relief, as the hard part seemed to be over. She paced up to Hyacinth's head once more. "Your highness?" She asked softly.</p>
+            <p>Hyacinth's eyes cracked open once more. They seemed decidedly more normal now, but still slightly unfocused. "Archie?" They asked weakly.</p>
+            <p>"Just me, your highness," Ward expressed softly. "You've given birth to two beautiful fillies," She expressed with a gentle smile.</p>
+            <p>Hyacinth gave a weak smile. "Ah, that... That is good news," They expressed. "Hopefully the children will settle down, now."</p>
+            <p>Ward smiled a little. "We're just making sure they're unwrapped properly, and then we'll bring them up for you to hold, okay?" She offered.</p>
+            <p>"Ah... Fetch Cardion, too, please. She deserves to hold her new sisters," Hyacinth expressed.</p>
+            <br>
+            <p>Ward nodded, scuttling out of the delivery room to go find Cardion. The task was not difficult in the slightest: Cardion's entourage now occupied the entire waiting room, with puppets arranged around or on top of one another as she focused on keeping them in line. It almost looked like a ritual circle of some kind, but Ward pushed through carefully and gently tapped the Archon's leg. "Cardion? We're almost ready for you," Ward offered.</p>
+            <p>Cardion's eyes opened, visibly fatigued. "A-ah... Is mother okay?" She asked, voice groggy.</p>
+            <p>"Yes, yes, everything went perfectly," Ward promised. "We're just getting your baby sisters unwrapped and then they'll be ready to see you."</p>
+            <p>"This one is glad..." Cardion managed. "It has been difficult keeping the siblings in line."</p>
+            <p>Ward looked around. "You've... You kept them all at bay while your mother was delivering?" She asked.</p>
+            <p>Cardion nodded. "This one did not want the doctors getting hurt or distracted," She expressed. "So this one has been quelling the unrest."</p>
+            <p>Ward's mind was too busy to take a mental note, but she nodded anyways. "Right... Well, come with me, okay? Just you for now, the delivery room's a bit crowded as it is," She expressed, motioning for Cardion to follow as she waded through puppets.</p>
+            <p>Cardion nodded and stood up, following Ward with a slightly slumped posture.</p>
+            <br>
+            <p>By the time Ward and Cardion returned, things had settled somewhat. Hyacinth had been helped into sitting upright now that the foals had been separated from them, and the other nurses were running checks on the twins' vitals. Ward noted that Hyacinth's eyes were now seemingly back to normal.</p>
+            <p>Cardion trotted over to Hyacinth, pulling her mother into a hug. "Is mother okay?" She asked softly.</p>
+            <p>Hyacinth smiled gently, leaning down and nuzzling the Archon. "I'm okay, dear. I'm just a little tender from everything," They promised, gently tracing a hoof over Cardion's mane. "You look tired, dear... Did something happen?"</p>
+            <p>"This one was making sure the others didn't hurt anything," Cardion explained.</p>
+            <p>Hyacinth's smile widened. "Ahah... Thank you, dear. I don't think I was quite myself through all of this," They expressed.</p>
+            <p>"It's okay, mother," Cardion replied. "This one was happy to be able to help."</p>
+            <p>Hyacinth nuzzled Cardion again, smiling gently. "I'm proud of you, dear," They expressed softly.</p>
+            <br>
+            <p>Ward took a deep breath, now that the intense part was over. She looked over at the other nurses, whom were getting ready to bring the twins over.</p>
+            <p>It took multiple nurses to shoulder each child, even with the mechanized one being a bit smaller than her sister. It was almost comical, really, but Ward figured with the size difference between puppets and ponies as it was it made enough sense.</p>
+            <p>"Alright, your highness, here they are..." Ward introduced softly. "Do you have names for them, or do you need a moment?"</p>
+            <p>Hyacinth couldn't help but gasp a little at the two foals, wrapped up in the sight of their children. They reached down, gently taking the alicorn from the nurses. Cardion scooped up the mechanized foal, not reacting outwardly. She laid her head over the foal's shoulder, letting the foal's head rest on her own.</p>
+            <br>
+            <p>"Look at you..." Hyacinth said in a hushed tone. The pastel purple, blue, and green stripes in their daughter's mane hadn't been lost on them. "You look just like your mother," They giggled softly.</p>
+            <p>The alicorn foal's eyes creaked open ever so slightly, and she gave a little snort. Hyacinth gently pressed their nose to the foal's and echoing the snort gently. The filly giggled a little, and Hyacinth smiled.</p>
+            <p>Cardion glanced at the mechanized filly in her hooves as her eyes opened. Their gazes met, and they rapidly became transfixed on each other, scarcely blinking and making no noise whatsoever.</p>
+            <p>Ward sat near the end of the cot, waving the other nurses off. She figured now that Hyacinth and Cardion just needed time and space.</p>
+            <br>
+            <p>The interactions between Hyacinth, Cardion, and the foals continued for some time, but eventually the fillies' eyes fell shut, seemingly ready to rest. By now, Hyacinth had taken both foals into their care, holding the dozing foals close to their chest. Even Cardion seemed ready for a rest, just slumping against her mother with her eyes closed.</p>
+            <p>It was only then that Ward spoke up, careful to be quiet. "Did you want to name them now, your highness? It would be nice to get them birth certificates," She expressed softly.</p>
+            <p>"Ah..." Hyacinth smiled gently. "I think I've got some names ready for these two."</p>
+            <p>Ward nodded, grabbing a clipboard and pen. "When you're ready, your highness," She replied.</p>
+            <p>"Solace and Allium, in the order they were born," Hyacinth explained softly, nuzzling each foal as they spoke the desired name.</p>
+            <br>
+            <p>Ward nodded, writing the names down for later. The thought of names brought her back to the one Hyacinth had said earlier. "If I may, your highness..." She started, putting her clipboard down. "Who is Archie?" She asked.</p>
+            <p>Hyacinth's smile softened to a neutral expressed. "Archie..." They trailed off, looking away briefly. "I had a sister when I was younger. We grew up together on the family farm," They explained. "Her name was 'Arched Trellis', but we always called her Archie. I..." They rubbed their head. "It's been a long time since we met for anything, but I swear I've seen her somewhere recently. It's always fuzzy, recalling my time with her."</p>
+            <p>Ward rubbed her chin. "I see," She replied softly. "I'm sorry your highness, I didn't mean to bring up anything painful," She expressed.</p>
+            <p>"It's all right, dear. She's just a bit strange to think about. Sometimes I feel like she'll come around the corner any day now, haha..." Hyacinth chuckled awkwardly, before giving a large yawn.</p>
+            <br>
+            <p>Ward nodded a little, rubbing her head. "Well, I hope if you do meet again, it's a nice meeting," She expressed softly. "Should I let you get some sleep, your highness?" She asked softly.</p>
+            <p>"I think you're losing us here," Hyacinth conceded with a soft chuckle. "It has been quite an exciting morning..." They murmured.</p>
+            <p>Ward smiled. "That's okay, your highness. You can just stay here for tonight," She offered. "I'll just shut the door and make sure the other staff know not to come in here," She expressed with a soft smile.</p>
+            <p>"Thank you, dear," Hyacinth replied with a gentle smile, watching as Ward left the room.</p>
+            <p>Hyacinth looked around at Cardion, Allium, and Solace, sighing softly in content. "If only she were here to see our family now..." They murmured softly, holding their daughters close as they tried to relax.</p>
+            <br>
+            <p>Hyacinth closed their eyes for a moment, letting their mind drift. They opened them again, able to see the faint outlines of something. A colossal, leafless tree, stretching outwards. They took shallow breaths. The air felt distant. Everything felt distant. They looked down at themselves. They could see their body, the foals in their grasp, Cardion against them. But everything seemed slightly translucent, as if they were looking through it. They could see roots stretching into the foals and Cardion, distinct from what seemed to be the trunk that ran through them</p>
+            <br>
+            <p>Their gaze tilted back up to the tree, and they narrowed their eyes. They could see something creeping along it, stained in the pinkish light the tree was emitting. Something equine, though not fully intact. A head and legs attached to a flat body wrapped around the branches like a carpet, sliding along noiselessly. It slid down the trunk, landing on the ground in front of Hyacinth.</p>
+            <p>Hyacinth and the creature stared at one another. Despite how novel it was, Hyacinth felt a sense of comfort as they looked at the strange entity, as if they were looking at someone they'd known their whole life.</p>
+            <p>Hyacinth carefully reached their arm out, trying to interact with the entity before them. The entity tilted its head. But reached out a leg. The two limbs crossed into each other, but no solid contact came: Just a faint pressure.</p>
+            <br>
+            <p>Hyacinth frowned gently as the entity slumped at the lack of interaction. "Ah, I'm sorry, dear..." They murmured. They looked at the large trunk running through them. "Why don't you come here?" They asked quietly.</p>
+            <p>The entity perked up and slunk over, wrapping around the trunk. Hyacinth could feel it; the faint pressure of having something wrapped around them. They closed their eyes, and when they opened them, the hospital room was back in full view. They could still feel the entity's presence around them, but could no longer see whatever plane it resided on. They looked down at themselves for a moment and took a deep breath, before catching Cardion looking at them out of the corner of their eye.</p>
+            <br>
+            <p>"Who was mother talking to?" Cardion asked softly.</p>
+            <p>"I'm... Not too sure, dear. I suppose I've been seeing things since your sisters were born," Hyacinth expressed.</p>
+            <p>"Oh," Cardion blinked. "Bad things?" She questioned.</p>
+            <p>"Not bad," Hyacinth shook their head. "Just... Strangeities. Things I haven't seen before," They replied gently.</p>
+            <p>"Okay mother," Cardion replied with a soft yawn. "This one is glad things are settling down some..." She expressed.</p>
+            <p>"I wouldn't say settling down is going to come very quickly. We've got your sisters to worry about, now," Hyacinth expressed with a gentle chuckle. "But at least they will be easier to take care of."</p>
+            <br>
+            <p>Cardion nodded, reaching up and gently rubbing Allium's head. "This one is glad those ones made it okay," She expressed.</p>
+            <p>Hyacinth smiled. "You were worried about them too, hm?" They mused softly. "They're lucky to have a sister as thoughtful as you."</p>
+            <p>Cardion nodded. "The different ones are always scary," She admitted. "But this one is glad mother and sisters are okay."</p>
+            <p>"Me too, dear. Me too," Hyacinth replied gently, looking down at the foals. They cracked a small smile. "We can tell you two are awake, you know," They chided gently.</p>
+            <br>
+            <p>Solace was seemingly eager to open her eyes and look up at her mother, but Allium stubbornly snuggled into Hyacinth's fur. Hyacinth giggled. "Polar opposites, it seems," They mused softly.</p>
+            <p>Cardion rubbed her chin. "Allium prefers thinking to talking," She mused. "These ones were thinking at one another."</p>
+            <p>Hyacinth smiled. "I suppose that answers the question of if they're part of the rest of the family," They commented. "That explains why the others were so antsy. They could probably feel the little ones becoming connected. I suppose it also explains why they were ready for Allium..." They rubbed their chin.</p>
+            <p>Cardion tilted her head. "What did Allium need?" She asked.</p>
+            <p>"She wasn't born with the metal components," Hyacinth replied. "The Serfs did that. They replaced the damaged pieces with the metal ones," They explained, gently rubbing the metal plate on Allium's back.</p>
+            <p>"Oh," Cardion blinked. "This one is glad they were ready, then."</p>
+            <p>"Me too, dear," Hyacinth nodded softly. "I don't know if I'd ever forgive myself if something bad happened to any of you."</p>
+            <br>
+            <p>Cardion briefly looked down at her little sisters, blinking as Solace's gaze met her own. "This one... This one will make sure sisters are protected," She expressed. "The Paladins want to protect the important ones: Mother, this one, the titans. This one will make sure each sister has one," She added sternly.</p>
+            <p>Hyacinth gave a gentle smile. "That might be a touch excessive, dear," They commented, nuzzling Cardion gently. "But I'm sure they'd appreciate knowing you were looking out for them."</p>
+            <p>Cardion nodded, watching the foals. Allium seemed quite stubbornly anchored to her spot, but Solace was more eager, trying to flop around in Hyacinth's front leg.</p>
+            <p>Cardion reached out, trying to offer Solace somewhere new to crawl to. With some help from Hyacinth, she managed to take the large filly into her hooves, pulling Solace into a supportive hug. Solace giggled a little, batting at Cardion's face and flapping her small wings.</p>
+            <br>
+            <p>Cardion smiled gently, lifting Solace up a bit as her wings flapped. Solace waggled her little legs and giggled happily. Little sparks of magical light dusted from her wings, but never travelled particularly far.</p>
+            <p>"She's quite energetic," Hyacinth chuckled. "We may have to find ways to tire her out," They mused.</p>
+            <p>"There are others thos one can play with," Cardion commented, lightly wafting Solace up and down to imitate flight. "Or this one can play with thos instead."</p>
+            <p>Hyacinth smiled. "I will do my best to be there for them. I cannot bring them everywhere, but they would be good company during paperwork," They mused.</p>
+            <p>Cardion nodded, looking over at Hyacinth. "What will mother tell the ponies now that those ones are born?" She asked.</p>
+            <p>Hyacinth paused. "I... Don't know," They conceded. "I do not wish to publicly announce them; not yet. I would rather they not have so many eyes on them as they grow."</p>
+            <p>Cardion nodded slowly. "This one will find more ways to help, so mother has time away from the ponies," She expressed.</p>
+            <br>
+            <p>Hyacinth's smile softened as they watched over their family, and they pondered that thought. "Things will be different for quite a while," They expressed. "I don't know how fast your sisters will grow, but until they are old enough to care for themselves, we are going to have to manage our time differently."</p>
+            <p>Cardion nodded. "This one will do this' best," She expressed, looking at the alicorn in her hooves. A few thoughts crossed her mind, but she voiced only one of them: "This one wonders if this was made to ensure mother was ready for the sisters," She mused.</p>
+            <p>Hyacinth contemplated that for a moment. "Everything happens for a reason, dear. I'm not sure you could call it planned, but I'm certainly glad you came to me when you did," They expressed, shifting Allium to their other leg to hug Cardion.</p>
+            <p>Cardion leaned into Hyacinth, closing her eyes for a moment. "This one is glad for that, too," She expressed quietly.</p>
+            <br>
+            <p>After a long moment of hugging, Hyacinth looked down at Allium gently. They traced a single finger over the metal pieces grafted to the foal's body. "Are you okay, small one? It is not uncomfortable, is it?" They asked gently.</p>
+            <p>Allium looked up and slowly opened her eyes. She moved her metal leg around a bit, with surprising dexterity. She seemed satisfied, slumping back against Hyacinth.</p>
+            <p>Hyacinth chuckled. "Not much of a talker at all," They murmured softly, leaning down to gently kiss the top of Allium's head.</p>
+            <p>The affection drew Solace's attention, who now jealously waggled her legs at Hyacinth. Her tongue poked out of her mouth, and she whined.</p>
+            <p>Hyacinth giggled gently. "Alright, dear. You too," They said softly, placing a gentle kiss on Solace's head, before tilting up to kiss the side of Cardion's as well. "And one for big sister."</p>
+            <p>Cardion jumped a little, but nuzzled into Hyacinth.</p>
+            <br>
+            <p>Solace reached up and poked Hyacinth's chin, sticking her tongue out again.</p>
+            <p>Hyacinth giggled. "She takes after her other mother," They commented softly. "Never ashamed of being the center of attention."</p>
+            <p>Cardion smiled a bit, but paused. "What... What was the other mother like?" She asked, looking at Hyacinth.</p>
+            <p>Hyacinth smiled gently, stroking Solace's head to placate her as they considered the question. "She was..." They trailed off. "I'm not really sure where to start. She was very much a socialite; more than I could ever be. It didn't matter if it was sorting the court or just spending time with loved ones; being around others was her element. It trickled into everything she did: She'd take any opportunity to spend time outside or out and about. She was quite excited to meet someone 'new' when we first met; I suppose she was old enough that anything new was rare for her," Hyacinth commented, rubbing their chin. "We bonded over wanting the best for our kin. She had been caring for ponies for a long time, and I was about twenty years into tending to your siblings then. I suppose what caught me by surprise was how much she enjoyed listening; understanding what made us different. I believe it all fed back into being a novelty for her," They admitted.</p>
+            <br>
+            <p>Cardion blinked once or twice. "How did mothers meet?" She asked, tilting her head.</p>
+            <p>Hyacinth looked down at Solace and Allium, who had once again settled down. "That might just be long enough for a bedtime story..." They conceded, rubbing their neck. "It was quite a long time ago. I was much younger then, of course: only in my thirties at most. I had struck out on my own when your siblings started coming along; we had found a nice spot in a large wetland, where wet-soil plants like flax grew plentifully. We were a small troupe back then: No more than a hundred of us, even including grandchildren. We didn't have the variety back then, either. No titans, not even superheavies. I was the largest of any of us by a substantial margin."</p>
+            <br>
+            <p>"We grew there for... Five, maybe six years. We had some unsavoury neighbors: creatures known as changelings would raid us now and then, hoping to take advantage of us. We learned quite quickly how to protect ourselves; Praetors came about during that time," Hyacinth continued. "The attacks made us wary of visitors, despite my attempts at staying optimistic. When Celestia touched down near the edge of our farm the first time, I approached her only once I was escorted by a pair of Praetors. I believe she had experience with stern royalty... She bowed to me when I first saw her. I had never been bowed to before, up until that point, and I hadn't had any particular practice with speaking formally," Hyacinth conceded. "Though I must say, I will never forget her expression when I offered my hand for a shake," They chuckled behind said hand.</p>
+            <br>
+            <p>"She was very disarming," Hyacinth admitted. "Though perhaps I was eager to just have a guest. I had her come inside, we made some bread and dandelion tea, and just... Talked. She asked me the basic questions: How long I'd been out there, who my allegiance was to. I remember explaining to her the basics of our kin; how I was the closest thing we had to a ruler. For as outgoing as she was, she always listened carefully when I tried to explain ourselves to her," They smiled fondly. "I suppose that's what always stuck out to me about our first meeting: How mundane it really was, in hindsight. Two new friends meeting for tea, striking up a conversation."</p>
+            <br>
+            <p>Cardion nodded. "Did mothers fall in love right away?" She asked.</p>
+            <p>Hyacinth chuckled. "I was quite oblivious to how much she enjoyed our time together. We had known each other for close to a century when it finally clicked that she wanted to bring our ties deeper than that of friends or diplomats," They conceded, rubbing their neck. "We had gone out to Rainbow Falls; it was her preferred place to go to empty her head. While we sat there, staring at the falls, I heard her just barely over the roar of the water: She told me that she loved me. I can't say I fully understood at first... I had only ever felt familial love for most of my life. It only really clicked into place the second after I told her I loved her back," They commented. "I had never seen her cry before that day, after ninety seven years of being there for each other through thick and thin... I think it all came out that evening. I just remember holding her until she could pull herself together long enough to set the sun," Hyacinth smiled bittersweetly, blinking their wet eyes a few times.</p>
+            <br>
+            <p>Cardion leaned in and hugged her mother with her unoccupied front leg. "That... Sounds like a long time to wait for love," She expressed. "This one does not know if this would last that long."</p>
+            <p>Hyacinth rubbed their neck, sniffling a bit. "Haha... That's the nature of the beast sometimes. You have to choose, between being patient, or being bold," They admitted. "For all her social outgoingness, she was patient to a fault during our quiet time... I think eventually it became too much for her to keep to herself after such a long time."</p>
+            <p>Cardion nodded, looking down at Allium, still in her front legs. "Thos one does not seem very patient."</p>
+            <p>Allium, without opening her eyes, tilted her head up and stuck her tongue out at Cardion.</p>
+            <p>Hyacinth laughed a bit. "Give her time. She isn't even a day old yet," They expressed, nuzzling both Cardion and Solace.</p>
+            <br>
+            <p>Ward poked in through the door, looking at the family. "Are you four okay in here?" She asked.</p>
+            <p>Hyacinth looked over at Ward with a smile. "Oh, yes. I was just telling Cardion about her other mother," They commented. "You're welcome to come in, dear."</p>
+            <p>Ward hesitated a little, but stepped inside, shutting the door behind her. "I didn't mean to intrude, your highness," She expressed. "I guess I'm just a bit on edge after this morning."</p>
+            <p>Hyacinth nodded. "I think it's all shaken out alright. These two seem happy enough, at least," They expressed.</p>
+            <p>Ward nodded, looking up at Solace as the large foal turned to look at her. She gave a nervous smile. "Hi..." She greeted softly. "Aren't you just a cutie?" She asked, trying to make a good impression.</p>
+            <p>Solace stuck her tongue out with a soft 'pbbt', blinking a couple times.</p>
+            <p>Hyacinth giggled. "She's a rambunctious one, be careful," They commented.</p>
+            <br>
+            <p>Cardion lowered Solace a bit as Ward came closer, so they were some approximation of eye level.</p>
+            <p>Ward looked over Solace, taking in the foal's appearance. Her eyes followed the messy curls of Solace's multicolored mane. "She certainly got Celestia's mane..." Ward murmured.</p>
+            <p>Solace blinked a couple times, tongue still poking out of her mouth.</p>
+            <p>"She got the hair and the personality, from what I've seen," Hyacinth giggled. "We will have to be cautious with making sure she doesn't wander off."</p>
+            <p>Ward nodded. "She has Cardion's eyes," She mused. "No pupils, just irises. But it seems like she can see just fine," She pondered.</p>
+            <p>"This one can see," Cardion nodded. "So can the others, and those ones have even less eye parts."</p>
+            <br>
+            <p>Ward nodded, rubbing her chin. "I guess that makes sense, though how your eyes work is kind of a mystery to us. If one of you has eye problems, I'm not sure if we'll be able to help," She admitted.</p>
+            <p>"I'm sure you'll figure something out if necessary, dear," Hyacinth commented with a small smile. "Though to my knowledge, none of my children have any sort of vision issues. Even the Leviathan can see just fine," They mused.</p>
+            <p>"That's good," Ward commented, before snapping out of her musings. "Oh- but, I don't want to take away from your time with the foals. We can discuss childcare another time," She expressed.</p>
+            <p>Hyacinth smiled. "The appointments are a good excuse to clear a morning, at least," They commented with a soft chuckle. "I suspect I'll want a bit more free time now that these two are here."</p>
+            <p>"I'll try to get some notes ready," Ward commented. "I can't really write you off of replacing the sun, but I can probably get you out of a few meetings," She added with a giggle.</p>
+            <p>"Every bit helps," Hyacinth supposed with a small smile.</p>
+            <br>
+            <p>Ward nodded, her gaze drifting to the other foal. "Is Allium okay?" She asked. "It was... Kind of a shock when the Serfs started operating on her. I'm glad they knew what they were doing."</p>
+            <p>"Oh, she's all right, dear," Hyacinth replied gently. "She seems to be the quiet one out of the two, but she doesn't seem to be in any sort of major discomfort," They expressed, rubbing the mechanized filly's head.</p>
+            <p>Allium blew a puff of air through her lips, but didn't turn to acknowledge the nurse.</p>
+            <p>Ward just giggled. "Seems like she's a little sassy, too," She commented, rubbing her chin. "Have either of them spoken yet?" She asked curiously.</p>
+            <p>"Not yet," Hyacinth admitted. "Though Cardion's been able to check in mentally with Allium, so I suspect it's only a matter of time," They commented.</p>
+            <p>"I guess it makes sense. They can probably learn from you and all the others if they're connected," Ward mused.</p>
+            <br>
+            <p>"I believe so," Hyacinth nodded, tapping their chin in thought. "Though if they are like Cardion, it will take some time. She is still fully adjusting to her abilities; the rest of my children are born fully capable and learned of their full potential," They commented.</p>
+            <p>Ward closed her eyes for a moment. "That makes sense, on some level," She commented as she looked back up at Hyacinth. "Different parts of the body age at different rates; the brain takes the longest of anything to fully develop, and even after that point it's still consistently rearranging itself. Cardion has more to process mentally than the others, so it makes sense she'd take the longest to grow," Ward mused.</p>
+            <p>Hyacinth nodded. "I suppose that follows logic, given Cardion has more control over the others than any of them do," They commented. "It is a role she is still growing into, in addition to getting used to speaking to those not of our kin."</p>
+            <br>
+            <p>Ward nodded. "It's something to keep an eye on," She supposed. "I... Should probably get back to helping out the other nurses, if you're all doing okay. I just wanted to check in and make sure the four of you were doing okay," She expressed.</p>
+            <p>Hyacinth smiled. "It's appreciated, dear. I think we'll be around for often for a while, just to make sure Solace and Allium are growing healthily," They expressed.</p>
+            <p>Ward smiled. "Of course, your highness. I'll help any way I can," She expressed, before tilting her head lower to look at Solace and Allium. "You two be good for mama, now," She expressed.</p>
+            <p>Solace waved her hooves at Ward and whined a little, while Allium just puffed softly and snuggled closer to Hyacinth.</p>
+            <p>Hyacinth smiled gently, kissing Solace's head. "We'll come see the doctor again soon, dear," They promised. "We need to get some rest, now."</p>
+            <p>Solace whined a little more, flopping dramatically against Cardion's chest and closing her eyes.</p>
+            <p>Ward giggled. "Such a little drama queen," She chided playfully as she turned to leave. "Have a good rest, you four," She expressed softly.</p>
+            <p>"Bye bye," Cardion replied softly, leaning against Hyacinth and closing her eyes.</p>
+            <p>"Thank you, dear. Take care of yourself," Hyacinth bade, giving a small wave.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
