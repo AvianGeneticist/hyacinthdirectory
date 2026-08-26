@@ -2,13 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abomination Spells</title>
+    <title>Tremorids</title>
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <style>
         * {
           box-sizing: border-box;
         }
-
+                
         .row {
           display: flex;
         }
@@ -47,8 +47,8 @@
 
         .column {
           float: left;
-          width: calc(100% - 200px);
-          min-width: 660px;
+          width: calc(100% - 740px);
+          min-width: 360px;
           min-height: 98vh;
           padding: 10px;
         }
@@ -60,8 +60,27 @@
           min-height: 98vh;
           padding: 10px;
         }
+
+        .infobox {
+          float: right;
+          width: 340px;
+          height: 400px;
+          padding: 5px;
+        }
+
+        .infotable {
+          border-collapse: collapse;
+          width: 100%;
+          height: 100%;
+        }
+
+        .infotablecell {
+          border: 2px solid rgba(214,145,210,0.5);
+          padding: 5px;
+        }
         
         /* Clear floats after the columns */
+        
         .row:after {
           content: "";
           display: table;
@@ -70,19 +89,6 @@
 
         li {
           margin-bottom: 6px;
-        }
-
-        table {
-          width: 100%;
-          border: 1px solid rgba(214,145,210,0.6);
-          border-collapse: collapse;
-        }
-
-        td {
-          vertical-align: top;
-          border: 1px solid rgba(214,145,210,0.6);
-          border-collapse: collapse;
-          padding: 8px;
         }
 
         /* unvisited link */
@@ -229,72 +235,50 @@
       
       <div class="spacer"></div>
         <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
-          <div>
-            <h1>Spell List</h1>
-            <p>This is the master spell list for Abominations. The Abomination Class does come with some unique spells, and those will be elaborated on below. This table only shows at a glance what spells are learnable. (Note that some class features may add spells beyond the usual list.)</p>
-            <table style="font-family:verdana; color:rgba(225,245,255,1)">
+          <div><h1>Tremorid Overview</h1></div>
+          <div class="infobox">
+            <table class="infotable" style="font-family:verdana; color:rgba(225,245,255,1)">
               <tr>
-                <td style="width:10%">Cantrip</td>
-                <td>Guidance, Resistance, Mending, Spare the Dying, Thaumaturgy, Mage Hand, Message, Arcane Slivers</td>
+                <td class="infotablecell">Commonality</td>
+                <td class="infotablecell">19.1%</td>
               </tr>
               <tr>
-                <td style="width:10%">1st-Level</td>
-                <td>Guiding Bolt, Healing Word, Command, Detect Magic, False Life, Goodberry, Longstrider, Mage Armor, Magic Missile, Shield, Speak With Animals</td>
+                <td class="infotablecell">Stability</td>
+                <td class="infotablecell">8/10</td>
               </tr>
               <tr>
-                <td style="width:10%">2nd-Level</td>
-                <td>Aid, Blindness/Deafness, Detect Thoughts, Enhance Ability, Gentle Repose, Lesser Restoration, Magic Weapon, Warding Bond, Propagating Recovery</td>
+                <td class="infotablecell">Attributes</td>
+                <td class="infotablecell">Synchronicity: 4/10<br>Activity: 9/10<br>Peculiarity: 0/10</td>
               </tr>
               <tr>
-                <td style="width:10%">3nd-Level</td>
-                <td>Aura of Vitality, Beacon Of Hope, Mass Healing Word, Protection From Energy, Harmonize, Haste</td>
+                <td class="infotablecell">Specials</td>
+                <td class="infotablecell">High control over tectonic activity</td>
+              </tr>
+              <tr>
+                <td class="infotablecell">Personality</td>
+                <td class="infotablecell">Eager first-aid attendants</td>
               </tr>
             </table>
-            <h1>Spell Descriptions</h1>
-            <h2>Arcane Slivers</h2>
-            <ul>
-              <li>Cantrip</li>
-              <li>Requires a Spellcasting Focus</li>
-              <li>Self</li>
-              <li>1 action*</li>
-            </ul>
-            <p>Casting this cantrip creates (5 + your spellcasting modifier) magic sliver projectiles around you (this can be casted over itself up to double the capacity of magic slivers (10 + 2 * your spellcasting modifier)).</p>
-            <p>So long as you have magic slivers around, you can use a bonus action to fire off up to 4 slivers at targets within 100 feet of you, or you can assign up to 8 magic slivers to an ally within 50 feet, who can then use their own bonus action to fire the slivers.</p>
-            <p>When attacking, each needle must make an attack roll using your spellcasting modifier (even if you’ve given the slivers to someone else) against the target’s armor class. Each needle does 1d2 force damage on a successful hit.</p>
-            <p><i>Cantrip Improvement:</i> The magic slivers become more powerful at higher levels. At 5th level, their damage die is increased to 1d4. At 11th level, their damage die is increased to 2d4. At 17th level, their damage die is increased to 3d4.</p>
-            <h2>Propagating Recovery</h2>
-            <ul>
-              <li>2nd Level</li>
-              <li>Verbal, requires a Spellcasting Focus</li>
-              <li>30 foot range</li>
-              <li>1 Action</li>
-            </ul>
-            <p>Target an ally in range with at least one summoned or animated entity with hit points. That target recovers 1d6 HP, and up to 3 of its underlings recover HP from a pool of 2d4 HP, split however the target desires. (If there are multiple “layers” of underlings (i.e. the underlings have underlings of their own), the pool is shared between them.) While you have no control over the healing split, you can feel where the energy goes.</p>
-            <p><i>At Higher Levels:</i> When casting this spell at a slot level higher than 2nd, add 1d6 healing to the initial target and 2d4 healing to the underling pool for every level above 2nd.</p>
-            <h2>Conjure Guiding Weapon</h2>
-            <ul>
-              <li>2nd Level</li>
-              <li>Verbal, Material (a small shard of glass)</li>
-              <li>30 foot range</li>
-              <li>1 action</li>
-            </ul>
-            <p>Casting this spell creates one of the following results of the caster's choosing:</p>
-            <ul>
-              <li>1 guiding Longsword. These weapons act like a longsword, but add 1d8 radiant damage on every swing. Additionally, struck targets must roll a Wisdom saving throw (DC 16), or else they suffer from an advantage on attacks against them next turn.</li>
-              <li>4 guiding Handaxes. These weapons act like Handaxes, but add 1d6 radiant damage on every swing. Additionally, struck targets must roll a Wisdom saving throw (DC 16), or else they suffer from an advantage on attacks against them next turn.</li>
-              <li>12 guiding Bolts. These bolts add 1dX radiant damage, depending on the dice of the crossbow that fired them. Additionally, struck targets must roll a Wisdom saving throw (DC 18), or else they suffer from an advantage on attacks against them next turn.</li>
-            </ul>
-            <p>Guiding weapons conjured in this way last 5 minutes. Casting the spell above second level increases the yield by 1 Longsword, 4 Handaxes, and 12 Bolts per level above second.</p>
-            <h2>Harmonize</h2>
-            <ul>
-              <li>3rd Level</li>
-              <li>Requires a Spellcasting Focus</li>
-              <li>100 foot range</li>
-              <li>1 round</li>
-            </ul>
-            <p>Target an enemy in range. Once per turn during this spell’s casting duration, the target can make an Intelligence saving throw against a DC of (16 + your spellcasting modifier). If it fails, all of your allies in a 20 foot radius of the target are healed for 2d8 HP. If it succeeds in a saving throw, the radius is reduced to 10 feet, and the healing is reduced to 1d8.</p>
-            <p><i>At Higher Levels:</i> When casting this spell at a slot level higher than 3rd, the healing is increased by 1d8 for both the succeeding and failing values for every level above the 3rd.</p>
           </div>
+          <p>Tremorids are among the most 'normal' of the Ouroborae, standing at rather average height. Their double-broad, heavy builds make them large enough to maintain an active lithosphere internally, and as such they are the most tectonically active of any Ouroboran. A group of Tremorids is known as a plume.</p>
+          <div><h2>Physical Description</h2></div>
+          <p>Tremorids are slightly above average in terms of size for Ouroborae, standing at roughly 2962 miles (4766.9km) tall. Their most notable external trait is just how wide they are, with their already double-broad physiques being further augmented with a large "antler" on either side of their body (similar to that of an <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorage's</a>), allowing them to support substantially wide continents even for their size. This large form also makes them exceptionally heavy, and they are prone to lying closer to the planet's core than their height would suggest, typically requiring psionic effort to slot into a proper world shell.</p>
+          <div><h2>Behaviour</h2></div>
+          <p>Tremorids are too big to engage in combat with anything meaningful, but they are perhaps the most uniquely suited to attempting to fend off large-scale aggression forces. A well-timed volcanic eruption is capable of producing numerous projectiles or a thick screen of smoke, though of course this is a drastic course of action that the Tremorid does not take lightly, requiring execute authority from the clan's Archmother to even set into motion.</p>
+          <p>When not being actively called upon for planetary defense, however, Tremorids generally mediate their tectonic activity accordingly, instead using their abilities to create mountains for the clan to harvest minerals from. They are uniquely effective at seeding large deposits of minerals, and while homesteading is not always comfortable on a Tremorid's back, it is known that <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> seem to enjoy the engineering challenges, and titans are fond of the often large, stony spaces created by the creation and exploitation of mineral deposits.</p>
+          <div><h2>Genetic Description</h2></div>
+          <p>Tremorids are known for their (relatively) hotblooded nature, particularly in the tissue around their cuticles where their internal lithosphere resides. They share this hotblooded trait with <a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a>, though being creatures of their size, this hotbloodedness rarely translates into any kind of frenetic temperament.</p>
+          <div><h2>Hyacinth's Thoughts</h2></div>
+          <p><i>The Tremorids... I was surprised at first to learn we had been living on one for most of our time before becoming aware of them, though after learning of the other Ouroborae, I suppose it made sense: Our home continent had many mountains, after all. Since then, we have taken to settling our large-scale population centers on the others, but we will always cherish the one who was once the cradle of our kin.</i></p>
+          <div><h2>Metanarrative</h2></div>
+          <p>Tremorids were the first Ouroborae to be properly drafted and fleshed out, starting the naming scheme of adjectivized words. They are meant to represent mountainous, geologically active continents such as North America, with an emphasis on mining and unusual engineering challenges. They of course get their name from tremors, which are known both as the initial phases of an earthquake or the uncontrollable shaking of the body.</p>
+      </div>
+      <div class="spacer"></div>
+      <div class="gallery" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div><h1>Gallery</h1></div>
+          <div><img src="delta.png" alt="A reference image of a Delta." width="520" height="446"></div>
+          <br>
+          <div><img src="deltainspect.png" alt="A Delta with a small insect captured in one of its fields." width="520" height="358"></div>
         </div>
     </div>
     </body>
