@@ -1,0 +1,354 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homecoming</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/plurites">Plurites</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/billiali">Billiali</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/tremorids">Tremorids</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/bifurn">Bifurn</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/striates">Striates</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/regalids">Regalids</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>Chrysalis squinted as she walked out onto her balcony. She saw a small blob of pink and blue approaching on the horizon, flitting through the air. It was approaching at substantial velocity, no less, growing larger at an observable, if subtle pace. A small smirk crossed her face. "...And now the immune system comes to clean the filth, hm?" She murmured under her breath.</p>
+            <p>Ducking back into her hive, she slunk down to the large chamber that Ester had been assigned to.</p>
+            <br>
+            <p>Ester sat in the middle of the room, tending to what would have looked like a Reconcilant to any outside observer. Chrysalis, of course, knew better: Of the seven visible Reconcilants in the room, only a single one was real. The rest were very convincing facades, even going so far as to mimic spawning appropriately.</p>
+            <p>"Ester," Chrysalis snipped. "We are going to have company, soon. Consider today your final test," She remarked.</p>
+            <p>Ester looked up. "What will this one's test entail?" She questioned, slowly standing up.</p>
+            <p>"Your mother is sending some creatures to check up on the ones we have here," Chrysalis puffed. "You must be ready to control them, else there will be no hive for you to represent by the end of today."</p>
+            <br>
+            <p>Ester's ears flattened. "Those ones will... Be angry?" She asked nervously.</p>
+            <p>Chrysalis nodded. "We are intruders into a body vaster than the land we live on, Ester," She said, voice cold. "We must assert our place within, or it will destroy us. I will say it plainly: The price of failure for this test is death."</p>
+            <p>This did little to inspire Ester's confidence, but she nodded. "Where must this one go?" She asked.</p>
+            <p>"They're likely coming for your abducted sibling, so expect them to breach the walls soon. I doubt they will be much for subtlety," Chrysalis remarked.</p>
+            <p>The whole room lurched as something crashed into the side of the hive. "Here they come," Chrysalis muttered, slinking out of the room.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>The entire hive reeled as the Praetor slammed into its side, large tentacles already tearing into the structure. The breach was fast, and the hive's changelings were left scrambling for the tunnels as they tried to respond to it. Behind the Praetor, hovering close to the hive wall, was a small number of other puppets: A Seraph, a Paladin, and a trio of Deltas. The bare minimum breaching force, but nonetheless a capable one.</p>
+            <p>As the Praetor cleared a landing, the Seraph set down the Paladin, before the Deltas erected shields around the puppets present. By the time the first changelings had managed to find the entry point, the Praetor was already established. The first guards were ripped into, the tight corridors giving no room to dodge. Deceptively sharp, the Praetor's tentacles punched through several ranks in singular strikes. The limited resistance the hive was able to put up only ever succeeded in denting the shield wrapped around the Praetor as it tore deeper in.</p>
+            <br>
+            <p>A few changelings attempted to flank the intruders from outside, at which point the Paladin turned and loosed a number of flagella into the air. The ray-like creatures spiralled up into the air, casting bolts of dark energy at the defenders.</p>
+            <p>The Seraph moved inwards, now sandwiched between the Praetor and Paladin. The Deltas worked overtime to ensure their shields stayed up despite the onslaught now coming from multiple angles.</p>
+            <br>
+            <p>Finally, the Praetor breached into a room: The nursery that it had been drawn to. Inside were dozens of Manipulators and Tricksters, as well as a few Reconcilants and a number of Imps and Arrays. In the center of it all sat a pure, unadulterated Archon.</p>
+            <br>
+            <p>There was a silent standoff as the real puppets broke into the room. Ester could feel psionic signals passing through her, translating into and out of magical patterns. She felt a nervous sweat building beneath her disguise's fur. Finally, she managed to speak: "Ah, you have found these ones!" She managed, if cumbersomely. "We were worried you would never come," She expressed, standing up hesitantly.</p>
+            <br>
+            <p>Ester felt her muscles tense up as the Paladin approached her. A lumbering beast, encased in a shell and some sort of soupy dark matter. But it bowed to her and rumbled in some sort of odd tongue: A question, asking her if she was alright.</p>
+            <p>"These ones are unharmed," Ester replied. "The changelings had these ones here for study," She attempted to explain.</p>
+            <p>The Paladin stood and warbled at her again, offering her its hoof; an offer to leave.</p>
+            <br>
+            <p>Ester looked around. Already, the Praetor was starting to round up the puppets, real and fake. Long tentacles, still stained with the remnants of their pierced enemies. Ester had to quell her siblings' nerves. As long as they stayed disguised, they were safe, she promised them. They were safer now than before their "rescuers" had arrived. She just had to believe that, and it would be true. The clan would make it true.</p>
+            <br>
+            <p>Ester took the Paladin's hoof, allowing it to lead her to the Seraph's back. With some help, she climbed aboard, looking at her siblings below.</p>
+            <p>The puppets seemed a bit overwhelmed, as if they hadn't expected so many evacuees. Ester wondered if something had gone wrong. Had she not communicated properly?</p>
+            <p>Regardless, puppets were piled on the Seraph. Reconcilants were prioritized first, being piled upon the Seraph's back with some even clambering on top of Ester herself. The weight was seemingly becoming too much for the Seraph, its legs now trembling. It remained silent, however, patiently awaiting for its go ahead to leave.</p>
+            <br>
+            <p>Ester closed her eyes. The plan wouldn't work if they couldn't even leave the hive. She needed someone... Anyone to move this along. She reached out, trying to touch anything she could. She checked the land, the sea, the sky... And finally found something. A large presence. She begged it for its help. She opened her eyes to find the side of the hive cloaked in shadow.</p>
+            <p>An enormous puppet landed next to the hive, clad in large scales and great wings. The Leviathan, waiting deep in the sky, had come.</p>
+            <br>
+            <p>With the reprieve ordered, the puppets' strategy shifted. Some Reconcilants were offloaded from the Seraph, allowing it to traverse the gap between the hive and the Leviathan. Imps and Arrays swarmed over in great numbers, taking refuge in the Leviathan's body.</p>
+            <p>Ester understood the plan immediately. As soon as the Seraph had touched down inside the Leviathan, Ester slid off its side, helping the smaller Reconcilants down so the Seraph could return to pick up another load of puppets. However, the hive was running out of time for its lack of response remain authentic: Changelings fired on the Seraph from above, breaking through the Deltas' shields and clipping one of the Seraph's wings, making it stagger in the air on its way back.</p>
+            <br>
+            <p>Ester winced as the Seraph faltered. She could feel its pain, if faintly, and felt a vengeance course through her. Her blood family and brain family were at odds with one another, and now she had to decide on her allegiance. Her horn lit brightly, unleashing a throng of projectiles towards the defenders, trying to keep them from hurting her adoptive family any more.</p>
+            <br>
+            <p>More puppets were ferried across, with the Paladin joining Ester in providing covering fire. They forced the defenders back, securing their extraction point.</p>
+            <p>Ester felt good. It felt right. This was her family, and she was protecting them. She continued providing protective fire as the Seraph made its rounds, transporting more and more of the puppets back over to the Leviathan. The Praetor was brought over last, ensuring nothing could further compromise their escape route.</p>
+            <p>With all puppets loaded, Ester ordered a hasty retreat. Perhaps too hasty, as her lack of care manifested in how the Leviathan chose to leave: Ungracefully, it shoved itself into the air, shattering the land its hooves pushed off of. Once in the air it seemed more sure, but the scarring left a massive set of cracks that spiderwebbed outward, even under the hive. Ester sighed in relief. The hard part, it seemed, was over.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>Chrysalis puffed as she eyed the fleeing puppets from her balcony. "And she leaves such a mess to clean up..." She murmured. "No matter. We have what we need," She remarked, looking down at the gaping wound in her hive and the bodies strewn below. "You had best make this worth the effort, Ester," She muttered, flying down to inspect the damage further.</p>
+            <p>Corpses crowded the tunnels, some cut in half, scorched, or even melted into disfigured piles of organic slag. Already, a few drones were attempting to pick through the refuse for survivors. Chrysalis eyed them. "Prepare a bonfire for the bodies and ensure the hive begins repairing the wall," She remarked. "If all goes well, this will be a tactical expense, rather than a death blow," She added under her breath.</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>Ester took a deep breath as the Leviathan careened along the horizon. She looked around herself, briefly pondering how she'd gotten this far. She wondered if she'd really be accepted. She looked at the large puppets around her, realizing how far out of her breadth she really was. She contemplated giving up right away; surrendering to Hyacinth. Ester wasn't sure what thought scared her more: Outing herself, or hiding forever.</p>
+            <p>She squeaked as the Paladin tapped her gently on the shoulder and warbled, asking if she was alright.</p>
+            <p>"Ah, yes, this one is unharmed... It was just scary in the hive," Ester expressed, rubbing the Paladin's head a bit. "Thank you for rescuing these ones."</p>
+            <p>The Paladin sat next to her with a small huff, closing its eyes and hanging its head to rest as the Leviathan drew close to Canterlot.</p>
+            <br>
+            <p>Hyacinth watched as the Leviathan aligned itself with Canterlot mountain, drawing along the large opening meant for extricating titans from the bottom of the castle. Cardion sat near them, flanked by Praetors on all sides, holding both Solace and Allium close to her chest. "Is mother sure it is safe for the sisters to be here?" Cardion asked.</p>
+            <p>"The Praetors will keep us safe, dear," Hyacinth promised. "I believe it is important we meet the newest members of our family," They expressed, stepping closer to the ledge as a small number of Seraphs and Brokers began to ferry puppets across.</p>
+            <p>Hyacinth issued orders psionically, attempting to organize the new swarm. These new puppets did not respond as readily to their commands, as if there were some sort of latency. But, they did obey with time, organizing Imps and Arrays into following their parent Reconcilants, rather than swarming the hangar.</p>
+            <br>
+            <p>Hyacinth watched as Reconcilant after Reconcilant lined up, each one surrounded with its gathering of Imps and Arrays. Hyacinth rubbed their chin as they made sense of all the new puppets. There were inconsistencies about them; their connections to the clan were wrong. They all routed through the new Archon, whom Hyacinth turned to look at as she was brought into the hangar.</p>
+            <p>Hyacinth stood tall, looking down at the new Archon. "Hello, small one," They greeted, eyeing the new arrival. "Do you have a name?"</p>
+            <p>The Archon looked up at them with intimidated eyes. "Th-this one is named Ester," She replied, voice trembling.</p>
+            <p>Hyacinth's expression softened, despite their concern. "I can't say you're familiar, dear," They expressed. "It's unusual for me not to recognize one of our own. Where have you been?" They asked.</p>
+            <br>
+            <p>Ester hesitated. She needed a good answer. Was there a good answer? "This one was caught by the changelings," She explained nervously. "These ones were stuck until those ones rescued these," She expressed, pointing at the Seraph as it patched up the small burn and blast marks on the Praetor and Paladin.</p>
+            <p>Hyacinth gently pulled Ester into a hug. "Did the changelings hurt you, dear?" They asked gently. "Your siblings feel a bit faint."</p>
+            <p>Ester flinched, but sank into the hug. The warmth and affection disarmed her for a moment. She closed her eyes, not answering right away.</p>
+            <p>Hyacinth rubbed Ester's back gently. "Take your time, dear," They cooed gently, not wanting to pressure the Archon.</p>
+            <p>Ester shivered a little. "They tried changing these ones... It didn't work. Spawning new siblings is harder now," She expressed softly.</p>
+            <p>"Ah..." Hyacinth replied gently. "It's okay, dear. We'll help you the best we can," They expressed.</p>
+            <p>"Th-thank you... Mother," Ester replied softly, her eyes remaining closed.</p>
+            <br>
+            <p>Hyacinth gave Ester a gentle squeeze. "Would you like to meet your other sisters?" They asked gently, running a hoof through Ester's mane.</p>
+            <p>"Yes please," Ester replied quietly, taking a moment to pull herself together before finally letting go of Hyacinth.</p>
+            <p>Cardion trotted over with her baby sisters on her back, looking between Hyacinth and Ester. Cardion eyed Ester with a curious gaze for a moment, before offering a leg for a hug. "This one is Cardion," She introduced herself. "Those ones are Solace and Allium."</p>
+            <p>Ester stood up to match Cardion's one-legged hug, offering a leg of her own and nuzzling her new sister's cheek. "This one is glad to meet thase ones," She expressed.</p>
+            <p>Cardion nodded a little. "This one is glad thase ones are safe," She expressed. "This one was worried, with the baby sisters around."</p>
+            <br>
+            <p>Ester looked at Allium and Solace, tilting her head. It hadn't occurred to her that any of her new family could be babies.</p>
+            <p>Solace flopped around on Cardion's shoulder, trying to get a good look at Ester and sticking her tongue out. Allium was decidedly less interested, just briefly glancing at the new Archon before flopping into the foliage on Cardion's back.</p>
+            <p>Ester couldn't help but smile a little, sticking her tongue out back at Solace. Solace giggled, clapping her front hooves together.</p>
+            <p>Ester giggled as well. She rubbed her chin before her horn lit, magicking up a small silk blanket and gently laying it over Allium. Allium said nothing, but snuggled down under the blanket, which was enough for Ester to feel satisfied.</p>
+            <br>
+            <p>"Aw..." Hyacinth fawned. "What a nice little safety blanket..."</p>
+            <p>Solace noticed the blanket, trying to lift a corner up to join Allium under the covers, and whining as Allium subsequently pushed her away with a back leg.</p>
+            <p>Ester frowned softly, but made another blanket, gently wrapping it around Solace. "There," She said, her smile returning. "One blanket each."</p>
+            <p>Solace's whining stopped, and she contently laid back down on Cardion's back.</p>
+            <p>Hyacinth giggled. "Such a jealous little thing..." They commented softly, leaning over to gently kiss both foals as they settled down. "Thank you, dear. I'm sure they'll sleep better with their own little blankets."</p>
+            <br>
+            <p>Ester beamed, but her smile fell as she felt a pang of something in her stomach: Fear, bordering on revulsion. The knowledge that Chrysalis would no doubt take interest in a baby Archon occupied her mind. Ester puffed herself up a bit. "This one will make sure the babies are safe," She expressed.</p>
+            <p>Cardion nodded a little. "Those ones must be protected," She expressed with a soft puff.</p>
+            <p>Hyacinth was beaming ear to ear, happy to see the two both getting along and caring so intently about their sisters. "I'm glad you're both taking their safety seriously," They expressed, gently nuzzling both of the grown Archons. "I think you'll settle in just fine, Ester, different or not," They expressed gently.</p>
+            <br>
+            <p>Ester looked at Hyacinth. Another pang hit her, this time one of guilt. She had been so readily accepted that she almost felt guilty. She wondered if she should've just revealed herself beforehoof. But now she was in the deep end, brought in under a false pretense. Her voice faltered a bit. "Th-thank you, mother," She replied quietly.</p>
+            <p>Hyacinth noticed the warble, giving a gentle expression. "Are you sure you're okay, dear?" They asked gently. "You look so scared..."</p>
+            <p>Ester nodded. "This one is just glad to be home," She excused. "It was scary, living with the changelings. Those ones used very strange magic, trying to find out how this one worked," She expressed, careful never to venture too far from the truth.</p>
+            <p>Hyacinth nodded gently. "That is concerning..." They murmured softly. "But it's okay, dear. You're home now, and we'll make sure you and your siblings are taken care of," They reassured. "How about we find you a quiet room to rest? You don't need to go to work right away," They expressed.</p>
+            <p>Ester nodded softly, standing up to follow Hyacinth. "This one would like some time to rest and think..."</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
