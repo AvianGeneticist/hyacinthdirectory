@@ -1,0 +1,311 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confrontation</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <div style="padding-left:8px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archmothers">Archmothers</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/warped">Warped</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/plurites">Plurites</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/billiali">Billiali</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/tremorids">Tremorids</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/bifurn">Bifurn</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/striates">Striates</a></div>
+        <div id="nurserianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria">Nurseria</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria/progenites">Progenites</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/regalids">Regalids</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>Hyacinth gently rubbed the leg of the Leviathan as they stepped out into the desolate land near Chrysalis' hive. "Back to space with you, dear," They said gently. "Just don't go too far," They expressed.</p>
+            <p>The Leviathan warbled a bit, nuzzling them carefully before gently pushing off into the sky once more, its massive frame sailing off into the sky gracefully.</p>
+            <p>Hyacinth heaved, making the last leg of the journey on hoof. It was important to them that they did not appear threatening, even though they were heading into what was by all accounts dangerous territory. They had never personally been in Chrysalis' hive before, though they could recognize the scar that the earlier "rescue mission" had caused: The upper section of the hive was sloughed slightly to the side, and large cracks were hastily filled like inflamed cuts, with a large patch of visibly newer material occupying the heart of the damage.</p>
+            <br>
+            <p>Hyacinth approached the hive, attempting to find some kind of entrance. However, they were found first; a number of changelings flew down towards them, not in aggressive vectors, but clearly wary. They shielded their face from the dirt and dust kicked up by the menagerie of buzzing wings.</p>
+            <p>"What business do you have here, Archmother?" One of the changelings hissed.</p>
+            <p>Hyacinth stifled a smile. That they weren't attacked on sight told them what they needed to know. "I need to talk with your mother, dear," They expressed, looking up at the changelings. "I'm alone."</p>
+            <p>The changelings looked among each other, seemingly trying to probe for any hint of insincerity. "What is there to talk about?" One asked.</p>
+            <p>"It's personal," Hyacinth sighed. "Something that cannot go unaddressed."</p>
+            <p>Finally, one of the changelings relented. After a moment, all but one of the changelings flew away. The changeling then dropped its disguise, revealing the much taller, gangly form of Chrysalis.</p>
+            <br>
+            <p>"Well? What is it that you want, Archmother?" Chrysalis puffed, leering at Hyacinth.</p>
+            <p>"It is about Ester," Hyacinth replied curtly. "I believe there are some... Things about her that we must discuss."</p>
+            <p>Chrysalis visibly flinched. Her eyes widened slightly. Briefly, she wondered how Hyacinth had found out. Her plan should have been foolproof, after all; it had fooled even the puppets who had come to rescue them. Ester had even shown herself able to call the Leviathan if necessary. Finally, Chrysalis relented, turning towards the hive. "...Do not cause further ruckus within my hive. Your 'children' have done enough," She puffed, flying towards the hive. A piece of the wall parted to reveal a room within, allowing the both of them inside.</p>
+            <p>Hyacinth followed without audible complaint, going so far as to carefully wipe their hooves at the very edge of the hive before stepping in deeper.</p>
+            <br>
+            <p>"How?" Chrysalis asked sharply. "I ensured every piece of her disguise was perfect: I had her disguise physically, I ensured she kept her emotions under wraps, and I even went through the trouble of replicating your psionic strangeness," She asked as she landed, leading Hyacinth deeper in.</p>
+            <p>Hyacinth smiled. "I wish I could call it a mother's intuition, or something of the sort," They replied. "But it was much simpler than that: I recognize all of my children. None of them have ever come to me as a surprise but Ester and her siblings," They commented. "She was too perfect, really. That was the sign that something was amiss."</p>
+            <p>Chrysalis stopped, cracking an odd smile. "Foiled by my own perfectionism..." She murmured, chuckling lowly. "So what, if I'd sent her rougher around the edges, you'd have not suspected a thing?"</p>
+            <p>"I would have noticed eventually. I have been exploring my... Other senses recently. She is quite distinct through the right set of eyes," Hyacinth replied. "I must compliment your work, however... She is a part of the family. The others love her, strangeities or no."</p>
+            <p>Chrysalis took a breath in, unsure of how to reply to that. She brought Hyacinth to her throne room, taking a seat and closing her eyes.</p>
+            <br>
+            <p>"Chrysalis, I believe you do not understand the... Significance, of what exactly you've done," Hyacinth expressed.</p>
+            <p>Chrysalis' eyes snapped open, before they fell to an unamused gaze. "Well then, enlighten me," She puffed.</p>
+            <p>"You and I have a child now, Chrysalis," Hyacinth replied. "A daughter between us."</p>
+            <p>Chrysalis rolled her eyes. "Tch. She's your daughter," She remarked. "If she's so perfect..." She grumbled.</p>
+            <p>Hyacinth stepped forward, making Chrysalis flinch. She shied away from them, backing into the back of her throne. Hyacinth reached out, setting a hoof on Chrysalis' shoulder. "Listen to yourself," They expressed with a gentle smile. "You must be proud, mustn't you?"</p>
+            <p>Chrysalis puffed and shoved Hyacinth's hoof away, crawling higher onto her chair. "...What are you doing?" She hissed.</p>
+            <br>
+            <p>"I don't know... What your original intent with her was. But I want to express that I choose to see her as a gift. One I accept wi-" Hyacinth started.</p>
+            <p>Chrysalis cut them off by laughing loudly. "Hah! A gift," She snickered, standing precariously on top of her throne. "She was a spy! A leech, sent to sap away food for us. And now she's left us all on our own, because you're so much better than us, aren't you? Just a ball of warmth and forgiveness, like some kind of..." She stopped, leering for a moment. "...Tch. You think you're clever for that title, no doubt. Like all other mothers are inferior to you," She darted downward, landing in her seat with a harsh crack of her hooves hitting the solid material. "Like I am inferior to you!"</p>
+            <br>
+            <p>Hyacinth flinched, the sudden lunge enough to make them spawn. A single Myrmecoph hatched from the resulting pupa, which took to standing carefully under its mother. Hyacinth's ears drooped slightly. "Is that what this is about?" They asked softly. "That you feel... Shown up?"</p>
+            <p>It was Chrysalis' turn to flinch. She sat back in her chair, turned away, and huffed. "...Don't be ridiculous. I am perfectly capable of providing for my children if necessary. I was able to build a perfect facsimile of a creature I did not even fully understand," She puffed.</p>
+            <p>Hyacinth gave a halfhearted smile. "You did something I never could," They admitted. "You... Figured out this body of mine. Perhaps I understand things you don't, but you almost certainly know things about myself that I do not."</p>
+            <br>
+            <p>Chrysalis snickered. "What, you are trying to make me feel better about myself, now?" She asked. "How is it that someone so stubborn, so set in their ways... Can act like such a pushover? It's like you're doing it on purpose." She leaned in. "Do you know what manipulation looks like, Archmother?" She asked lowly.</p>
+            <p>Hyacinth blinked. They felt their chest tighten, just a little bit. "I... I don't understand," They managed weakly.</p>
+            <p>"I think you do," Chrysalis' face grew into a broad smirk. "You play an act. The gentle, motherly, warm creature. You tell everyone what they want to hear, you try to placate them. But deep down... You just want them to love you. Because you know, no matter how many offshoots you have, no matter how many of those creatures you rear, you will forever be trapped with yourself in your own mind. And that thought terrifies you."</p>
+            <br>
+            <p>Hyacinth took a step back. "Y-you... You don't really think that about me, do you?" They asked, ears drooping slightly.</p>
+            <p>Chrysalis grinned. "And there it is: Is it realization, or guilt tripping? It doesn't really matter, does it? You will stick to it either way," She remarked.</p>
+            <p>"No," Hyacinth attempted, voice warbling faintly. "I d-don't... I want to make others happy. I want to take care of them."</p>
+            <p>"And why do you do that?" Chrysalis asked, now, standing tall on her throne, looking down at them.</p>
+            <p>"B-because... Because I don't want anyone to feel how I feel," Hyacinth admitted, tears pricking at their eyes. "I don't want anyone to become... Me, anymore."</p>
+            <p>Chrysalis started off with a powerful chuckle, but her enthusiasm faded. "You... This was not the revelation I was planning for you to come to," She commented flatly.</p>
+            <br>
+            <p>Hyacinth didn't care. They continued anyway: "I was alone in that swamp for a century," They expressed, tears running down their face. "My children were there, of course they were, but I was always... In my own head. They were all just reflections of me."</p>
+            <p>Chrysalis wasn't sure how to process that. A part of her regretted pushing Hyacinth this far; cleanup would have been difficult if they broke down proper.</p>
+            <p>"I terrify myself," Hyacinth admitted quietly, posture slumping to the floor, the Myrmecoph opting to climb on their back instead, hugging them. "I don't want to hurt anyone, but... It happens regardless. I push them to the wayside, or forget to check in... Look at you. You've been stuck with bare twilight this whole time. I can't take care of myself, much less anyone else."</p>
+            <br>
+            <p>Chrysalis shook slightly as she looked at Hyacinth. "...Go do your moping somewhere else. We are not 'friends', and I owe you nothing. I'm sure Ester will comfort you better than I could," She hissed lowly.</p>
+            <p>Hyacinth took a deep breath, wiping their face and slowly standing up. "No, no, I understand. I'll leave you be," They croaked weakly, slowly walking towards the hive's exit.</p>
+            <p>Chrysalis puffed as she watched them go, slumping in her chair. "...What a mess," She muttered to herself, closing her eyes and exhaling deeply, attempting to smooth out her mane.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
