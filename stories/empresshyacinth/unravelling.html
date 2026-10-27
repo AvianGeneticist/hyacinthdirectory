@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unravelling</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <div style="padding-left:8px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archmothers">Archmothers</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/warped">Warped</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/plurites">Plurites</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/billiali">Billiali</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/tremorids">Tremorids</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/bifurn">Bifurn</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/striates">Striates</a></div>
+        <div id="nurserianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria">Nurseria</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria/progenites">Progenites</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/regalids">Regalids</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>"Hyacinth is late for court, where are they?" One of the guards asked, looking at Cardion as she poked out from Hyacinth's bedroom door.</p>
+            <p>"Mother has been unwell since last night," Cardion replied. "Mother cannot attend court today."</p>
+            <p>"Oh. Well, they should have communicated that to someone. Court is already gathered," The guard replied.</p>
+            <p>Ester came to the door as well. "Mother is needed in court?" She asked. "Would these ones suffice?"</p>
+            <p>Cardion blinked. "These ones... Thas one wants these ones to attend court?" She asked.</p>
+            <p>"These ones are mother," Ester reminded. "These ones should be able to attend court in mother's stead. It may be helpful to these ones as well, to better understand why mother is so tired."</p>
+            <p>Cardion nodded a little, contemplating that for a moment. "Very well. These ones shall go," She decided, pushing open the door enough that they could both slip out, before closing it behind them. "This one knows the way."</p>
+            <p>"Well, you'd better hurry," The guard replied. "They can get pretty impatient."</p>
+            <br>
+            <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+            <br>
+            <p>There was some confusion as Cardion and Ester walked into the court. Ester took the front, not as self-conscious about Cardion.</p>
+            <p>"These ones apologize for the wait, everyone," Ester expressed. "Mother is unwell today, and unfit to attend court."</p>
+            <p>"What happened to them?" Someone in the court asked.</p>
+            <p>"It is difficult to explain," Ester admitted. "But we are here to fill in for mother. Please continue as if thos was here."</p>
+            <p>There were some murmurings about continuing or not continuing the meeting without Hyacinth, but eventually the court relented, seeing as everyone was gathered. Eventually, it begun in earnest.</p>
+            <br>
+            <p>The first order of business was announced by a representative of what seemed to be quite a few people in the court. "There is growing dissatisfaction with Hyacinth's performance, given the stutter in the day schedule some time ago and the occasionally short daytime hours," The representative began.</p>
+            <p>"It is regrettable, but these ones do not have the resources to handle everything," Ester expressed. "These ones must manage their input and output carefully to ensure these do not starve, otherwise these ones will be completely unable to function. Foraging has run dry for a long time, so these ones are entirely reliant on farming cycles, which get shorter as days get harder and harder to maintain."</p>
+            <p>"So what do you need to make more resources?" The representative asked.</p>
+            <p>Cardion spoke up this time. "More siblings could help," She expressed. "Being short of hooves is the primary problem right now."</p>
+            <p>"So make more puppets," The representative huffed. "What needs to be done to make more?"</p>
+            <br>
+            <p>Ester and Cardion shared a look, debating whether to tell the truth. They tried figuring out what Hyacinth would do, and eventually settled on the fact that they would be honest: "The... Fastest way to encourage more spawning is for these ones or mother to get hurt," Ester expressed. "Though it is not particularly sustainable."</p>
+            <p>Rumblings echoed around the court. The idea seemed more popular than some may have liked; particularly the Archons and a few representatives who were concerned for Hyacinth's welfare. Slowly, they built, escalating into a full blown argument.</p>
+            <p>Ester tried speaking loudly to quell the argument, but the room had grown far too unruly.</p>
+            <br>
+            <p>Things went silent, however, as a sharp stamp of a hoof echoed through the room like thunder. Hyacinth approached the podium, clearly a mess; their eyes (one of which was slightly squinted) were bloodshot, and their mane was an even more dire tangle than usual, with unmanaged curls of hair even running up on their face. "That's enough," They boomed, stepping gently between Ester and Cardion to take the center of the stage. A few courtgoers gasped as a snout poked over Hyacinth's head: Solace was peering over the court, hugging Hyacinth's neck.</p>
+            <p>"I cannot say I had particularly high expectations, but is it too much to ask that you remain civil when my daughters must compensate for my absence?" Hyacinth asked, speaking in a sharp, if exasperated tone.</p>
+            <br>
+            <p>A number of eyes were fixated on not Hyacinth, but the foals on their back. Finally, someone voiced the silent tempest of thoughts: "Who is that!?"</p>
+            <p>Hyacinth heaved a deep sigh. "I must confess something to you all," They expressed. "I have been keeping a secret from you for some time; two secrets, really: When Celestia was still here, we had made the choice to have foals. She feared foals reared from me would be too large for her to carry safely, so I volunteered as a surrogate for my own children," They explained. Their horn lit, scooping Allium from their back to hoist her into view. "I had no idea that choice would lead us to now, where I have been caring for healthy twins for roughly four months. I have been keeping them as secretively as possible, as I know there are... Radical elements that would no doubt yearn to either butcher them for study or kill them in protest. But I don't believe I can hide it anymore; I need to ensure the air is clear between all of us," They explained.</p>
+            <br>
+            <p>The reaction was mixed, to say the least; some understanding, some anger, some disbelief. A few others seemed to deliberately keep their heads down. Hyacinth took a mental note of the lattermost group in particular, trying to remember their faces. They had some more looking to do.</p>
+            <p>Once the worst of the rabble had settled, Hyacinth continued. "If it is truly requested that we pick up puppet production, then I will volunteer myself for the beatings needed," They expressed. "However, let me be extremely clear: Any attempt to perform such assaults on my family will be responded to with force," They added seriously, standing tall for a moment.</p>
+            <p>The room fell silent. A few court members exchanged glances, though Hyacinth's presence seemed to be stifling any attempts at speech.</p>
+            <br>
+            <p>Finally, Hyacinth relaxed their posture into a slouch, depositing Allium on their back as their horn went dark. "I am going to get some rest. I'm sure Ester and Cardion can help sort out your future plan," They commented, turning away. "I will await whatever procedures are prepared," They remarked, slowly lumbering back out of the court, back into the hallway.</p>
+            <p>Solace crawled up over their head, trying to get their attention. "Mama..." She whined softly.</p>
+            <p>Hyacinth looked up at the little snout resting on the bridge of their own. "Now, now... You're not the one I'm upset with," They promised tenderly.</p>
+            <p>Solace hugged Hyacinth's snout. "Why mama upset?" She asked.</p>
+            <p>Hyacinth managed a small smile. "The others... They do not feel the strain we do: the hunger, the fatigue. We work hard to keep them comfortable, and thus they do not fully grasp the severity of the sun and moon being gone. They do not easily grasp pictures so much larger than them," They explained.</p>
+            <br>
+            <p>Solace took a long time to think about that. "How fix?" She asked.</p>
+            <p>"I... We can't exactly fix people's minds, dear," Hyacinth sighed. "We must teach them, or hope that they teach themselves. We can provide the opportunity for them to learn, but we can't force them."</p>
+            <p>"Oh," Solace blinked, going quiet.</p>
+            <p>"You don't have to think about that yet, dear. You're still a touch small to be thinking about such things," Hyacinth said tenderly.</p>
+            <p>"This one wants to help learning," Solace expressed. "Will learn how to talk to them."</p>
+            <p>Hyacinth closed their eyes, a smile tugging at their lips despite everything. "Haha... I have no doubt they will listen to you, one day. You are like your other mother," They commented wistfully.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
