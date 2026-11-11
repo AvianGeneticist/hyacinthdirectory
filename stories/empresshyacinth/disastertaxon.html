@@ -1,0 +1,345 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Taxon</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <div style="padding-left:8px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archmothers">Archmothers</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/warped">Warped</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/plurites">Plurites</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/billiali">Billiali</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/tremorids">Tremorids</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/bifurn">Bifurn</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/striates">Striates</a></div>
+        <div id="nurserianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria">Nurseria</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria/progenites">Progenites</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/regalids">Regalids</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>It was a peaceful evening in Ponyville; the town was readying for the shutting off of the Auroras, which would begin soon. However, a few ponies had noticed that things already seemed a bit dim, perhaps even intermittent as the day went on. By only 11 hours into the 14 hour day, it was getting so bad that some ponies thought there was a storm brewing.</p>
+            <br>
+            <p>Then, the light cut. The town was plunged into a dark twilight, caught between the distant light of other Auroras. A twinkle began to fall from the sky, a fizzling star against the dull backdrop. It grew larger and larger, falling closer to the ground, until eventually a crash echoed through town as the fallen star finally struck its resting place.</p>
+            <p>Said place was Sugar Cube Corner; an unhappy accident, caused only by proximity and chance. Ponies staggered away as the roof caved in under the fallen entity's weight, rubble and dust occluding much of its figure.</p>
+            <br>
+            <p>Finally, however, the entity's figure (or rather, what was left of it) became clear. The Aurora assigned to Ponyville and its surroundings now laid half-melted and floundering in the bent-inward floor of the bakery. The Aurora's body was already beginning to melt away, with much of its back legs and all but the basic colour of its wings disrupted and melted away. The Aurora clawed at the crater it had left, its whistling cries rendered into bubbling, spattering warbles, as if it were drowning under its own insides.</p>
+            <br>
+            <p>As the dust settled, ponies began to scream at the colossal monster of a melting equine now occupying much of the bakery's front. Some fled immediately, others stared in shock. Perhaps one brave soul attempted to help the Aurora out of its impact site, only to wind up pulling off a half-melted glob of puppet slurry and what remained of the Aurora's differentiated tissues, but yarded away from the main body, they soon melted away into nothing but reddish pink cell slush.</p>
+            <br>
+            <p>Mr. and Mrs. Cake, the owners of the establishment, were just as caught off-guard by the Aurora's sudden entrance, but were now attempting to control the situation. "N-now, everyone stay calm!" Mrs. Cake attempted. "It's one of Hyacinth's, it can't want to hurt us," She managed, vaulting over what remained of the counter to try and calm the struggling puppet.</p>
+            <p>While the Aurora's upper body had managed better than its lower one, with one front leg still almost completely intact and the other only visibly broken, its condition was beginning to deteriorate. Part of its face began to melt, one of its eyes beginning to bubble away into a trickle of smaller eyes that ran down its cheek and neck.</p>
+            <br>
+            <p>One look at the deteriorating Aurora and Mrs. Cake gagged, realizing she may have been out of her league. She knew some of the common knowledge about puppets, but such a catastrophic injury was far beyond her. "N-now, you need to stay calm, too," She managed. Instinctively, she reached out to try to comfort it, but winced as her hoof sunk into the puppet's decomposing cheek. She stared, panicked, for a moment, before wrenching her hoof away. "I'm sorry, I don't know how to help you," She managed.</p>
+            <br>
+            <p>"We need to get a Cambrian," Starlight Glimmer said as she entered the bakery. "They... Do something to the Auroras. It's like a recharge for them," She explained, regarding the Aurora with a nose wrinkle of disgust as it awkwardly twisted only about a third of its body to face her, the rest simply pooling in the divot.</p>
+            <p>"That can't be too hard, can it?" Mrs. Cake managed, looking between Starlight and the Aurora.</p>
+            <p>"They're one of the easier puppet types to spot," Starlight commented. "I think Hyacinth keeps one stationed near the Everfree Forest. It towers over the treeline; you couldn't miss it."</p>
+            <p>Mrs. Cake nodded. "I'll try and keep this one stable. Go get that Cambrian," She expressed.</p>
+            <p>Starlight took a deep breath, but nodded. "I'll be back. Don't try to move it," She puffed.</p>
+            <br>
+            <p>As Starlight raced out into the town, she noticed the chaos. The sudden combination of the loud impact of the Aurora as well as the sudden darkness was a lot for the town to handle, and some were clearly fearing the worst, belting out things about the end of days or the like.</p>
+            <p>Starlight rolled her eyes, lighting her horn to levitate herself. "Not likely, folks. Hyacinth isn't that easy..." She murmured, carrying herself off in the direction of the Everfree forest.</p>
+            <br>
+            <p>Meanwhile, Mrs. Cake was trying to stabilize the Aurora to the best of her ability. Not that her best ability was much in this instance, but she'd thrown a few tablecloths over it to try and keep it warm, trying to keep its attention on her.</p>
+            <p>"You need to stay with me, okay? Starlight'll come back, and we'll fix you up good," Mrs. Cake promised, looking at the Aurora.</p>
+            <p>The Aurora burbled and wheezed, occasionally scooping a dropped bit of its muzzle back towards itself with its slowly decomposing good leg. Its gaze remained fixated on Mrs. Cake, even as its eyelids began to melt and fold over what remained of its good eye.</p>
+            <br>
+            <p>Mrs. Cake shuddered. As much as she hated to admit it, the Aurora was not an easy sight to take in. Her mind went immediately to the one place that she knew could make someone feel better: "Just h-hold on, now, I'm not giving up on you. Let's... Find you something to eat, okay? Maybe you're just..." She didn't finish her thought, stumbling over what remained of the counter to try and find something that didn't have debris or dust all over it. Pickings in that regard were slim, so she settled on the softest-looking thing she could find: A piece of sponge cake.</p>
+            <br>
+            <p>Mrs. Cake stumbled back over the counter as the ground began to shake again. She took a deep breath, hoping that was Starlight returning with the Cambrian, rather than some poorly-timed second cataclysm. "All right, now, here. Just try to..." Mrs. Cake hesitated. Telling something that was currently melting to "relax" felt inappropriate. "Just don't worry," She said, offering the piece of cake to the Aurora.</p>
+            <p>The Aurora burbled, attempting to open its mouth. What remained of its teeth stuck together, lips parting in strings. Mrs. Cake winced, and her hoof quivered for a moment. Without thinking, she shoved the piece of cake into the Aurora's mouth, before wrenching her hoof away.</p>
+            <br>
+            <p>The Aurora's eyes widened ever so slightly, before it sank to the floor, collapsing. It closed its eyes, seemingly entirely focused on chewing. Resting did seem to help it a bit, as the melting slowed to a crawl, but it still wasn't getting <i>better</i>.</p>
+            <p>Mrs. Cake heaved, just keeping a careful eye on it. Finally, however, the shaking came to a head before stopping.</p>
+            <p>Through the hole the Aurora had punched through the ceiling came the large snout of a Cambrian, glancing down at the decomposing Aurora. The colossal puppet frowned gently, leaning down to nuzzle the Aurora, which whined and burbled.</p>
+            <br>
+            <p>Starlight heaved as she walked in the door. "It's still alive?" She asked.</p>
+            <p>"It's stuck through this far," Mrs. Cake expressed. "Giving it something to eat seems like it helped."</p>
+            <p>Starlight's eyes narrowed. "That begs the question of what happened to it..." She murmured. "It must've been exhaustion or something."</p>
+            <p>"You think exhaustion could do this?" Mrs. Cake asked, looking at Starlight.</p>
+            <p>"Puppets aren't solid like we are," Starlight replied. "If something bad happens to them, they start to melt. Though whatever happened to this one clearly wasn't very clean, given it's still holding on," She gestured vaguely at the Aurora as the Cambrian slowly began to nudge it back into shape.</p>
+            <br>
+            <p>Mrs. Cake blinked, watching as the Cambrian worked. The cramped space, evidently, was making it more difficult for the Cambrian to work, but it continued anyways. Slowly, the Aurora's body was readjusted; height and thickness were shaved away into the puddle of puppet below, freeing much of its face. The trickle of eyes down one side remained, one of which even now hung from a string on the puppet's jowl. The body was elongated, and while hair and fur slowly returned to the top half, much of the bottom remained a strange, exposed, reddish-pink skin.</p>
+            <br>
+            <p>Then, the puppet's back began to bubble as it pushed itself into a more upright posture. Thin, glowing gold mycelia began to creep out from its spine and down its body, twisting into and out of the softer skin and fur. The net grew thicker, with small mushrooms eventually beginning to sprout.</p>
+            <p>"Is it okay?" Mrs. Cake asked, looking at Starlight.</p>
+            <p>"It seems stable, at least... Whether it's 'okay' or not is anyone's guess," Starlight commented, watching intently.</p>
+            <p>Finally, the equine had settled into its new form. A mat of glowing mycelia covered its back, running from its neck down through its tail. Its body posture was not quite equine; its front legs had been fixed, but the back legs were seemingly impossible to replace. Instead, it simply sat on a sluglike mass of body, storing what feet of its height it had lost as extra bulk. While its face did still look a bit melted, the worst of the damage was seemingly contained to the eye that had melted and split apart.</p>
+            <br>
+            <p>The mushrooms that sprouted on the ex-Aurora's back now hummed with bioluminescent life, radiating light. They had a very faint, consistent flicker to them; the visual equivalent of a "buzzing sound", if there ever was one. While it wasn't hard to look away, it did leave an impression on the eyes of Mrs. Cake and Starlight.</p>
+            <p>Finally, the puppet spoke; a deep, humming tone, entirely unalike the higher, more whistling tone an Aurora typically had. The noise, however, was accompanied by intelligible words. The words seemed to emanate from deeper within the puppet's body. "Thhhank thase for thase's assistance," The voice expressed.</p>
+            <br>
+            <p>Mrs. Cake jumped a bit as the puppet spoke, whereas Starlight tensed, leaning in. "You... What happened to you?" Starlight asked.</p>
+            <p>The puppet stopped to ponder that for a long moment. "A fatal tiredness," It answered. "It became hard to maintain shape. All of this one's energy went to making sunlight."</p>
+            <p>"All of your... So you were burning everything?" Mrs. Cake asked.</p>
+            <p>The puppet nodded. "These ones... Mother works all of these ones very hard, to preserve..." The puppet trailed off for a moment. "...Normalcy."</p>
+            <p>"Normalcy?" Mrs. Cake asked.</p>
+            <p>"It is mother's goal that singular ones'," The puppet gestured with a front leg to the two mares, " Lives be as uninterrupted as possible."</p>
+            <p>Starlight looked away. "In that case, I should be going," She commented. "You seem like you can handle yourself now," She expressed, turning to leave.</p>
+            <br>
+            <p>"Why're you in such a hurry?" Mrs. Cake asked.</p>
+            <p>"Because the whole town just got plunged into darkness and they're probably going to need light spells to make up for this," Starlight replied, shaking her head. "I'm about to be very busy," She grumbled, trotting out of the bakery.</p>
+            <p>Mrs. Cake and the puppet both watched her go. "Thos is lacking patience," The puppet observed.</p>
+            <p>"I think Starlight's had a lot on her plate ever since the Princesses disappeared, hun," Mrs. Cake expressed, sighing. "We don't see her much anymore. I'm surprised she's still here," She admitted.</p>
+            <p>The puppet tilted its head gently. "Thos cannot ask for supplication?" It asked.</p>
+            <p>"I suppose I've never offered," Mrs. Cake admitted. "Though I can't say I know where she goes off to."</p>
+            <p>The puppet nodded a bit, clearly lost in thought.</p>
+            <br>
+            <p>Mrs. Cake looked at it. "What about you, hun? What are you going to do now?" She asked.</p>
+            <p>"This one must request an audience with mother," The puppet replied. "No more is this one an Aurora. This one is something new, and mother must give an appraisal."</p>
+            <p>"Appraisal?" Mrs. Cake asked, concern heightening her voice. "Are you worried about them disowning you?"</p>
+            <p>The puppet shook its head frantically. "Absolutely not," It replied. "However, this one is no longer an Aurora. Mother must ordain this one with a new cognomen, and prepare the mind for a new deviation."</p>
+            <p>"A new... Is you speaking a problem?" Mrs. Cake asked, trying to wrap her head around what she was hearing.</p>
+            <br>
+            <p>The puppet paused. "This one is not speaking to thas one," It conceded. "When the body was weak, and the symbiote became wise to the root. These two now exist as this one, and the minds compliment each other," It attempted to explain.</p>
+            <p>Mrs. Cake pondered that. The jargonlike language didn't make it any easier to decipher. "So you've got a little translator buddy, basically?" She attempted.</p>
+            <p>The puppet nodded. "A suitable allegory," It replied. "The symbiote blurs the line between minds... Three distinct become featureless points on one line. It is not quite how the Myrmecophs do it, but this one believes it may be similar."</p>
+            <p>"The Myrmecophs... The little guys running around catching bees? You're doing something similar to me?" Mrs. Cake asked incredulously.</p>
+            <p>"Much weaker. Teaching the patterns of how these ones commune. This one has little hope that it would continue if thas closed thas one's eyes for very long," The puppet replied.</p>
+            <br>
+            <p>Mrs. Cake nodded. "Well... If it's that easy, surely you can just waddle on over whenever and strike up a friendly conversation," She reasoned.</p>
+            <p>"This one will need to experiment," The puppet replied. "These ones seldom have to learn about the self."</p>
+            <p>Mrs. Cake nodded. "Well... I hope you learn whatever you need without much issue," She expressed with a gentle smile.</p>
+            <p>"Thank thas," The puppet bowed its head politely to her. "This one will request some of the others come to clean the mess," It expressed, looking around the heavily damaged bakery.</p>
+            <p>Mrs. Cake hesitated. "I... Wasn't going to mention it, but that would be appreciated. You did a number on our poor little bakeshop here," She expressed.</p>
+            <p>The puppet nodded. "This one apologizes personally. This was not supposed to happen," It expressed.</p>
+            <p>"Given the circumstances, I can't be too mad," Mrs. Cake sighed. "I'd better go make sure my husband and the twins are doing okay. You be good for your ma, now, okay?"</p>
+            <p>The puppet nodded. "This one will be more careful in the future," It promised, turning to slither out of the bakery.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>

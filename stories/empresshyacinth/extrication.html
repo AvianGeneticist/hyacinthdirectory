@@ -1,0 +1,358 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrication</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <div style="padding-left:8px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archmothers">Archmothers</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/warped">Warped</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/plurites">Plurites</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/billiali">Billiali</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/tremorids">Tremorids</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/bifurn">Bifurn</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/striates">Striates</a></div>
+        <div id="nurserianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria">Nurseria</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria/progenites">Progenites</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/regalids">Regalids</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>Glistening Ward heaved a deep sigh as she finally got off shift, leaving the back of the infirmary. She yipped as the tall figure of Archie blocked her from walking any further. "A-Archie!" She chirped. "Uh- phew... You scared me."</p>
+            <p>"...Apologies..." Archie replied. "...Requires assistance."</p>
+            <p>"Is something wrong? Do you need some medicine, or one of the doctors?" Ward asked, looking Archie over. The curator's body was peculiar even by Hyacinth's standards, but Ward couldn't pick out anything that seemed any more wrong than usual.</p>
+            <p>"...Requires a perspective untainted..." Archie replied. "...Come." She said, turning to leave.</p>
+            <p>"Well... Okay," Ward blinked, following Archie."It's nice to see you a bit more confident on your legs," She expressed, trying to make small talk as she followed Archie.</p>
+            <br>
+            <p>"...Weight is becoming familiar...Cardion has caught this one some times..." Archie admitted. "...Is nice to be mobile on this' own."</p>
+            <p>"Is there a reason you're all on your own today?" Ward asked. "I'm surprised one of the others isn't showing you around."</p>
+            <p>"...Danger..." Archie replied grimly. "...Unsafe for nieces."</p>
+            <p>"Um..." Ward blinked. "If it's too dangerous for them I don't know how much help I'll be, Archie."</p>
+            <p>"...No threat to a singular sort...Only these ones," Archie assured.</p>
+            <p>"Ohh... Is this about those axes?" Ward asked, starting to piece it together.</p>
+            <p>"...Correct," Archie replied, "...Ester mentioned they cut the root...Concerning development."</p>
+            <p>"The root?" Ward asked.</p>
+            <br>
+            <p>"...All of these ones have a root that comes back to sister..." Archie replied. "...Nourishes and heals and regulates these ones...Ensures no discordance between these...But if the root is cut away, these are not long for this world...Attacks on the root would ignore these's defenses."</p>
+            <p>Ward's eyes widened. "So even strong puppets like Praetors..." She blinked.</p>
+            <p>Archie nodded grimly. "...Must be rectified, lest rectification find these ones..." She replied. "...Existential danger..."</p>
+            <p>Ward shivered. Archie's voice wasn't particularly deep or intimidating, but the words 'existential danger' still sent a chill through her.</p>
+            <br>
+            <p>Ward cocked a brow as the castle library came into view. "The library?" She questioned, looking up at Archie.</p>
+            <p>"...Kept with father's research..." Archie replied. "...All threats in one place, tightly controlled."</p>
+            <p>"With..." Ward felt a weight in the pit of her stomach. "I guess it makes sense to keep all of it in one place."</p>
+            <p>The two entered the library, and Archie glanced around. "...Sparks spoke well of this place..." Archie commented. "...Home to vast knowledge, safe and dangerous...Eternities of reading."</p>
+            <p>Ward followed Archie. "Sparks?" She questioned.</p>
+            <p>"...Curator formed in this one's absence...Young blood, young flesh, young mind...Fresh memories," Archie replied. "...Unlike this one..."</p>
+            <p>"Does... The freshness of the memories matter?" Ward asked.</p>
+            <p>Archie pondered that. "...Tradeoffs," She explained as she led the way to the restricted section. "...Fresh memories lack the intuition from steeping in the mind...Missing skills, not yet knowing purposes...But old memories deteriorate the person...This one is but a shadow of the one called 'Archie'...The barest traits sister remembers..."</p>
+            <br>
+            <p>Ward blinked. "So... You were always like this?" She asked. "How long had it been between Hyacinth losing... The other Archie, and you coming along?"</p>
+            <p>"...The mind did not need curation in its early years..." Archie explained. "...Decades had passed in smallness, in restraint...This one was fifty years old as it awoke..."</p>
+            <p>Ward blinked. "So... Fifty years of Hyacinth forgetting details about you?" She asked.</p>
+            <p>"...It is why this one is so faint and hard of voice..." Archie expressed. "...It is a struggle to speak with any force...This one has no voice with which to speak."</p>
+            <p>"Ah..." Ward blinked. "Could you be fixed with new memories? Like, if we found a painting?" Ward asked.</p>
+            <p>"...No," Archie looked away. "...As far as this one knows, once these ones are formed, the memories are set...Eternal and unchanging, above curation..."</p>
+            <p>"Oh..." Ward frowned softly. "I'm sorry, Archie. If I could help, I would."</p>
+            <p>"...This one appreciates the thought, but this one is content with being the eldest curator...The new memories will need welcoming and training that this one can provide," Archie replied, smiling faintly. "...This one never got the chance to be a big sister...But now this might."</p>
+            <br>
+            <p>Ward managed an awkward smile, looking towards the locked gate that they were approaching. Pony guards and Praetors alike were stationed here; anyone trying to break in would have their work cut out for them. The ponies initially moved to block the two, but as the Praetors stood down and even bowed to Archie, the response turned much more welcoming.</p>
+            <p>"...These ones need inside for some time... Permit these," Archie requested.</p>
+            <p>The guards shared some looks, but seeing as the Praetors were standing down, one of them eventually relented, unlocking the door.</p>
+            <p>Ward blinked, following Archie inside. "They bow to you?" She asked. "I don't think I've ever seen them bow to Hyacinth."</p>
+            <p>"...Nonstandard behaviour..." Archie replied, "...These ones must convey things so the singular sorts may understand them."</p>
+            <p>"Oh," Ward nodded a little. Subconsciously, she kept tighter to Archie's side now that they were in here, eyes darting around.</p>
+            <br>
+            <p>"...Much to be respected here...Little to fear," Archie reassured, leading Ward towards a nook crammed with books. The axes had been put into a reinforced rack, awkwardly straddling two of the bookshelves.</p>
+            <p>"It... Kind of feels like I shouldn't be here," Ward admitted.</p>
+            <p>"...No one should be...Necessary evils," Archie commented. "...Important that this be resolved."</p>
+            <p>Ward nodded. "Let's... Just try to get what information you need quickly," She expressed. "What do you need me to do?" She asked.</p>
+            <p>"...One of the axes...Bring it near, so this one may observe it," Archie requested.</p>
+            <p>Ward nodded, stepping forward trepidatiously. She picked up one of the axes. She nearly fumbled it at first; the weapon was heavier than it first appeared. She winced.</p>
+            <p>Archie saved Ward some of the trouble, stepping forward. "...Peculiar," She murmured as she appraised the implement.</p>
+            <br>
+            <p>"...Whoever made this had experience...Knowledge of father's work...Precise arrangement and high quality throughout," Archie declared. "...Father could have made this, and this one would have no way of telling thos hadn't."</p>
+            <p>"So... How are you sure?" Ward asked.</p>
+            <p>"...Father is dead," Archie replied. "...But knowledge remains, slumbering for anyone to wake."</p>
+            <p>"Right..." Ward looked up at the poleaxe, trying to distract herself. "So, what do you see, exactly? It just kind of looks like a long axe to me," She expressed.</p>
+            <p>"...Quills protruding in new directions," Archie replied. "...They stretch deep...No wonder thas struggles with the inertia...Allow this one to visualize..."</p>
+            <br>
+            <p>One of Archie's ghostly legs stretched forward, elongating into a haft. Quills protruded outward from the appendage, like a spiked club in all directions. </p>
+            <p>"That's what it looks like to you?" Ward asked, blinking.</p>
+            <p>"...An example," Archie replied. "...Not fully correct...Improperly 'rotated'...It does not span only three dimensions," She explained.</p>
+            <p>"Uh...huh. So it's like the rest of Hyacinth?" Ward asked.</p>
+            <p>"Yes..." Archie replied. "...A psionic dimension, stretching deeper into these ones' space...Perhaps only a prototype, given the size...But of high quality nonetheless...An amateur could not have created such a weapon..."</p>
+            <p>"So whoever made this knew what they were doing... That probably narrows it down a lot," Ward commented.</p>
+            <p>Archie nodded. "...Someone who had connections, to either Father or the old crown..." She replied. "...Someone who would not have had to break in..." She rubbed her chin, finally relaxing her leg.</p>
+            <br>
+            <p>Archie suddenly perked up. "...This one's attention is needed elsewhere for a moment," She admitted. "...Will return..."</p>
+            <p>"Uh- Archie, this-" Ward started, watching as Archie slowly blinked, her eyes glowing blank once more. "...Thing's kinda heavy," She expressed. She took a deep breath, before cumbersomely swinging the weapon back around towards the rack, leaning it between its two counterparts. She exhaled, shaking herself off. "...Hope she doesn't take too long," Ward murmured. She sat down, closing her eyes for a moment.</p>
+            <br>
+            <p>Slowly, her eyes opened, beginning to wander the room. She avoided the more exotic or dangerous-looking artifacts, instead letting her eyes wander the bookshelves. Her eyes narrowed, and she stood up, walking closer to some of the bookshelves, reading the spines more closely. One in particular caught her eye: 'Project Hyacinth'.</p>
+            <br>
+            <p>She pulled the thick, heavy book off the shelf and opened it. She flipped it open, past the table of contents, immediately reading into chapter one. It started as harmless as mad science could get: Nonspecific hypertrophy, a way of making a pony grow larger. She was immediately put off by the diagrams scratched into each page: A portly filly, slowly reflecting the changes made across the pages of detail and extended thought.</p>
+            <br>
+            <p>Ward began to read more, and she didn't like what she saw. The experiments started mundane, but progressed into stranger and darker territory:</p>
+            <p>The second chapter, on magical enhancement, had diagrams showing the filly wasting away to nothing under an enhanced metabolism.</p>
+            <p>Then the third chapter, on neural patterning, showed the filly being unable to walk due to her legs being neuropathically merged.</p>
+            <p>Fourth was stimulating limb growth. The filly had legs and long hair and other such things growing out of or withering away from all the wrong places.</p>
+            <p>The fifth chapter showed and described the filly's body being trained to support the new growths, with new limbs becoming permanent.</p>
+            <p>The sixth chapter showed experiments in cutting the extended limbs off to see if they would regenerate or strike out independently.</p>
+            <p>Seventh was the adaptation of the brain and neurons to carry these detached pieces, puppeting them. The filly now bore a distinctive, leafless tree sprouting from her spine, though it was marked in a decidedly different material.</p>
+            <br>
+            <p>Ward flipped through the pages faster and faster as she processed only the images. It was a flipbook of a pony being torn apart, remade into something new.</p>
+            <p>Ward yelped as a gentle hoof touched her shoulder, the book being shut in front of her. "...Perhaps that is enough reading...For this time..." Archie murmured, back to her inhabited self.</p>
+            <p>Ward wiped her face, able to feel the tears she hadn't processed. "I don't... I don't understand..." She murmured.</p>
+            <p>Archie sat, gently wrapping her front legs around Ward in a hug. "...Father was not a kind stallion..." She conceded quietly.</p>
+            <p>"But... Why this? It's just... Torture," Ward whimpered, sniffling. "What did she do to deserve that?"</p>
+            <br>
+            <p>"...Sometimes deserving isn't necessary," Archie expressed with a soft sigh. "...Thirsting for knowledge is dangerous."</p>
+            <p>Ward closed her eyes. "Is this book really about...?" She trailed off.</p>
+            <p>"...Sister...This one, to a lesser extent..." Archie admitted. "...This one did not make it."</p>
+            <p>"I-I-" Ward stammered, taking a deep breath. "I'm sorry, Archie. I don't... I don't think I can do any more today."</p>
+            <p>"...This one understands...Has what this needs, regardless..." Archie replied, letting go of Ward and standing up, offering her a hoof.</p>
+            <p>"Okay... Okay," Ward took another breath, before taking Archie's hoof to pull herself to her own. She watched as Archie set the book back on the shelf, as if had never been moved at all.</p>
+            <br>
+            <p>Ward rubbed her head as her brain tried to make heads or tails of what she'd read.</p>
+            <p>"...Is there something on thas' mind?" Archie asked as she began to lead the way out of the library.</p>
+            <p>"I-" Ward's voice caught again. "We use some of those procedures, in the hospital: They're the foundations of the stimulants used to grant earth pony magic to crippled pegasi or unicorns, and regenerating lost tissues or even small bones has been in limited use since before Luna's return, and-" She cut herself off as Archie just smiled gently down at her.</p>
+            <p>"...Sister would be relieved to know good came from thos..." Archie commented. "...It is a difficult subject to make light of, but this one knows thos one would appreciate it regardless."</p>
+            <p>"R-right..." Ward nodded. "...I just really hope we never have to dig into that book for therapies for them. I don't think anyone could justify making them relive any of... <i>That</i> again."</p>
+            <p>"...These ones trust thas to be responsible when needed..." Archie replied softly.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>

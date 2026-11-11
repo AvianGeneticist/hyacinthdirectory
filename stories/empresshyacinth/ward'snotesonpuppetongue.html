@@ -1,0 +1,275 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward's Notes on Puppetongue</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          display: flex;
+        }
+
+        #base {
+          background-color:rgb(26,0,27);
+          background-image: url(../../backgroundwhite.png), url(../../backgroundblue.png), url(../../backgroundred.png), url(../../backgroundyellow.png);
+          background-repeat: repeat, repeat, repeat, repeat;
+          background-position: left top, left bottom, right top, right bottom;
+        }
+                
+        .sidebar {
+          float: left;
+          width: 190px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .subpuppetcollapse {
+          background-color: rgba(0,0,0,0);
+          border: rgba(0,0,0,0);
+          font-family:verdana;
+          color:rgba(225,245,255,1);
+          text-align:center;
+          width:12px;
+          padding:0px;
+          font-size:14px;
+        }
+
+        .spacer {
+          float: left;
+          min-width: 5px;
+          min-height: 98vh;
+          width: 10px;
+        }
+
+        .column {
+          float: left;
+          width: calc(100% - 200px);
+          min-width: 600px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page {
+          position: relative;
+          left: calc(25.5% - 18px);
+          width: 55%;
+          min-width: 303px;
+          max-width: 850px;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-left: 2px solid rgba(214,145,210,0.6);
+          border-right: 2px solid rgba(214,145,210,0.6)
+        }
+        
+        .gallery {
+          float: left;
+          width: 540px;
+          min-width: 540px;
+          min-height: 98vh;
+          padding: 10px;
+        }
+
+        .page p {
+          text-indent: 16px;
+          line-height: 1.3;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          margin-bottom: 6px;
+        }
+
+        /* unvisited link */
+        a:link {
+          color: rgb(160,180,255);
+        }
+
+        /* visited link */
+        a:visited {
+          color: rgb(0,255,255);
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: rgb(255,180,190);
+        }
+
+        /* selected link */
+        a:active {
+          color: rgb(245,140,145);
+        }
+        </style>
+</head>
+<body id="base">
+    <div style="font-family:verdana; color:rgba(225,245,255,1)" class="row">
+      <div class="sidebar" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+        <div><h3>Navigation</h3></div>
+        <div><a href="https://aviangeneticist.github.io/hyacinthdirectory/">Hyacinth</a></div>
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/history.html">History</a></div>
+        <div style="padding-left:8px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archmothers">Archmothers</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/">Puppets</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/lifecycle.html">Life Cycle</a></div>
+        <div style="padding-left:16px;padding-top:6px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/heightchart.html">Height Chart</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/manipulators">Manipulators</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/tricksters">Tricksters</a></div>
+        <div id="deltaparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas">Deltas</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/deltas/phalanxes">Phalanxes</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/myrmecophs">Myrmecophs</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div id="reconcilantparent" style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants">Reconcilants</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/imps">Imps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/arrays">Arrays</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/pustules">Pustules</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters">Barycenters</a></div>
+          <div style="padding-left:32px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/reconcilants/barycenters/satellites">Satellites</a></div>
+        </div>
+        <div id="howitzerparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers">Howitzers</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/howitzers/heralds">Heralds</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/mesosae">Mesosae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/praetors">Praetors</a></div>
+        <div id="totemparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems">Totems</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/wisps">Wisps</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/envoys">Envoys</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/delegates">Delegates</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls">Consuls</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/consuls/agents">Agents</a></div>
+          <div style="padding-left:24px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/totems/brokers">Brokers</a></div>
+        </div>
+        <div id="anchorageparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages">Anchorages</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/serfs">Serfs</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/colonies">Colonies</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/sovereignties">Sovereignties</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations">Federations</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/anchorages/federations/provinces">Provinces</a></div>
+        </div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/perditioners">Perditioners</a></div>
+        <div id="cambrianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians">Cambrians</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></button></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae">Cornucopiae</a></div>
+          <div style="padding-left:32px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/fronds">Fronds</a></div>
+          <div style="padding-left:32px;padding-bottom:3px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/cornucopiae/coddlers">Coddlers</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/auroras">Auroras</a></div>
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/cambrians/seraphs">Seraphs</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/puppets/leviathans">Leviathans</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons">Archons</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/gangrenous">Gangrenous</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/solar">Solar</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/mechanized">Mechanized</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/warped">Warped</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/archons/false">False</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae">Ouroborae</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/plurites">Plurites</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/billiali">Billiali</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/tremorids">Tremorids</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/bifurn">Bifurn</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/striates">Striates</a></div>
+        <div id="nurserianparent" style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria">Nurseria</a> <button class="subpuppetcollapse" style="float:right"><b>+</b></div>
+        <div style="padding:0px;display:none">
+          <div style="padding-left:24px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/nurseria/progenites">Progenites</a></div>
+        </div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/ouroborae/regalids">Regalids</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories">Stories</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/hyacinth'sdiary">Hyacinth's Diary</a></div>
+        <div style="padding-left:16px;padding-top:6px;"><a href="https://aviangeneticist.github.io/hyacinthdirectory/stories/empresshyacinth">Empress Hyacinth</a></div>
+        <hr style="height:2px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:8px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/">Games</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/idlecinth">Idlecinth</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/intothebreach">Into The Breach</a></div>
+        <hr style="width:80%;height:1px;border-width:0;color:rgba(214,145,210,0.6);background-color:rgba(214,145,210,0.6)">
+        <div style="padding-left:16px"><a href="https://aviangeneticist.github.io/hyacinthdirectory/games/dnd">Abomination (DnD)</a></div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("subpuppetcollapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              content.style.display = "block";
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseenter", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b>+</b>") {
+              this.innerHTML = "<b><u>+</u></b>"
+            } else {
+              this.innerHTML = "<b><u>-</u></b>"
+            }
+          });
+          coll[i].addEventListener("mouseleave", function() {
+            this.classList.toggle("active");
+            if (this.innerHTML === "<b><u>+</u></b>") {
+              this.innerHTML = "<b>+</b>";
+            } else {
+              this.innerHTML = "<b>-</b>";
+            }
+          });
+        }
+      </script>
+      
+      <div class="spacer"></div>
+        <div class="column" style="background-image:linear-gradient(rgba(214,145,210,0.4),rgba(214,145,210,0.1));border: 3px solid rgba(214,145,210,0.6);border-radius:10px;">
+          <div class="page">
+            <p>While most ponies know that puppets lack genders of any kind, this fact is baked into their language, too</p>
+            <p>Archie tells me that puppets have six major pronouns which focus on subject clusivity and plurality:</p>
+            <div style="display:flex">
+              <div style="float:left;width:49%;padding-right:1%">
+                <p>SINGULAR</p>
+                <p style="text-shadow: 2px 1px rgb(225,0,0)">- "This" describes the self and only the self, like how I use... Well, "I". It can also be pronounced "thes" to better match its plural, though this pattern doesn't seem particularly common in any speaking caste. I think I've caught Cardion use it once or twice when speaking quickly.</p>
+                <p style="text-shadow: 2px 1px rgb(0,0,225)">- "Thas" refers to the single entity the self is speaking to, comparable to "you". In a two way conversation, you'll probably hear this a lot. It's interesting they pick a vowel that wasn't used in our own tongue when transcribing it over...
+                <p style="text-shadow: 2px 1px rgb(0,105,35)">- "Thos" refers to a singular entity that is not the speaker or the one being addressed. He, she, and it all get kind of squashed into one word due to the aforementioned lack of genders. Another word that doesn't seem to be borrowed from Ponish in any way, though in this case it's easy to see they took the plural and worked backwards.</p>
+              </div>
+              <div style="float:left;width:49%">
+                <p>PLURAL</p>
+                <p style="text-shadow: 2px 1px rgb(225,0,0)">- "These" refers to a group that the self is a part of, analogous to "we" or "us". Puppets lack any kind of formal or royal we; if a title is important, it is used instead (for example, Hyacinth is always "mother", though weirdly Archons seem to be less consistently referred to as such).</p>
+                <p style="text-shadow: 2px 1px rgb(0,0,225)">- "Thase" refers to a group the self is addressing. Ponish doesn't have an explicit plural form of you, but if it did, this would be comparable (I think Prench has one?)</p>
+                <br>
+                <p style="text-shadow: 2px 1px rgb(0,105,35)">- "Those" refers to a group that doesn't include the speaker nor the one being addressed. "They" is close enough here, though with a particular emphasis on the assumption of indeterminate gender in this case.</p>
+              </div>
+            </div>
+            <p>All of the above pronouns can be sufficed with "one/ones" as appropriate. There doesn't seem to be hard or established grammar in regards to this - it takes into account the speaker's personal preference, the sentence's flow, and to a lesser extent the urgency of the message. Given puppets all intuitively know everything important that's conveyed between them, it's sensible enough.</p>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
